@@ -2,8 +2,7 @@
 <div class="container">
   <div class="card">
     <h2>Hi, I'm Cameron</h2>
-    <p>I'm a driven learner, freelance web developer, and product builder. I'm passionate for entrepreneurship, user experience, analytics, and marketing.</p>
-    <p>I study computer science and management of entrepreneurship in the Jerome Fisher Program in Management and Technology at the University of Pennsylvania.</p>
+    <p>I'm passionate for leveraging technology to simplify and extend people's lives. I study computer science and management in the M&T program at the University of Pennsylvania and spend much of my free time developing websites, learning new things, and going to new places.</p>
   </div>
 </div>
 
@@ -12,7 +11,7 @@
   <h4 class="mono bold title">Education</h4>
   {{#each education}}
     <div class="card">
-      <h4 class="marg-bot-0">{{this.title}}</h4>
+      <h4 class="marg-bot-0">{{this.title}}, {{this.organization}}</h4>
       <p class="mono gray-text subtitle">{{this.startYear}}-{{this.endYear}} / {{this.gpa}} GPA</p>
       <p>{{this.description}}</p>
     </div>
@@ -22,7 +21,7 @@
 <!-- Experience -->
 <div class="container">
   <h4 class="mono bold title">Experience</h4>
-  {{#each experience}}
+  {{#each experiences}}
     <div class="card">
       <h4 class="marg-bot-0">{{this.title}}, {{this.company}}</h4>
       <p class="mono gray-text subtitle">{{this.startDate}}-{{this.endDate}}</p>
@@ -55,4 +54,13 @@
 </div>
 
 <!-- Extracurriculars -->
-<!-- TODO -->
+<div class="container">
+  <h4 class="mono bold title">Extracurriculars</h4>
+  {{#each extracurriculars}}
+    <div class="card">
+      <h4 class="marg-bot-0">{{this.title}}</h4>
+      <p class="mono gray-text subtitle">{{this.startDate}}-{{this.endDate}}</p>
+      <p>{{this.description}}</p>
+    </div>
+  {{/each}}
+</div>

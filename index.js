@@ -6,7 +6,8 @@ const sassMiddleware = require('node-sass-middleware');
 
 // Import json
 const education = require('./src/json/education');
-const experience = require('./src/json/experience');
+const experiences = require('./src/json/experiences');
+const extracurriculars = require('./src/json/extracurriculars');
 
 // Configure the app to use express
 const app = express();
@@ -34,11 +35,13 @@ app.set('view engine', 'hbs');
 app.get('/', (req, res) => res.render('index', {
   title: 'Cameron Cabo',
   education,
-  experience,
+  experiences,
+  extracurriculars,
 }));
 
 // TODO other routes
 
+// Handle 404 error
 app.get('*', (req, res) => res.render('not-found', {
   title: 'Cameron Cabo',
 }));
