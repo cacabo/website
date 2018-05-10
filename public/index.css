@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html,
 body {
   background: #f2f2f4;
@@ -10,6 +11,13 @@ p,
 a {
   font-size: 1.2rem; }
 
+a {
+  color: #41597f; }
+  a:hover, a:focus, a:active {
+    color: #28364c; }
+  a:visited {
+    color: #41597f; }
+
 .marg-bot-0 {
   margin-bottom: 0; }
 
@@ -18,6 +26,19 @@ a {
 
 .gray-text {
   color: #848484; }
+
+.btn {
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem; }
+
+.btn-primary {
+  color: white !important;
+  background: #41597f !important;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+  .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background: #28364c !important; }
 
 .content {
   padding-bottom: 1rem; }
@@ -28,7 +49,8 @@ a {
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 0.2rem;
-    box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05); }
+    box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1); }
     .content .card .subtitle {
       margin-bottom: 0.5rem; }
 
@@ -52,6 +74,8 @@ a {
           color: #5b5b5b; }
           .app .nav .links a:hover, .app .nav .links a:active, .app .nav .links a:focus {
             color: #000000; }
+            .app .nav .links a:hover::after, .app .nav .links a:active::after, .app .nav .links a:focus::after {
+              content: " →"; }
     .app .content {
       padding-top: 1rem;
       margin-left: 16rem; } }

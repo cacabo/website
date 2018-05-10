@@ -15,6 +15,20 @@ a {
   font-size: 1.2rem;
 }
 
+a {
+  color: $slate;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-slate;
+  }
+
+  &:visited {
+    color: $slate;
+  }
+}
+
 .marg-bot-0 {
   margin-bottom: 0;
 }
@@ -27,7 +41,28 @@ a {
   color: $gray;
 }
 
+.btn {
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem $shadow;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  color: white !important;
+  background: $slate !important;
+  border: 1px solid $border;
+
+  &:hover,
+  &:active,
+  &:focus, {
+    background: $dark-slate !important;
+  }
+}
+
 .content {
+  padding-bottom: 1rem;
+
   .title {
     margin-top: 1rem;
   }
@@ -38,13 +73,12 @@ a {
     margin-bottom: 1rem;
     border-radius: 0.2rem;
     box-shadow: 0rem 0.2rem 0.4rem $shadow;
+    border: 1px solid $border;
 
     .subtitle {
       margin-bottom: 0.5rem;
     }
   }
-
-  padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 848px) {
@@ -73,6 +107,10 @@ a {
           &:active,
           &:focus {
             color: $black;
+
+            &::after {
+              content: " →",
+            }
           }
         }
       }

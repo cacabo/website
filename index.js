@@ -37,5 +37,11 @@ app.get('/', (req, res) => res.render('index', {
   experience,
 }));
 
+// TODO other routes
+
+app.get('*', (req, res) => res.render('not-found', {
+  title: 'Cameron Cabo',
+}));
+
 // Render the app
 app.listen(3000, () => console.log('App listening on port 3000!'));
