@@ -1,0 +1,14 @@
+{
+  "name": "Website",
+  "version": "1.0.0",
+  "description": "Personal website for Cameron Cabo",
+  "main": "index.js",
+  "repository": "https://github.com/ccabo1/website",
+  "author": "Cameron Cabo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11"
+  }
+}
