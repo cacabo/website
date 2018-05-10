@@ -4,6 +4,10 @@ const path = require('path');
 const hbs = require('express-handlebars');
 const sassMiddleware = require('node-sass-middleware');
 
+// Import json
+const education = require('./src/json/education');
+const experience = require('./src/json/experience');
+
 // Configure the app to use express
 const app = express();
 
@@ -27,7 +31,11 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'hbs');
 
 // Base URL
-app.get('/', (req, res) => res.render('index', {title: 'Cameron Cabo'}));
+app.get('/', (req, res) => res.render('index', {
+  title: 'Cameron Cabo',
+  education,
+  experience,
+}));
 
 // Render the app
 app.listen(3000, () => console.log('App listening on port 3000!'));

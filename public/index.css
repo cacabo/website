@@ -6,19 +6,38 @@ body {
 .mono {
   font-family: 'Inconsolata', monospace; }
 
-.content .card {
-  background: white;
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.2rem;
-  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05); }
+p,
+a {
+  font-size: 1.2rem; }
+
+.marg-bot-0 {
+  margin-bottom: 0; }
+
+.bold {
+  font-weight: bold; }
+
+.gray-text {
+  color: #848484; }
+
+.content {
+  padding-bottom: 1rem; }
+  .content .title {
+    margin-top: 1rem; }
+  .content .card {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05); }
+    .content .card .subtitle {
+      margin-bottom: 0.5rem; }
 
 @media screen and (min-width: 848px) {
   .app {
     display: block;
     width: 100%; }
     .app .nav {
-      width: 25vw;
+      width: 16rem;
       padding: 1rem;
       position: fixed; }
       .app .nav .links {
@@ -35,4 +54,4 @@ body {
             color: #000000; }
     .app .content {
       padding-top: 1rem;
-      margin-left: 25vw; } }
+      margin-left: 16rem; } }

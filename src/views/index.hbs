@@ -1,7 +1,58 @@
+<!-- Overview -->
 <div class="container">
   <div class="card">
-    <h2>Hi! I'm Cameron</h2>
-    <p>I'm a driven learner, freelance web developer, and product builder— passionate for entrepreneurship, user experience, analytics, and marketing.</p>
+    <h2>Hi, I'm Cameron</h2>
+    <p>I'm a driven learner, freelance web developer, and product builder. I'm passionate for entrepreneurship, user experience, analytics, and marketing.</p>
     <p>I study computer science and management of entrepreneurship in the Jerome Fisher Program in Management and Technology at the University of Pennsylvania.</p>
   </div>
 </div>
+
+<!-- Education -->
+<div class="container">
+  <h4 class="mono bold title">Education</h4>
+  {{#each education}}
+    <div class="card">
+      <h4 class="marg-bot-0">{{this.title}}</h4>
+      <p class="mono gray-text subtitle">{{this.startYear}}-{{this.endYear}} / {{this.gpa}} GPA</p>
+      <p>{{this.description}}</p>
+    </div>
+  {{/each}}
+</div>
+
+<!-- Experience -->
+<div class="container">
+  <h4 class="mono bold title">Experience</h4>
+  {{#each experience}}
+    <div class="card">
+      <h4 class="marg-bot-0">{{this.title}}, {{this.company}}</h4>
+      <p class="mono gray-text subtitle">{{this.startDate}}-{{this.endDate}}</p>
+      <p>{{this.description}}</p>
+    </div>
+  {{/each}}
+</div>
+
+<!-- Technologies -->
+<div class="container">
+  <h4 class="mono bold title">Technologies</h4>
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="card">
+        <h4>General Purpose</h4>
+        <p>
+          JavaScript, Java, Ruby, Hadoop/Map Reduce, React Native, Android, SQL.
+        </p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div class="card">
+        <h4>Web Development</h4>
+        <p>
+          HTML/CSS, React/Redux, Node/Express, Ruby on Rails, AWS, Postgres, MongoDB.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Extracurriculars -->
+<!-- TODO -->
