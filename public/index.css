@@ -1,0 +1,38 @@
+html,
+body {
+  background: #f2f2f4;
+  font-family: 'Roboto', sans-serif; }
+
+.mono {
+  font-family: 'Inconsolata', monospace; }
+
+.content .card {
+  background: white;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05); }
+
+@media screen and (min-width: 848px) {
+  .app {
+    display: block;
+    width: 100%; }
+    .app .nav {
+      width: 25vw;
+      padding: 1rem;
+      position: fixed; }
+      .app .nav .links {
+        display: block;
+        width: 100%; }
+        .app .nav .links a {
+          display: block;
+          float: left;
+          clear: left;
+          text-decoration: none;
+          margin-bottom: 0.5rem;
+          color: #5b5b5b; }
+          .app .nav .links a:hover, .app .nav .links a:active, .app .nav .links a:focus {
+            color: #000000; }
+    .app .content {
+      padding-top: 1rem;
+      margin-left: 25vw; } }

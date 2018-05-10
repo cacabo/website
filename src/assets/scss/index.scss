@@ -1,3 +1,63 @@
+@import './colors';
+
+html,
 body {
-  color: black;
+  background: $light-gray;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mono {
+  font-family: 'Inconsolata', monospace;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.content {
+  .card {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0.2rem 0.4rem $shadow;
+  }
+}
+
+@media screen and (min-width: 848px) {
+  .app {
+    display: block;
+    width: 100%;
+
+    .nav {
+      width: 25vw;
+      padding: 1rem;
+      position: fixed;
+
+      .links {
+        display: block;
+        width: 100%;
+
+        a {
+          display: block;
+          float: left;
+          clear: left;
+          text-decoration: none;
+          margin-bottom: 0.5rem;
+          color: $dark-gray;
+
+          &:hover,
+          &:active,
+          &:focus {
+            color: $black;
+          }
+        }
+      }
+    }
+
+    .content {
+      padding-top: 1rem;
+      margin-left: 25vw;
+    }
+  }
 }

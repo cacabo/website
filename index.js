@@ -27,7 +27,7 @@ app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'hbs');
 
 // Base URL
-app.get('/', (req, res) => res.render('index', {title: 'Cool, huh!'}));
+app.get('/', (req, res) => res.render('index', {title: 'Cameron Cabo'}));
 
 // Render the app
 app.listen(3000, () => console.log('App listening on port 3000!'));
