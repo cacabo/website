@@ -1,7 +1,9 @@
 @charset "UTF-8";
-html,
-body {
-  background: #f2f2f4;
+/**
+ * Styling for text and fonts
+ */
+body,
+html {
   font-family: 'Roboto', sans-serif; }
 
 .mono {
@@ -18,24 +20,15 @@ a {
   a:visited {
     color: #41597f; }
 
-.marg-bot-0 {
-  margin-bottom: 0; }
-
-.marg-bot-05 {
-  margin-bottom: 0.5rem; }
-
-.marg-bot-1 {
-  margin-bottom: 1rem; }
-
-.marg-bot-2 {
-  margin-bottom: 2rem; }
+.gray-text {
+  color: #848484; }
 
 .bold {
   font-weight: bold; }
 
-.gray-text {
-  color: #848484; }
-
+/**
+ * Styling buttons used on the site
+ */
 .btn {
   border-radius: 0.2rem;
   box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
@@ -49,6 +42,25 @@ a {
     border: 1px solid rgba(0, 0, 0, 0.1) !important; }
     .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
       background: #28364c !important; }
+
+/**
+ * Modular classes for spacing elements out
+ */
+.marg-bot-0 {
+  margin-bottom: 0; }
+
+.marg-bot-05 {
+  margin-bottom: 0.5rem; }
+
+.marg-bot-1 {
+  margin-bottom: 1rem; }
+
+.marg-bot-2 {
+  margin-bottom: 2rem; }
+
+html,
+body {
+  background: #f2f2f4; }
 
 .content {
   padding-bottom: 1rem; }

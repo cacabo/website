@@ -1,0 +1,25 @@
+/**
+ * Styling buttons used on the site
+ */
+.btn {
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem $shadow;
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem;
+
+  &:hover {
+    box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
+  }
+
+  &.btn-primary {
+    color: white !important;
+    background: $slate !important;
+    border: 1px solid $border !important;
+
+    &:hover,
+    &:active,
+    &:focus, {
+      background: $dark-slate !important;
+    }
+  }
+}

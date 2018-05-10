@@ -1,0 +1,38 @@
+/**
+ * Styling for text and fonts
+ */
+body,
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+.mono {
+  font-family: 'Inconsolata', monospace;
+}
+
+p,
+a {
+  font-size: 1.2rem;
+}
+
+a {
+  color: $slate;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-slate;
+  }
+
+  &:visited {
+    color: $slate;
+  }
+}
+
+.gray-text {
+  color: $gray;
+}
+
+.bold {
+  font-weight: bold;
+}
