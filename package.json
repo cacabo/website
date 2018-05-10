@@ -11,6 +11,12 @@
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
     "node-sass": "^4.9.0",
-    "node-sass-middleware": "^0.11.0"
+    "node-sass-middleware": "^0.11.0",
+    "nodemon": "^1.17.4"
+  },
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "node index.js",
+    "test": "node index.js --env=jsdom"
   }
 }

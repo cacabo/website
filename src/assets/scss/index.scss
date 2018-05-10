@@ -33,6 +33,14 @@ a {
   margin-bottom: 0;
 }
 
+.marg-bot-1 {
+  margin-bottom: 1rem;
+}
+
+.marg-bot-2 {
+  margin-bottom: 2rem;
+}
+
 .bold {
   font-weight: bold;
 }
@@ -46,26 +54,26 @@ a {
   box-shadow: 0rem 0.2rem 0.4rem $shadow;
   font-family: 'Inconsolata', monospace;
   font-size: 1.2rem;
-}
 
-.btn-primary {
-  color: white !important;
-  background: $slate !important;
-  border: 1px solid $border;
+  &:hover {
+    box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
+  }
 
-  &:hover,
-  &:active,
-  &:focus, {
-    background: $dark-slate !important;
+  &.btn-primary {
+    color: white !important;
+    background: $slate !important;
+    border: 1px solid $border !important;
+
+    &:hover,
+    &:active,
+    &:focus, {
+      background: $dark-slate !important;
+    }
   }
 }
 
 .content {
   padding-bottom: 1rem;
-
-  .title {
-    margin-top: 1rem;
-  }
 
   .card {
     background: white;

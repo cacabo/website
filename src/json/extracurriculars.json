@@ -1,9 +1,23 @@
 [
   {
-    "title": "Software Engineering Intern",
-    "organization": "PayPal",
-    "startDate": "May 2018",
-    "endDate": "August 2018",
-    "description": "Working to reduce user churn and optimize payments. Creating new features in full-stack JavaScript."
+    "title": "Web Developer",
+    "organization": "Penn Labs",
+    "startDate": "September 2017",
+    "endDate": "Present",
+    "description": "Penn Labs is a University-sponsored group of developers, designers, and intrapreneurs who make software products for students at Penn to make information and resources more accessible. I'm currently building PennBasics, a centralized source of information with React, Express, and Node."
+  },
+  {
+    "title": "VP Marketing, Webmaster",
+    "organization": "YouthHack",
+    "startDate": "August 2016",
+    "endDate": "Present",
+    "description": "YouthHack is an international organization dedicated to building student entrepreneurs. I lead the Core Team in all marketing initiatives for YouthHack events, partnerships, and programs. I also consult our student-run ventures within the Ventures Accelerator program."
+  },
+  {
+    "title": "Project Consultant",
+    "organization": "MUSE",
+    "startDate": "August 2016",
+    "endDate": "December 2017",
+    "description": "MUSE, or the Marketing Undergraduate Student Establishment, is a club at Wharton dedicated to marketing-oriented event planning and consulting. Through MUSE, I developed go-to-market strategies, market research, and brand positioning for our clients."
   }
 ]
