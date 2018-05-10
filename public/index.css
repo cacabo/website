@@ -21,6 +21,9 @@ a {
 .marg-bot-0 {
   margin-bottom: 0; }
 
+.marg-bot-05 {
+  margin-bottom: 0.5rem; }
+
 .marg-bot-1 {
   margin-bottom: 1rem; }
 
@@ -69,6 +72,9 @@ a {
       width: 16rem;
       padding: 1rem;
       position: fixed; }
+      .app .nav .logo {
+        max-height: 5rem;
+        margin-bottom: 1rem; }
       .app .nav .links {
         display: block;
         width: 100%; }
@@ -83,6 +89,15 @@ a {
             color: #000000; }
             .app .nav .links a:hover::after, .app .nav .links a:active::after, .app .nav .links a:focus::after {
               content: " →"; }
+      .app .nav .social {
+        margin-bottom: 1rem; }
+        .app .nav .social a {
+          text-decoration: none !important;
+          opacity: 0.8; }
+          .app .nav .social a .fa {
+            margin-right: 0.25rem; }
+          .app .nav .social a:hover {
+            opacity: 1; }
     .app .content {
       padding-top: 1rem;
       margin-left: 16rem; } }
