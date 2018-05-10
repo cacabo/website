@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
+const sassMiddleware = require('node-sass-middleware');
 
 // Configure the app to use express
 const app = express();
@@ -10,11 +11,19 @@ const app = express();
 app.engine('hbs', hbs({
   extname: 'hbs',
   defaultLayout: 'layout',
-  layoutsDir: `${__dirname}/views/layouts/`,
+  layoutsDir: `${__dirname}/src/views/layouts/`,
 }));
 
+app.use(sassMiddleware({
+  src: __dirname + '/src/assets/scss',
+  dest: __dirname + '/public',
+  debug: true,
+}));
+
+app.use(express.static(path.join( __dirname, 'public')));
+
 // Set the views path
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'hbs');
 
 // Base URL
