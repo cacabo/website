@@ -8,14 +8,54 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 const education = require('./src/json/education');
 const experiences = require('./src/json/experiences');
 const extracurriculars = require('./src/json/extracurriculars');
+const posts = require('./src/json/posts');
 
-// Base URL
-router.get('/', (req, res) => res.render('index', {
+// Homepage
+router.get('/', (req, res) => res.render('home', {
   title: 'Cameron Cabo',
   education,
   experiences,
   extracurriculars,
 }));
+
+// Listing all posts
+router.get('/posts', (req, res) => res.render('posts', {
+  title: 'Cameron Cabo | Posts',
+  posts,
+}));
+
+// Rendering a specific post
+router.get('/posts/:slug', (req, res) => {
+  // Isolate the slug from the URL
+  const slug = req.params.slug;
+
+  // Find posts with the same slug, if there are any
+  const filteredPosts = posts.filter(post => post.slug === slug);
+  if (filteredPosts && filteredPosts.length) {
+    const post = filteredPosts[0];
+    const {
+      title,
+      subtitle,
+      image,
+      updatedAt,
+      createdAt,
+      body,
+    } = post;
+    res.render('post', {
+      title,
+      subtitle,
+      image,
+      createdAt,
+      updatedAt,
+      body,
+    });
+  } else {
+    // Else, the slug was not matched, render the not found route
+    res.render('not-found', {
+      title: 'Cameron Cabo | Not Found',
+    });
+  }
+});
 
 // Handle sending an email through the contact form
 router.post('/contact', (req, res) => {
@@ -76,7 +116,7 @@ router.post('/contact', (req, res) => {
 
 // Handle 404 error
 router.get('*', (req, res) => res.render('not-found', {
-  title: 'Cameron Cabo',
+  title: 'Cameron Cabo | Not Found',
 }));
 
 // Export the router

@@ -1,0 +1,28 @@
+<div class="container">
+  <h4 class="mono bold">
+    Posts
+  </h4>
+  <div class="card-columns">
+    {{#each posts}}
+      {{#if this.image}}
+        <a href="/posts/{{this.slug}}" class="card has-img">
+          <img src={{this.image}} alt={{this.title}} class="img-fluid card-img"></img>
+          <div class="body">
+            <h4>{{this.title}}</h4>
+            <p class="serif">{{this.subtitle}}</p>
+          </div>
+        </a>
+      {{else}}
+        <a href="/posts/{{this.slug}}" class="card">
+          <div class="body">
+            <h4>{{this.title}}</h4>
+            <p class="serif">{{this.subtitle}}</p>
+          </div>
+        </a>
+      {{/if}}
+    {{/each}}
+  </div>
+  <a href="/" class="btn btn-primary marg-bot-1">
+    ← Back to home
+  </a>
+</div>

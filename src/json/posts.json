@@ -1,0 +1,19 @@
+[
+  {
+    "createdAt": 1526074253432,
+    "updatedAt": 1526074253432,
+    "title": "The art of leg breaking—dealing with expected and unexpected change",
+    "slug": "slug",
+    "subtitle": "Subtitle",
+    "image": "https://www.labradortraininghq.com/wp-content/uploads/2014/02/how-to-crate-train-a-puppy-happy-lab-1.jpg",
+    "body": "<h1>This is the body</h1><br /> woohoo!"
+  },
+  {
+    "createdAt": 1526074253432,
+    "updatedAt": 1526074253432,
+    "title": "The art of leg breaking—dealing with expected and unexpected change",
+    "slug": "slug",
+    "subtitle": "Subtitle",
+    "body": "<h1>This is the body</h1><br /> woohoo!"
+  }
+]

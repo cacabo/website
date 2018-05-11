@@ -7,7 +7,10 @@ html {
   font-family: 'Roboto', sans-serif; }
 
 .mono {
-  font-family: 'Inconsolata', monospace; }
+  font-family: 'Roboto Mono', monospace; }
+
+.serif {
+  font-family: 'Libre Baskerville', Georgia, serif; }
 
 p,
 a {
@@ -236,6 +239,18 @@ a {
   .app .content {
     margin-left: 16rem; } }
 
+@media screen and (max-width: 594px) {
+  .card-columns {
+    column-count: 1; } }
+
+@media screen and (min-width: 594px) and (max-width: 1024px) {
+  .card-columns {
+    column-count: 2; } }
+
+@media screen and (min-width: 1024px) {
+  .card-columns {
+    column-count: 3; } }
+
 html,
 body {
   background: #f2f2f4; }
@@ -253,3 +268,12 @@ body {
       margin-bottom: 0.5rem; }
     .content .card p:last-child {
       margin-bottom: 0rem; }
+    .content .card.has-img {
+      padding: 0; }
+      .content .card.has-img .card-img {
+        border-radius: 0.2rem 0.2rem 0rem 0rem; }
+      .content .card.has-img .body {
+        padding: 1rem; }
+  .content a.card {
+    text-decoration: none !important;
+    color: black !important; }

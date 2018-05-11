@@ -5,6 +5,7 @@
 @import './spacing';
 @import './contact';
 @import './nav';
+@import './columns';
 
 html,
 body {
@@ -29,5 +30,22 @@ body {
     p:last-child {
       margin-bottom: 0rem;
     }
+
+    &.has-img {
+      padding: 0;
+
+      .card-img {
+        border-radius: 0.2rem 0.2rem 0rem 0rem;
+      }
+
+      .body {
+        padding: 1rem;
+      }
+    }
+  }
+
+  a.card {
+    text-decoration: none !important;
+    color: black !important;
   }
 }

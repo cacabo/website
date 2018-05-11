@@ -9,8 +9,9 @@ Personal website developed in Node with Handlebars.
 - [ ] Freelancing info
 - [ ] Posts
 - [ ] Art/Design
-- [ ] Mobile responsive nav
+- [x] Mobile responsive nav
 - [ ] Page background styling
 - [x] Add linter
 - [x] Contact form frontend
 - [x] Contact form functionality
+- [ ] Replace icons
