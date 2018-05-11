@@ -2,6 +2,7 @@
 function updateClasses() {
   $('#toggle').toggleClass('active');
   $('#menu').toggleClass('active');
+  $('#overview').toggleClass('active');
 }
 function handleToggle() {
   $('#toggle').click(updateClasses);

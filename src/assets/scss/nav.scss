@@ -59,6 +59,12 @@
     display: none;
   }
 
+  .nav-space {
+    width: 100%;
+    display: block;
+    height: 3rem;
+  }
+
   .nav {
     width: 100%;
     box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
@@ -140,7 +146,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      padding: 0.5rem 1rem 0.5rem 1rem;
+      padding: 1rem 1rem 0.5rem 1rem;
       box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
       overflow: hidden;
       transition: all 0.2s ease;
