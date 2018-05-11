@@ -6,6 +6,7 @@
 @import './contact';
 @import './nav';
 @import './columns';
+@import './posts';
 
 html,
 body {
@@ -13,7 +14,7 @@ body {
 }
 
 .content {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 
   .card {
     background: white;
@@ -37,8 +38,6 @@ body {
       .card-img {
         border-radius: 0.2rem 0.2rem 0rem 0rem;
         width: 100%;
-        max-height: 80vh;
-        overflow: hidden;
       }
 
       .body {

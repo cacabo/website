@@ -11,7 +11,7 @@ html {
 }
 
 .serif {
-  font-family: 'Libre Baskerville', Georgia, serif;
+  font-family: 'PT Serif', Georgia, serif;
 }
 
 p,
@@ -36,7 +36,7 @@ a {
 }
 
 .gray-text {
-  color: $gray;
+  color: $gray !important;
 }
 
 .bold {

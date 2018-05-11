@@ -10,7 +10,7 @@ html {
   font-family: 'Roboto Mono', monospace; }
 
 .serif {
-  font-family: 'Libre Baskerville', Georgia, serif; }
+  font-family: 'PT Serif', Georgia, serif; }
 
 p,
 a {
@@ -26,7 +26,7 @@ a {
     color: #41597f; }
 
 .gray-text {
-  color: #848484; }
+  color: #848484 !important; }
 
 .bold {
   font-weight: bold; }
@@ -237,7 +237,8 @@ a {
     .app .nav .social {
       margin-bottom: 1rem; }
   .app .content {
-    margin-left: 16rem; } }
+    margin-left: 16rem;
+    margin-right: 1rem; } }
 
 @media screen and (max-width: 594px) {
   .card-columns {
@@ -251,12 +252,29 @@ a {
   .card-columns {
     column-count: 3; } }
 
+.caption {
+  color: #848484;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem; }
+
+.underline {
+  text-decoration: underline; }
+
+.bold {
+  font-weight: bold; }
+
+.italics {
+  font-style: italic; }
+
 html,
 body {
   background: #f2f2f4; }
 
 .content {
-  padding-bottom: 1rem; }
+  padding-bottom: 2rem; }
   .content .card {
     background: white;
     padding: 1rem;
@@ -272,9 +290,7 @@ body {
       padding: 0; }
       .content .card.has-img .card-img {
         border-radius: 0.2rem 0.2rem 0rem 0rem;
-        width: 100%;
-        max-height: 80vh;
-        overflow: hidden; }
+        width: 100%; }
       .content .card.has-img .body {
         padding: 1rem; }
   .content a.card {

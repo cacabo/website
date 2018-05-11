@@ -48,6 +48,7 @@ router.get('/posts/:slug', (req, res) => {
       createdAt,
       updatedAt,
       body,
+      slug,
     });
   } else {
     // Else, the slug was not matched, render the not found route

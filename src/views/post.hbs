@@ -2,13 +2,14 @@
   <div class="card{{#if image}} has-img{{/if}}">
     <div class="body">
       <h1>{{title}}</h1>
-      {{#if subtitle}}<h3 class="serif">{{subtitle}}</h3>{{/if}}
+      {{#if subtitle}}<h3 class="serif gray-text">{{subtitle}}</h3>{{/if}}
     </div>
     {{#if image}}
       <img src={{image}} class="img-fluid"></img>
     {{/if}}
     <div class="body serif">
-      {{{body}}}
+      <!-- Lookup the partial indexed by the post slug -->
+      {{> (lookup . 'slug')}}
     </div>
   </div>
 
