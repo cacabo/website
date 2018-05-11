@@ -71,7 +71,12 @@ a {
   border-width: 2px;
   font-size: 16px;
   font-family: 'Roboto' sans-serif;
-  padding: 0.75rem; }
+  padding: 0.75rem;
+  border: 2px solid rgba(0, 0, 0, 0.1); }
+  #contactModal .form-control:hover {
+    border: 2px solid rgba(0, 0, 0, 0.15); }
+  #contactModal .form-control:focus, #contactModal .form-control:active {
+    border: 2px solid #41597f; }
 
 #contactModal textarea.form-control {
   margin-bottom: 0; }

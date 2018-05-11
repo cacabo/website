@@ -12,3 +12,4 @@ Personal website developed in Node with Handlebars.
 - [ ] Posts
 - [ ] Art/Design
 - [ ] Mobile responsive nav
+- [ ] Page background styling
