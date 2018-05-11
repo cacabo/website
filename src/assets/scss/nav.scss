@@ -67,7 +67,7 @@
 
   .nav {
     width: 100%;
-    box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
+    box-shadow: 0rem 0.1rem 0.1rem $dark-shadow;
     position: fixed;
     z-index: 1;
 
@@ -78,16 +78,16 @@
       padding: 0.5rem 1rem;
       background: white;
       border-bottom: 1px solid $border;
+      transition: all 0.2s ease;
 
       .logo {
         height: 2rem;
         margin-right: 0.75rem;
       }
 
-      .title {
-        display: inline-block;
-        margin-bottom: 0;
-        transform: translateY(0.25rem);
+      &.active {
+        background: $slate;
+        border-bottom: 1px solid $light-border;
       }
     }
 
@@ -124,6 +124,18 @@
       }
 
       &.active {
+        span {
+          background: $light-blue;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          span {
+            background: $white;
+          }
+        }
+
         #first {
           transform: translateY(11px) translateX(0.2rem) rotate(135deg);
         }
@@ -147,7 +159,6 @@
       left: 0;
       top: 0;
       padding: 1rem 1rem 0.5rem 1rem;
-      box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
       overflow: hidden;
       transition: all 0.2s ease;
       height: 0;
@@ -155,6 +166,34 @@
 
       &.active {
         height: 100vh;
+        background: $slate;
+      }
+
+      .social a,
+      .links a {
+        color: $light-blue !important;
+
+        &:hover {
+          color: $white !important;
+        }
+      }
+    }
+
+    .social {
+      margin-bottom: 1rem;
+
+      a {
+        .fa {
+          font-size: 1.4rem;
+          margin-right: 2.5%;
+        }
+      }
+    }
+
+    .links {
+      a {
+        margin-bottom: 3%;
+        font-size: 1.4rem;
       }
     }
   }

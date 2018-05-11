@@ -133,7 +133,7 @@ a {
     height: 3rem; }
   .nav {
     width: 100%;
-    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0rem 0.1rem 0.1rem rgba(0, 0, 0, 0.1);
     position: fixed;
     z-index: 1; }
     .nav #overview {
@@ -142,14 +142,14 @@ a {
       z-index: 2;
       padding: 0.5rem 1rem;
       background: white;
-      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      transition: all 0.2s ease; }
       .nav #overview .logo {
         height: 2rem;
         margin-right: 0.75rem; }
-      .nav #overview .title {
-        display: inline-block;
-        margin-bottom: 0;
-        transform: translateY(0.25rem); }
+      .nav #overview.active {
+        background: #41597f;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
     .nav #toggle {
       width: auto;
       width: 2rem;
@@ -170,6 +170,10 @@ a {
         transition: all 0.2s ease; }
       .nav #toggle span + span {
         margin-top: 0.5rem; }
+      .nav #toggle.active span {
+        background: #c3d0e5; }
+      .nav #toggle.active:hover span, .nav #toggle.active:focus span, .nav #toggle.active:active span {
+        background: #ffffff; }
       .nav #toggle.active #first {
         transform: translateY(11px) translateX(0.2rem) rotate(135deg); }
       .nav #toggle.active #second {
@@ -185,13 +189,27 @@ a {
       left: 0;
       top: 0;
       padding: 1rem 1rem 0.5rem 1rem;
-      box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: all 0.2s ease;
       height: 0;
       z-index: 1; }
       .nav #menu.active {
-        height: 100vh; } }
+        height: 100vh;
+        background: #41597f; }
+      .nav #menu .social a,
+      .nav #menu .links a {
+        color: #c3d0e5 !important; }
+        .nav #menu .social a:hover,
+        .nav #menu .links a:hover {
+          color: #ffffff !important; }
+    .nav .social {
+      margin-bottom: 1rem; }
+      .nav .social a .fa {
+        font-size: 1.4rem;
+        margin-right: 2.5%; }
+    .nav .links a {
+      margin-bottom: 3%;
+      font-size: 1.4rem; } }
 
 @media screen and (min-width: 848px) {
   .hidden-on-desktop {
