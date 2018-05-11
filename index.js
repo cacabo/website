@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const hbs = require('express-handlebars');
 const sassMiddleware = require('node-sass-middleware');
+const bodyParser = require('body-parser');
 
 // Import routes
 const api = require('./routes');
@@ -24,6 +25,11 @@ app.use(sassMiddleware({
   debug: true,
 }));
 
+// Leverage JSON body parser
+// app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+
+// Serve assets via the public directory
 app.use(express.static(path.join( __dirname, 'public')));
 
 // Set the views path

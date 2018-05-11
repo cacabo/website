@@ -63,6 +63,9 @@ a {
 /**
  * Styling the contact modal and form
  */
+#contactModal .alert {
+  border-width: 2px; }
+
 #contactModal .modal-content {
   border-radius: 0.2rem; }
 

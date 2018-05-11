@@ -9,6 +9,7 @@
   "dependencies": {
     "@sendgrid/mail": "^6.2.1",
     "babel-eslint": "^8.2.3",
+    "body-parser": "^1.18.2",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.11",
