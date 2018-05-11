@@ -271,7 +271,10 @@ body {
     .content .card.has-img {
       padding: 0; }
       .content .card.has-img .card-img {
-        border-radius: 0.2rem 0.2rem 0rem 0rem; }
+        border-radius: 0.2rem 0.2rem 0rem 0rem;
+        width: 100%;
+        max-height: 80vh;
+        overflow: hidden; }
       .content .card.has-img .body {
         padding: 1rem; }
   .content a.card {
