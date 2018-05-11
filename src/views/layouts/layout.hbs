@@ -24,7 +24,9 @@
     <title>{{ title }}</title>
   </head>
   <body>
+    <!-- Wrapper div for the application -->
     <div class="app">
+      <!-- Navigation -->
       <div class="nav">
         <img src="/img/logo-01.svg" class="img-fluid logo" alt="logo" />
         <h4 class="bold">Cameron Cabo</h4>
@@ -56,11 +58,52 @@
           <a href="/projects">Projects</a>
           <a href="/posts">Posts</a>
           <a href="/art-design">Art/Design</a>
-          <a href="/contact">Contact</a>
+          <a href="/freelancing">Freelancing</a>
+          <a data-toggle="modal" data-target="#contactModal">
+            Contact
+          </a>
         </div>
       </div>
+
+      <!-- App content -->
       <div class="content">
         {{{ body }}}
+      </div>
+
+      <!-- Contact form -->
+      <div class="modal fade" tabindex="-1" role="contact" id="contactModal" aria-labelledby="contactModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Contact me</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <input type="text" name="firstName" class="form-control" placeholder="First" required="true"></input>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <input type="text" name="lastName" class="form-control" placeholder="Last" required="true"></input>
+                  </div>
+                </div>
+                <input type="email" name="email" class="form-control" placeholder="example@gmail.com" required="true"></input>
+                <textarea type="text" name="body" class="form-control" placeholder="Your message..." required="true"></textarea>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary">
+                Send
+              </button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
