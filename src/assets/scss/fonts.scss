@@ -16,14 +16,14 @@ a {
 }
 
 a {
-  color: $slate;
+  color: $blue !important;
   cursor: hand;
   cursor: pointer;
 
   &:hover,
   &:focus,
   &:active {
-    color: $dark-slate;
+    color: darken($blue, 10%) !important;
   }
 
   &:visited {

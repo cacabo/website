@@ -7,10 +7,10 @@ Personal website developed in Node with Handlebars.
 - [ ] Add meta tags
 - [ ] Projects
 - [ ] Freelancing info
-- [ ] Contact form frontend
-- [ ] Contact form functionality
 - [ ] Posts
 - [ ] Art/Design
 - [ ] Mobile responsive nav
 - [ ] Page background styling
-- [ ] Add linter
+- [x] Add linter
+- [x] Contact form frontend
+- [x] Contact form functionality

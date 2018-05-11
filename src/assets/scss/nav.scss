@@ -1,0 +1,196 @@
+/**
+ * Styling for the navigation of the app
+ * On mobile and smaller screens, this is at the top
+ * On larger screens, this is on the left
+ */
+.app {
+  display: block;
+  width: 100%;
+
+  .content {
+    padding-top: 1rem;
+  }
+
+  .social {
+    margin-bottom: 0.5rem;
+    width: 100%;
+
+    a {
+      text-decoration: none !important;
+      color: $dark-gray !important;
+
+      .fa {
+        margin-right: 0.25rem;
+      }
+
+      &:hover {
+        color: black !important;
+      }
+    }
+  }
+
+  .links {
+    display: block;
+    width: 100%;
+
+    a {
+      color: $dark-gray !important;
+      text-decoration: none;
+      display: block;
+      float: left;
+      clear: left;
+      margin-bottom: 0.5rem;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $black !important;
+
+        &::after {
+          content: " →",
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 847.9px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+
+  .nav {
+    width: 100%;
+    box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
+    position: fixed;
+    z-index: 1;
+
+    #overview {
+      width: 100%;
+      display: block;
+      z-index: 2;
+      padding: 0.5rem 1rem;
+      background: white;
+      border-bottom: 1px solid $border;
+
+      .logo {
+        height: 2rem;
+        margin-right: 0.75rem;
+      }
+
+      .title {
+        display: inline-block;
+        margin-bottom: 0;
+        transform: translateY(0.25rem);
+      }
+    }
+
+    #toggle {
+      width: auto;
+      width: 2rem;
+      cursor: hand;
+      cursor: pointer;
+      position: absolute;
+      right: 1rem;
+      margin-top: 0.2rem;
+      z-index: 1001;
+      top: 0.5rem;
+
+      &:hover,
+      &:focus,
+      &:active {
+        span {
+          background: $dark-gray;
+        }
+      }
+
+      span {
+        width: 100%;
+        background: $gray;
+        height: 3px;
+        display: block;
+        transition: all 0.2s ease;
+      }
+
+      // Apply a margin top to all bars except the first one
+      span + span {
+        margin-top: 0.5rem;
+      }
+
+      &.active {
+        #first {
+          transform: translateY(11px) translateX(0.2rem) rotate(135deg);
+        }
+
+        #second {
+          transform: rotate(-135deg) translateX(-0.14142rem) translateY(0.14142rem);
+        }
+
+        #third {
+          transform: translateY(-11px) translateX(0.2rem) rotate(135deg);
+        }
+      }
+    }
+
+    #menu {
+      background: white;
+      width: 100%;
+      width: 100%;
+      border-bottom: 1px solid $border;
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
+      overflow: hidden;
+      transition: all 0.2s ease;
+      height: 0;
+      z-index: 1;
+
+      &.active {
+        height: 100vh;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 848px) {
+  .hidden-on-desktop {
+    display: none;
+  }
+
+  .app {
+    .nav {
+      width: 16rem;
+      padding: 1rem;
+      position: fixed;
+      background: none;
+      box-shadow: none;
+
+      #toggle {
+        display: none;
+      }
+
+      .logo {
+        display: block;
+        height: 5rem;
+        margin-bottom: 1rem;
+      }
+
+      .title {
+        height: auto;
+        display: block;
+        width: 100%;
+        line-height: 1;
+      }
+
+      .social {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .content {
+      margin-left: 16rem;
+    }
+  }
+}

@@ -14,11 +14,11 @@ a {
   font-size: 1.2rem; }
 
 a {
-  color: #41597f;
+  color: #3e64a0 !important;
   cursor: hand;
   cursor: pointer; }
   a:hover, a:focus, a:active {
-    color: #28364c; }
+    color: #304d7b !important; }
   a:visited {
     color: #41597f; }
 
@@ -60,6 +60,11 @@ a {
 .marg-bot-2 {
   margin-bottom: 2rem; }
 
+.space-3 {
+  width: 100%;
+  height: 3rem;
+  display: block; }
+
 /**
  * Styling the contact modal and form
  */
@@ -84,6 +89,131 @@ a {
 #contactModal textarea.form-control {
   margin-bottom: 0; }
 
+/**
+ * Styling for the navigation of the app
+ * On mobile and smaller screens, this is at the top
+ * On larger screens, this is on the left
+ */
+.app {
+  display: block;
+  width: 100%; }
+  .app .content {
+    padding-top: 1rem; }
+  .app .social {
+    margin-bottom: 0.5rem;
+    width: 100%; }
+    .app .social a {
+      text-decoration: none !important;
+      color: #5b5b5b !important; }
+      .app .social a .fa {
+        margin-right: 0.25rem; }
+      .app .social a:hover {
+        color: black !important; }
+  .app .links {
+    display: block;
+    width: 100%; }
+    .app .links a {
+      color: #5b5b5b !important;
+      text-decoration: none;
+      display: block;
+      float: left;
+      clear: left;
+      margin-bottom: 0.5rem; }
+      .app .links a:hover, .app .links a:active, .app .links a:focus {
+        color: #000000 !important; }
+        .app .links a:hover::after, .app .links a:active::after, .app .links a:focus::after {
+          content: " →"; }
+
+@media screen and (max-width: 847.9px) {
+  .hidden-on-mobile {
+    display: none; }
+  .nav {
+    width: 100%;
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    position: fixed;
+    z-index: 1; }
+    .nav #overview {
+      width: 100%;
+      display: block;
+      z-index: 2;
+      padding: 0.5rem 1rem;
+      background: white;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .nav #overview .logo {
+        height: 2rem;
+        margin-right: 0.75rem; }
+      .nav #overview .title {
+        display: inline-block;
+        margin-bottom: 0;
+        transform: translateY(0.25rem); }
+    .nav #toggle {
+      width: auto;
+      width: 2rem;
+      cursor: hand;
+      cursor: pointer;
+      position: absolute;
+      right: 1rem;
+      margin-top: 0.2rem;
+      z-index: 1001;
+      top: 0.5rem; }
+      .nav #toggle:hover span, .nav #toggle:focus span, .nav #toggle:active span {
+        background: #5b5b5b; }
+      .nav #toggle span {
+        width: 100%;
+        background: #848484;
+        height: 3px;
+        display: block;
+        transition: all 0.2s ease; }
+      .nav #toggle span + span {
+        margin-top: 0.5rem; }
+      .nav #toggle.active #first {
+        transform: translateY(11px) translateX(0.2rem) rotate(135deg); }
+      .nav #toggle.active #second {
+        transform: rotate(-135deg) translateX(-0.14142rem) translateY(0.14142rem); }
+      .nav #toggle.active #third {
+        transform: translateY(-11px) translateX(0.2rem) rotate(135deg); }
+    .nav #menu {
+      background: white;
+      width: 100%;
+      width: 100%;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: absolute;
+      left: 0;
+      top: 0;
+      padding: 0.5rem 1rem 0.5rem 1rem;
+      box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: all 0.2s ease;
+      height: 0;
+      z-index: 1; }
+      .nav #menu.active {
+        height: 100vh; } }
+
+@media screen and (min-width: 848px) {
+  .hidden-on-desktop {
+    display: none; }
+  .app .nav {
+    width: 16rem;
+    padding: 1rem;
+    position: fixed;
+    background: none;
+    box-shadow: none; }
+    .app .nav #toggle {
+      display: none; }
+    .app .nav .logo {
+      display: block;
+      height: 5rem;
+      margin-bottom: 1rem; }
+    .app .nav .title {
+      height: auto;
+      display: block;
+      width: 100%;
+      line-height: 1; }
+    .app .nav .social {
+      margin-bottom: 1rem; }
+  .app .content {
+    margin-left: 16rem; } }
+
 html,
 body {
   background: #f2f2f4; }
@@ -101,41 +231,3 @@ body {
       margin-bottom: 0.5rem; }
     .content .card p:last-child {
       margin-bottom: 0rem; }
-
-@media screen and (min-width: 848px) {
-  .app {
-    display: block;
-    width: 100%; }
-    .app .nav {
-      width: 16rem;
-      padding: 1rem;
-      position: fixed; }
-      .app .nav .logo {
-        max-height: 5rem;
-        margin-bottom: 1rem; }
-      .app .nav .links {
-        display: block;
-        width: 100%; }
-        .app .nav .links a {
-          display: block;
-          float: left;
-          clear: left;
-          text-decoration: none;
-          margin-bottom: 0.5rem;
-          color: #5b5b5b; }
-          .app .nav .links a:hover, .app .nav .links a:active, .app .nav .links a:focus {
-            color: #000000; }
-            .app .nav .links a:hover::after, .app .nav .links a:active::after, .app .nav .links a:focus::after {
-              content: " →"; }
-      .app .nav .social {
-        margin-bottom: 1rem; }
-        .app .nav .social a {
-          text-decoration: none !important;
-          opacity: 0.8; }
-          .app .nav .social a .fa {
-            margin-right: 0.25rem; }
-          .app .nav .social a:hover {
-            opacity: 1; }
-    .app .content {
-      padding-top: 1rem;
-      margin-left: 16rem; } }

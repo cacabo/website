@@ -4,6 +4,7 @@
 @import './buttons';
 @import './spacing';
 @import './contact';
+@import './nav';
 
 html,
 body {
@@ -27,70 +28,6 @@ body {
 
     p:last-child {
       margin-bottom: 0rem;
-    }
-  }
-}
-
-@media screen and (min-width: 848px) {
-  .app {
-    display: block;
-    width: 100%;
-
-    .nav {
-      width: 16rem;
-      padding: 1rem;
-      position: fixed;
-
-      .logo {
-        max-height: 5rem;
-        margin-bottom: 1rem;
-      }
-
-      .links {
-        display: block;
-        width: 100%;
-
-        a {
-          display: block;
-          float: left;
-          clear: left;
-          text-decoration: none;
-          margin-bottom: 0.5rem;
-          color: $dark-gray;
-
-          &:hover,
-          &:active,
-          &:focus {
-            color: $black;
-
-            &::after {
-              content: " →",
-            }
-          }
-        }
-      }
-
-      .social {
-        margin-bottom: 1rem;
-
-        a {
-          text-decoration: none !important;
-          opacity: 0.8;
-
-          .fa {
-            margin-right: 0.25rem;
-          }
-
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-    }
-
-    .content {
-      padding-top: 1rem;
-      margin-left: 16rem;
     }
   }
 }
