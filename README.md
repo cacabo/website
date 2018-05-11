@@ -13,3 +13,4 @@ Personal website developed in Node with Handlebars.
 - [ ] Art/Design
 - [ ] Mobile responsive nav
 - [ ] Page background styling
+- [ ] Add linter
