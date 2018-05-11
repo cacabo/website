@@ -14,7 +14,9 @@ a {
   font-size: 1.2rem; }
 
 a {
-  color: #41597f; }
+  color: #41597f;
+  cursor: hand;
+  cursor: pointer; }
   a:hover, a:focus, a:active {
     color: #28364c; }
   a:visited {

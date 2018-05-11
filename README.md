@@ -11,3 +11,4 @@ Personal website developed in Node with Handlebars.
 - [ ] Contact form functionality
 - [ ] Posts
 - [ ] Art/Design
+- [ ] Mobile responsive nav
