@@ -9,6 +9,7 @@ const education = require('./src/json/education');
 const experiences = require('./src/json/experiences');
 const extracurriculars = require('./src/json/extracurriculars');
 const posts = require('./src/json/posts');
+const projects = require('./src/json/projects');
 
 // Homepage
 router.get('/', (req, res) => res.render('home', {
@@ -19,7 +20,15 @@ router.get('/', (req, res) => res.render('home', {
 }));
 
 // Freelancing
-router.get('/freelancing', (req, res) => res.render('freelancing'));
+router.get('/freelancing', (req, res) => res.render('freelancing', {
+  title: 'Cameron Cabo | Freelancing',
+}));
+
+// Projects
+router.get('/projects', (req, res) => res.render('projects', {
+  title: 'Cameron Cabo | Projects',
+  projects,
+}));
 
 // Listing all posts
 router.get('/posts', (req, res) => res.render('posts', {

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Nalda",
+    "description": "Web application for curated listings, articles, and videos dedicated to exploring cities through food.",
+    "link": "https://naldacampus.com",
+    "slug": "nalda",
+    "repo": "https://github.com/adamripley98/nalda",
+    "technologies": [
+      "Node",
+      "React",
+      "Redux",
+      "Google Maps API",
+      "Amazon S3",
+      "Passport",
+      "MongoDB"
+    ],
+    "startDate": "February 2018",
+    "endDate": "Present",
+    "desktopImage": "nalda.png",
+    "mobileImage": null
+  }
+]

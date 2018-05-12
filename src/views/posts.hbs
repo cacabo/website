@@ -1,21 +1,10 @@
 <div class="container">
-  <h4 class="mono bold">
-    Posts
-  </h4>
   <div class="card-columns">
     {{#each posts}}
-      <a href="/posts/{{this.slug}}" class="card{{#if this.image}} has-img{{/if}}">
-        {{#if this.image}}
-          <img src={{this.image}} alt={{this.title}} class="img-fluid card-img"></img>
-        {{/if}}
-        <div class="body">
-          <h4>{{this.title}}</h4>
-          {{#if this.subtitle}}<p class="serif gray-text">{{this.subtitle}}</p>{{/if}}
-        </div>
-      </a>
+      {{> postPreview this}}
     {{/each}}
   </div>
-  <a href="/" class="btn btn-primary">
+  <a href="/" class="btn btn-primary marg-top-2">
     ← Back to home
   </a>
 </div>
