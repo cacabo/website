@@ -1,0 +1,25 @@
+/**
+ * Styling for projects and project screenshots
+ */
+.browser-screenshot {
+  background: $lighter-gray;
+  border: 1px solid $border;
+  padding: 0rem 0.25rem 0.5rem 0.25rem;
+  box-shadow: 0rem 0.1rem 0.4rem $dark-shadow;
+  border-radius: 0.2rem;
+
+  .top {
+    height: 2rem;
+    text-align: right;
+    padding: 0.5rem 0rem;
+
+    .circle {
+      display: inline-block;
+      background: $border;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin-left: 0.25rem;
+    }
+  }
+}

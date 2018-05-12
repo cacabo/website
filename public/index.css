@@ -49,6 +49,10 @@ a {
     .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
       background: #28364c !important; }
 
+@media screen and (max-width: 848px) {
+  .btn {
+    font-size: 1rem; } }
+
 /**
  * Modular classes for spacing elements out
  */
@@ -63,6 +67,9 @@ a {
 
 .marg-bot-2 {
   margin-bottom: 2rem; }
+
+.marg-top-1 {
+  margin-top: 1rem; }
 
 .space-3 {
   width: 100%;
@@ -320,10 +327,11 @@ a {
   border-radius: 0.2rem; }
   .browser .top {
     text-align: right;
-    background: #f2f2f4;
+    background: #dbdbe0;
     padding: 0.5rem;
     height: 2.25rem;
-    border: 1px solid rgba(0, 0, 0, 0.1); }
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.2rem 0.2rem 0rem 0rem; }
     .browser .top .circle {
       display: inline-block;
       width: 1.25rem;
@@ -332,10 +340,32 @@ a {
       background: rgba(0, 0, 0, 0.1);
       margin-left: 0.5rem; }
   .browser .body {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.175);
     border-top: 0px solid transparent;
     background: white;
-    padding: 1rem; }
+    padding: 1rem;
+    border-radius: 0rem 0rem 0.2rem 0.2rem; }
+
+/**
+ * Styling for projects and project screenshots
+ */
+.browser-screenshot {
+  background: #dbdbe0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0rem 0.25rem 0.5rem 0.25rem;
+  box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem; }
+  .browser-screenshot .top {
+    height: 2rem;
+    text-align: right;
+    padding: 0.5rem 0rem; }
+    .browser-screenshot .top .circle {
+      display: inline-block;
+      background: rgba(0, 0, 0, 0.1);
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin-left: 0.25rem; }
 
 html,
 body {

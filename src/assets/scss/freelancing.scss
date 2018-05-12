@@ -7,10 +7,11 @@
 
   .top {
     text-align: right;
-    background: $light-gray;
+    background: $lighter-gray;
     padding: 0.5rem;
     height: 2.25rem;
     border: 1px solid $border;
+    border-radius: 0.2rem 0.2rem 0rem 0rem;
 
     .circle {
       display: inline-block;
@@ -23,9 +24,10 @@
   }
 
   .body {
-    border: 1px solid $border;
+    border: 1px solid rgba(0, 0, 0, 0.175);
     border-top: 0px solid transparent;
     background: white;
     padding: 1rem;
+    border-radius: 0rem 0rem 0.2rem 0.2rem;
   }
 }

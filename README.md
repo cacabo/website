@@ -6,8 +6,8 @@ Personal website developed in Node with Handlebars.
 - [ ] Add images to homepage content
 - [ ] Add meta tags
 - [ ] Projects
-- [ ] Freelancing info
-- [ ] Posts
+- [x] Freelancing info
+- [x] Posts
 - [ ] Art/Design
 - [x] Mobile responsive nav
 - [ ] Page background styling
@@ -15,3 +15,4 @@ Personal website developed in Node with Handlebars.
 - [x] Contact form frontend
 - [x] Contact form functionality
 - [ ] Replace icons
+- [ ] Write additional posts
