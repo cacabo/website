@@ -13,7 +13,8 @@ html {
   font-family: 'PT Serif', Georgia, serif; }
 
 p,
-a {
+a,
+li {
   font-size: 1.2rem; }
 
 a {
@@ -219,7 +220,7 @@ a {
     display: none; }
   .app .nav {
     width: 16rem;
-    padding: 1rem;
+    padding: 1rem 0rem 0rem 1rem;
     position: fixed;
     background: none;
     box-shadow: none; }
@@ -272,8 +273,7 @@ a {
 .line {
   width: 100%;
   height: 0px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem; }
+  border-top: 1px solid rgba(0, 0, 0, 0.1); }
 
 .center {
   text-align: center; }
@@ -284,7 +284,7 @@ a {
 .post h4,
 .post h5,
 .post h6 {
-  margin-top: 1rem; }
+  margin-top: 1.5rem; }
 
 .post h1,
 .post h2,
@@ -300,6 +300,17 @@ a {
     margin: 0;
     font-family: 'Roboto Mono', monospace;
     font-size: 0.8rem; }
+
+.post .blockquote {
+  border-left: 4px solid #f2f2f4;
+  padding: 0.25rem 0rem 0.25rem 1rem;
+  font-style: italic;
+  color: #848484; }
+  .post .blockquote .author {
+    display: block;
+    text-align: right;
+    font-size: 1rem;
+    padding-top: 0.25rem; }
 
 html,
 body {
