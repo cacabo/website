@@ -16,7 +16,7 @@ app.engine('hbs', hbs({
   extname: 'hbs',
   defaultLayout: 'layout',
   layoutsDir: `${__dirname}/src/views/layouts/`,
-  partialsDir: `${__dirname}/src/views/posts`,
+  partialsDir: `${__dirname}/src/views/partials`,
 }));
 
 // Compile SCSS to CSS

@@ -18,6 +18,9 @@ router.get('/', (req, res) => res.render('home', {
   extracurriculars,
 }));
 
+// Freelancing
+router.get('/freelancing', (req, res) => res.render('freelancing'));
+
 // Listing all posts
 router.get('/posts', (req, res) => res.render('posts', {
   title: 'Cameron Cabo | Posts',
@@ -46,7 +49,7 @@ router.get('/posts/:slug', (req, res) => {
       image,
       createdAt,
       updatedAt,
-      slug,
+      partial: `posts/${slug}`,
     });
   } else {
     // Else, the slug was not matched, render the not found route
