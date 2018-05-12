@@ -1,0 +1,100 @@
+<p>Going into this project, I wanted to build a long-lasting product which I could rely on for the coming weeks, semesters, and on. It had to be adaptable to my varied interests, simple and effective in its user interface, and, above all, something which I and all site visitors thoroughly <i>enjoy using.</i></p>
+
+<p>Lastly, this project presented a great learning opportunity at a time that I knew I could get the most out of it: having finished my first year of college, this was a time to take on a rigorous side project, experiment with new technologies, and better understand full-stack application development.</p>
+
+<p>With that preface, we can get into the decisions I made through drafting, developing, and implementing this site.</p>
+
+<h3>Deciding on languages and frameworks</h3>
+
+<p>The application is built on a combination of Rails 5, Ruby 2.3, JavaScript, jQuery, HTML5, CSS3, a variety of Ruby gems, and Bootstrap 4.</p>
+
+<p>I was a bit a torn between using Rails or not, but it proved an advantageous decision: Rails aligns itself beautifully with post-based applications. Specifically, the programmer can generate a simple blog application in quite literally three bash commands. From there, the application can be hosted locally and rapidly edited, viewed, and refined. All this is to say, <u>Rails is a very product driven and product forward framework</u>, thereby making it easy to quantify progress at every step through development.</p>
+
+<p>The use of Bootstrap was a far easier decision--paired with Rails's ability to quickly generate the application, Bootstrap works to quickly generate elegant views with mobile-first and responsive development at its basis. Further, the recently released Bootstrap 4 is a lighter weight and more direct iteration of previous versions, making rapid development even easier.</p>
+
+Having decided on <i>how</i> to build, it was now a question of <i>what</i>, exactly, to build at all.
+
+<h3>Deciding on features and functionality</h3>
+
+<p>Unlike the process of framework and language decisions, feature selection is a far more fluid and dynamic one. Moreover, pivoting regarding one feature often means at least tweaking the implementation of every other one. As more and more features come to fruition, reality increasingly deviates from the developer's initial vision, thereby necessitating a shift in direction.</p>
+
+<p>When struggling to find said direction, I always loop back to the product at hand's target use cases. In context of this site:</p>
+
+<p>I should be able to...</p>
+
+<ul>
+  <li>Easily add content without changing application code</li>
+  <li>Pitch myself, my projects, and my ambitions</li>
+  <li>Write without limitations on how I can display information</li>
+</ul>
+
+<p>A visitor should be able to...</p>
+
+<ul>
+  <li>Access desired content in as few clicks as possible</li>
+  <li>Not be distracted by unnecessary features or excessive navigation</li>
+  <li>Be interested in exploring the site as they use it</li>
+</ul>
+
+<p>By this set of cases, I was able to decide on some features and decide against others, thereby solidifying the model and controller sides of my application. For example, tags and timestamps on articles allow visitors to easily find content and allows me to better organize my writing. However adding built-in components to the database side beyond an image, a title, and content were more than I needed in order to effectively get my points across and would serve to interfere with the writing process.</p>
+
+<p>Last, but very much not least, I had to implement the view to best translate the work I put into the back end into the front end.</p>
+
+<h3>Deciding on user-facing implementation</h3>
+
+<p>On the blog side I wanted fully functional input and output: a set number of styling commands (a sort of hybrid of the markdown and HTML languages). Further, a lot of the blog input is tagged with:</p>
+
+<div class="code">
+  <xmp><%= @text.html_safe %></xmp>
+</div>
+
+<p>Which allows for fully customizable features within blog posts by permitting the use of HTML. While this proves dangerous within a traditional, more social platform, i this case there are set administrators and thus there is no fear of a malicious attack on that front.</p>
+
+<p>Similarly, the use of <a href="http://prismjs.com">Prism</a> allows for stylized code between pre and code tags (as I used in the code block above). This, and many other built in components, are pivotal in creating highly functional, in-depth, and interactive posts.</p>
+
+<p>In order to actually identify what should be code, or a subheader, or a line, or some other component, I used a simple case based function for displaying content of the post to the user:</p>
+
+<p><strong>Parsing my input</strong></p>
+
+<p>First I split up the post's text line by line and applied the cases to each separated line of content.</p>
+
+<div class="code">
+  <xmp><% components = @article.text.split(/\n+/) %></xmp>
+  <xmp><% components.each do |comp| %></xmp>
+  <xmp>  ...</xmp>
+  <xmp><% end %></xmp>
+</div>
+
+<p>If you are unfamiliar with Ruby, you can see it has a wonderful set of functions which allow it to read arguably closer to English than any comparable programming language. While this raises issues with efficiency, it undeniably yields short, clean code.</p>
+
+<p>On the inside of this for each loop lies the cases:</p>
+
+<div class="code">
+  <xmp><% if comp.start_with?('[IMAGE]') %></xmp>
+  <xmp>  <% comp.slice! '[IMAGE]' %></xmp>
+  <xmp>  ...</xmp>
+  <xmp><% elsif comp.start_with?('[CODE]') %></xmp>
+  <xmp>  <% comp.slice! '[CODE]' %></xmp>
+  <xmp>  ...</xmp>
+  <xmp><% elsif comp.start_with?('### ') %></xmp>
+  <xmp>  <% comp.slice! ('### ') %></xmp>
+  <xmp>  <h5><strong><%= comp %></strong></h5></xmp>
+  <xmp>...</xmp>
+  <xmp><% elsif comp.start_with?('[LINE]') %></xmp>
+  <xmp>  <div class="line"></div></xmp>
+  <xmp><% else %></xmp>
+  <xmp>  <p><%= comp.html_safe %></p></xmp>
+  <xmp><% end %></xmp>
+</div>
+
+<p>Essentially, the algorithm looks for lines starting with certain tags denoted by [...], and displays the component with tag accordingly. This allows for easily creating spaces, formatted text, code snippets, images, dashes, and other components within the post itself without writing pure HTML (although I also have that option when needed).</p>
+
+<p><strong>Implementing the rest of the site</strong></p>
+
+<p>The rest of the site was far more straightforward in development. While each page has a unique focus and a corresponding unique display, they are all bounded by a cohesive styling framework.</p>
+
+<p class="center gray-text">
+  *****
+</p>
+
+<p>Thus, upon putting a lot of thought into organizing and optimizing information on this site, the product is, in my opinion, fittingly clean and informative. This post, in itself, serves as partial validation of my aims. All this being said, the true worth of the product can only be gauged via sustained use by a dynamic user base. To be continued...</p>

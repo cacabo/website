@@ -1,13 +1,15 @@
 <div class="container">
-  <div class="card{{#if image}} has-img{{/if}}">
+  <div class="card {{#if image}} has-img{{/if}}">
     <div class="body">
-      <h1>{{title}}</h1>
+      <h1 class="marg-bot-0">{{title}}</h1>
       {{#if subtitle}}<h3 class="serif gray-text">{{subtitle}}</h3>{{/if}}
     </div>
     {{#if image}}
       <img src={{image}} class="img-fluid"></img>
+    {{else}}
+      <div class="line"></div>
     {{/if}}
-    <div class="body serif">
+    <div class="body post serif">
       <!-- Lookup the partial indexed by the post slug -->
       {{> (lookup . 'slug')}}
     </div>

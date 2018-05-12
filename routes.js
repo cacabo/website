@@ -39,7 +39,6 @@ router.get('/posts/:slug', (req, res) => {
       image,
       updatedAt,
       createdAt,
-      body,
     } = post;
     res.render('post', {
       title,
@@ -47,7 +46,6 @@ router.get('/posts/:slug', (req, res) => {
       image,
       createdAt,
       updatedAt,
-      body,
       slug,
     });
   } else {

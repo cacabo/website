@@ -1,11 +1,24 @@
 [
   {
-    "createdAt": 1526074253432,
-    "updatedAt": 1526074253432,
+    "createdAt": "2017-08-20 22:55:48",
+    "updatedAt": "2017-09-02 03:58:10",
     "title": "The art of leg breaking—dealing with expected and unexpected change",
     "slug": "the-art-of-leg-breaking",
     "subtitle": "I wouldn't recommend it, though I did learn from it",
-    "image": "http://s3.amazonaws.com/cameroncabo-blog-photos/articles/images/000/000/005/large/bench.JPG?1503269747",
-    "body": "<h1>This is the body</h1><br /> woohoo!"
+    "image": "http://s3.amazonaws.com/cameroncabo-blog-photos/articles/images/000/000/005/large/bench.JPG?1503269747"
+  },
+  {
+    "createdAt": "2017-05-30 15:21:36",
+    "updatedAt": "2017-06-06 20:40:03",
+    "title": "Building the blog—the thought process",
+    "slug": "building-the-blog-the-thought-process",
+    "subtitle": "Creating a platform I can contribute to and learn from"
+  },
+  {
+    "createdAt": "2017-05-30 15:24:39",
+    "updatedAt": "2017-06-14 19:05:24",
+    "title": "Building the blog—the tech side",
+    "slug": "building-the-blog-the-tech-side",
+    "subtitle": "Putting functionality first"
   }
 ]
