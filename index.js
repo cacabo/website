@@ -17,6 +17,9 @@ app.engine('hbs', hbs({
   defaultLayout: 'layout',
   layoutsDir: `${__dirname}/src/views/layouts/`,
   partialsDir: `${__dirname}/src/views/partials`,
+  helpers: {
+    isEven: (index, options) => (index % 2 === 0) ? options.fn(this) : options.inverse(this),
+  }
 }));
 
 // Compile SCSS to CSS

@@ -1,3 +1,36 @@
 <div class="container">
-  <h4>Projects</h4>
+  {{#each projects}}
+    <div class="project {{#isEven @index}}right{{else}}left{{/isEven}}" style="background: {{this.color}}">
+      <div class="text">
+        <h1>{{this.title}}</h1>
+        <p>{{this.description}}</p>
+        <p><strong>Technologies:</strong> {{this.technologies}}.</p>
+        <div class="buttons">
+          {{#if this.link}}
+            <a class="btn btn-sm" href={{this.link}}>
+              View here
+            </a>
+          {{/if}}
+          {{#if this.repo}}
+            <a class="btn btn-sm" href={{this.repo}}>
+              View repo
+            </a>
+          {{/if}}
+        </div>
+      </div>
+      <div class="screenshot-wrapper">
+        <div class="browser-screenshot">
+          <div class="top">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+          </div>
+          <img src="/img/projects/{{this.desktopImage}}" alt={{this.title}} class="img-fluid" />
+        </div>
+      </div>
+    </div>
+  {{/each}}
+  <a href="/" class="btn btn-primary">
+    ← Back to home
+  </a>
 </div>

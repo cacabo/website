@@ -17,7 +17,7 @@
 
     a {
       text-decoration: none !important;
-      color: $dark-gray !important;
+      color: lighten($dark-gray, 10%) !important;
 
       .fa {
         margin-right: 0.25rem;
@@ -34,7 +34,7 @@
     width: 100%;
 
     a {
-      color: $dark-gray !important;
+      color: lighten($dark-gray, 10%) !important;
       text-decoration: none;
       display: block;
       float: left;
@@ -47,8 +47,12 @@
         color: $black !important;
 
         &::after {
-          content: " →",
+          content: " →";
         }
+      }
+
+      &.active {
+        color: black !important;
       }
     }
   }

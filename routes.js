@@ -17,23 +17,33 @@ router.get('/', (req, res) => res.render('home', {
   education,
   experiences,
   extracurriculars,
+  isRootActive: true,
 }));
 
 // Freelancing
 router.get('/freelancing', (req, res) => res.render('freelancing', {
   title: 'Cameron Cabo | Freelancing',
+  isFreelancingActive: true,
 }));
 
 // Projects
 router.get('/projects', (req, res) => res.render('projects', {
   title: 'Cameron Cabo | Projects',
   projects,
+  isProjectsActive: true,
+}));
+
+// Art and design
+router.get('/art-design', (req, res) => res.render('artDesign', {
+  title: 'Cameron Cabo | Art/Design',
+  isArtDesignActive: true,
 }));
 
 // Listing all posts
 router.get('/posts', (req, res) => res.render('posts', {
   title: 'Cameron Cabo | Posts',
   posts,
+  isPostsActive: true,
 }));
 
 // Rendering a specific post

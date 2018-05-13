@@ -118,7 +118,7 @@ a {
     width: 100%; }
     .app .social a {
       text-decoration: none !important;
-      color: #5b5b5b !important; }
+      color: #757575 !important; }
       .app .social a .fa {
         margin-right: 0.25rem; }
       .app .social a:hover {
@@ -127,7 +127,7 @@ a {
     display: block;
     width: 100%; }
     .app .links a {
-      color: #5b5b5b !important;
+      color: #757575 !important;
       text-decoration: none;
       display: block;
       float: left;
@@ -137,6 +137,8 @@ a {
         color: #000000 !important; }
         .app .links a:hover::after, .app .links a:active::after, .app .links a:focus::after {
           content: " →"; }
+      .app .links a.active {
+        color: black !important; }
 
 @media screen and (max-width: 847.9px) {
   .hidden-on-mobile {
@@ -355,7 +357,7 @@ a {
 .browser-screenshot {
   background: #dbdbe0;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0rem 0.25rem 0.5rem 0.25rem;
+  padding: 0% 1.25% 2.5% 1.25%;
   box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.1);
   border-radius: 0.2rem; }
   .browser-screenshot .top {
@@ -369,6 +371,46 @@ a {
       height: 1rem;
       border-radius: 50%;
       margin-left: 0.25rem; }
+
+.project {
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  padding: 0rem 2.5%; }
+  .project.left {
+    flex-direction: row-reverse; }
+    .project.left .screenshot-wrapper {
+      padding: 5% 1rem 0% 0%; }
+  .project.right {
+    flex-direction: row; }
+    .project.right .screenshot-wrapper {
+      padding: 5% 0% 0% 1rem; }
+  .project .screenshot-wrapper,
+  .project .text {
+    flex: 1; }
+  .project .browser-screenshot {
+    padding-bottom: 0rem;
+    border-radius: 0.2rem 0.2rem 0rem 0rem;
+    border-bottom: none;
+    box-shadow: 0rem -0.1rem 2rem rgba(0, 0, 0, 0.25); }
+  .project .text {
+    padding: 1rem 0rem; }
+    .project .text .btn {
+      background: rgba(255, 255, 255, 0.3);
+      color: white !important; }
+
+@media screen and (max-width: 1024px) {
+  .project {
+    display: block;
+    padding: 0% 5%; }
+    .project .screenshot-wrapper {
+      padding: 0rem !important; }
+      .project .screenshot-wrapper .browser-screenshot {
+        box-shadow: 0rem -0.1rem 0.5rem rgba(0, 0, 0, 0.25); } }
 
 html,
 body {
