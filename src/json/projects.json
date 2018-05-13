@@ -119,6 +119,7 @@
     "technologies": "JavaScript, jQuery, HTML, CSS",
     "startDate": null,
     "endDate": null,
+    "repo": "https://github.com/ccabo1/tictactoe",
     "desktopImage": "tic-tac-toe.png",
     "mobileImage": null,
     "color": "#404040"

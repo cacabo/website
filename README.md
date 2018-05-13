@@ -5,7 +5,7 @@ Personal website developed in Node with Handlebars.
 ### TODO
 - [ ] Add images to homepage content
 - [ ] Add meta tags
-- [ ] Projects
+- [x] Projects
 - [x] Freelancing info
 - [x] Posts
 - [ ] Art/Design
