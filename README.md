@@ -16,3 +16,4 @@ Personal website developed in Node with Handlebars.
 - [x] Contact form functionality
 - [ ] Replace icons
 - [ ] Write additional posts
+- [ ] Generic background image
