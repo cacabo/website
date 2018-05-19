@@ -9,47 +9,9 @@
 @import './posts';
 @import './freelancing';
 @import './projects';
+@import './cards';
 
 html,
 body {
   background: $light-gray;
-}
-
-.content {
-  padding-bottom: 2rem;
-
-  .card {
-    background: white;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 0.2rem;
-    box-shadow: 0rem 0.1rem 0.4rem $shadow;
-    border: 1px solid $border;
-
-    .subtitle {
-      margin-bottom: 0.5rem;
-    }
-
-    p:last-child {
-      margin-bottom: 0rem;
-    }
-
-    &.has-img {
-      padding: 0;
-
-      .card-img {
-        border-radius: 0.2rem 0.2rem 0rem 0rem;
-        width: 100%;
-      }
-
-      .body {
-        padding: 1rem;
-      }
-    }
-  }
-
-  a.card {
-    text-decoration: none !important;
-    color: black !important;
-  }
 }

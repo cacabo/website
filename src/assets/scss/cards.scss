@@ -1,0 +1,55 @@
+/**
+ * Styling for cards used throughout the application
+ */
+.content {
+  padding-bottom: 2rem;
+
+  .card {
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0rem 0.1rem 0.4rem $shadow;
+    border: 1px solid $border;
+
+    .subtitle {
+      margin-bottom: 0.5rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0rem;
+    }
+
+    &.card-post {
+      padding: 0;
+
+      .body {
+        padding: 1rem;
+      }
+    }
+
+    &.has-img {
+      padding: 0;
+
+      .card-img {
+        border-radius: 0.2rem 0.2rem 0rem 0rem;
+        width: 100%;
+      }
+
+      .body {
+        padding: 1rem;
+      }
+    }
+  }
+
+  a.card {
+    text-decoration: none !important;
+    color: black !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content .card.card-post .body {
+    padding: 1.5rem calc(1rem + 2.5%);
+  }
+}

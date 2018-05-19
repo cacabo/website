@@ -413,10 +413,9 @@ a {
       .project .screenshot-wrapper .browser-screenshot {
         box-shadow: 0rem -0.1rem 0.5rem rgba(0, 0, 0, 0.25); } }
 
-html,
-body {
-  background: #f2f2f4; }
-
+/**
+ * Styling for cards used throughout the application
+ */
 .content {
   padding-bottom: 2rem; }
   .content .card {
@@ -430,6 +429,10 @@ body {
       margin-bottom: 0.5rem; }
     .content .card p:last-child {
       margin-bottom: 0rem; }
+    .content .card.card-post {
+      padding: 0; }
+      .content .card.card-post .body {
+        padding: 1rem; }
     .content .card.has-img {
       padding: 0; }
       .content .card.has-img .card-img {
@@ -440,3 +443,11 @@ body {
   .content a.card {
     text-decoration: none !important;
     color: black !important; }
+
+@media screen and (min-width: 1024px) {
+  .content .card.card-post .body {
+    padding: 1.5rem calc(1rem + 2.5%); } }
+
+html,
+body {
+  background: #f2f2f4; }
