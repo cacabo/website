@@ -133,8 +133,6 @@ router.post('/contact', (req, res) => {
     });
 });
 
-// TODO other routes
-
 // Handle 404 error
 router.get('*', (req, res) => res.render('not-found', {
   title: 'Cameron Cabo | Not Found',

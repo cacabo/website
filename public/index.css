@@ -248,7 +248,9 @@ a {
       width: 100%;
       line-height: 1; }
     .app .nav .social {
-      margin-bottom: 1rem; }
+      margin-bottom: 10%; }
+    .app .nav .links a {
+      margin-bottom: 7.5%; }
   .app .content {
     margin-left: 16rem;
     margin-right: 1rem; } }
@@ -380,15 +382,14 @@ a {
   display: flex;
   align-items: flex-end;
   margin-bottom: 2rem;
-  padding: 0rem 2.5%; }
-  .project.left {
+  padding: 0rem 2.5%;
+  flex-direction: row; }
+  .project .screenshot-wrapper {
+    padding: 5% 0% 0% 1rem; }
+  .project:nth-child(even) {
     flex-direction: row-reverse; }
-    .project.left .screenshot-wrapper {
+    .project:nth-child(even) .screenshot-wrapper {
       padding: 5% 1rem 0% 0%; }
-  .project.right {
-    flex-direction: row; }
-    .project.right .screenshot-wrapper {
-      padding: 5% 0% 0% 1rem; }
   .project .screenshot-wrapper,
   .project .text {
     flex: 1; }

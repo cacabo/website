@@ -1,6 +1,8 @@
 /**
  * Styling for projects and project screenshots
  */
+
+// Styling the screenshot used to show desktop screenshots
 .browser-screenshot {
   background: $lighter-gray;
   border: 1px solid $border;
@@ -24,6 +26,7 @@
   }
 }
 
+// Styling individual project previews
 .project {
   border-radius: 0.2rem;
   box-shadow: 0rem 0.1rem 0.4rem $shadow;
@@ -34,19 +37,17 @@
   margin-bottom: 2rem;
   padding: 0rem 2.5%;
 
-  &.left {
+  flex-direction: row;
+
+  .screenshot-wrapper {
+    padding: 5% 0% 0% 1rem;
+  }
+
+  &:nth-child(even) {
     flex-direction: row-reverse;
 
     .screenshot-wrapper {
       padding: 5% 1rem 0% 0%;
-    }
-  }
-
-  &.right {
-    flex-direction: row;
-
-    .screenshot-wrapper {
-      padding: 5% 0% 0% 1rem;
     }
   }
 

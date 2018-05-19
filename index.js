@@ -5,6 +5,9 @@ const hbs = require('express-handlebars');
 const sassMiddleware = require('node-sass-middleware');
 const bodyParser = require('body-parser');
 
+// Import the port, if there is one
+const PORT = process.env.PORT;
+
 // Import routes
 const api = require('./routes');
 
@@ -17,9 +20,6 @@ app.engine('hbs', hbs({
   defaultLayout: 'layout',
   layoutsDir: `${__dirname}/src/views/layouts/`,
   partialsDir: `${__dirname}/src/views/partials`,
-  helpers: {
-    isEven: (index, options) => (index % 2 === 0) ? options.fn(this) : options.inverse(this),
-  }
 }));
 
 // Compile SCSS to CSS
@@ -44,4 +44,4 @@ app.set('view engine', 'hbs');
 app.use('/', api);
 
 // Render the app
-app.listen(3000, () => console.log('App listening on port 3000!'));
+app.listen(PORT || 3000, () => console.log('App listening on port 3000!'));
