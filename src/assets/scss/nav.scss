@@ -11,6 +11,10 @@
     padding-top: 1rem;
   }
 
+  .logo-wrapper {
+    text-decoration: none !important;
+  }
+
   .social {
     margin-bottom: 0.5rem;
     width: 100%;
@@ -71,7 +75,7 @@
 
   .nav {
     width: 100%;
-    box-shadow: 0rem 0.1rem 0.1rem $dark-shadow;
+    box-shadow: 0rem 0.125rem 0.625rem $dark-shadow;
     position: fixed;
     z-index: 1;
 
@@ -87,11 +91,22 @@
       .logo {
         height: 2rem;
         margin-right: 0.75rem;
+
+        &.alt {
+          position: absolute;
+          z-index: 1;
+          opacity: 0;
+          transition: all 0.2s ease;
+        }
       }
 
       &.active {
         background: $slate;
         border-bottom: 1px solid $light-border;
+
+        .logo.alt {
+          opacity: 1;
+        }
       }
     }
 
@@ -205,7 +220,7 @@
 
 @media screen and (min-width: 848px) {
   .hidden-on-desktop {
-    display: none;
+    display: none !important;
   }
 
   .app {
@@ -222,7 +237,7 @@
 
       .logo {
         display: block;
-        height: 5rem;
+        height: 4rem;
         margin-bottom: 1rem;
       }
 
@@ -230,11 +245,13 @@
         height: auto;
         display: block;
         width: 100%;
+        font-size: 1.8rem;
         line-height: 1;
+        font-weight: 500;
       }
 
       .social {
-        margin-bottom: 10%;
+        margin-bottom: 15%;
       }
 
       .links {

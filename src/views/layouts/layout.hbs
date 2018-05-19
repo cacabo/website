@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- Config meta tags -->
     <meta charset="utf-8">
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Cameron Cabo">
+
+    <!-- Set the page title -->
+    {{#if title}}
+      <title>{{ title }}</title>
+    {{else}}
+      <title>Cameron Cabo</title>
+    {{/if}}
+
+    <!-- Set the page description -->
+    {{#if description}}
+      <meta name="description" content={{ description }}>
+    {{else}}
+      <meta name="description" content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
+    {{/if}}
+
+    <!-- Set the page keywords -->
+    {{#if keywords}}
+      <meta name="keywords" content={{ keywords }}>
+    {{else}}
+      <meta name="keywords" content="cameron,cam,cabo,cameroncabo,penn,freelance,web,webdev,website,m&t,jerome,fisher,upenn,pennsylvania,university,harvard,westlake,student,react,javascript,node,developer,dev,rails,ruby,art,design,contact,los,angeles,LA,philly,philadelphia,youthhack,riplo,metric,themetric">
+    {{/if}}
+
+    <!-- Set the page image -->
+    {{#if image}}
+      <meta property="og:image" content={{image}}>
+    {{else}}
+      <meta property="og:image" content="TODO">
+    {{/if}}
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -20,67 +49,12 @@
 
     <!-- TODO more meta tags -->
 
-    <!-- Set the page title -->
-    <title>{{ title }}</title>
   </head>
   <body>
     <!-- Wrapper div for the application -->
     <div class="app">
       <!-- Navigation -->
-      <div class="nav">
-        <div id="overview">
-          <a href="/">
-            <img src="/img/logo-01.svg" class="img-fluid logo" alt="logo" />
-          </a>
-          <h4 class="bold title hidden-on-mobile">Cameron Cabo</h4>
-          <p class="marg-bot-05 hidden-on-mobile">
-            Driven learner, developer, and product builder.
-          </p>
-
-          <div id="toggle">
-            <span class="bar" id="first"></span>
-            <span class="bar" id="second"></span>
-            <span class="bar" id="third"></span>
-          </div>
-        </div>
-
-        <div id="menu">
-          <div class="space-3 hidden-on-desktop"></div>
-          <div class="social">
-            <a href="https://facebook.com/cam.cabo" target="_BLANK">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="https://linkedin.com/in/cameroncabo" target="_BLANK">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="https://twitter.com/cameroncabo" target="_BLANK">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="https://github.com/ccabo1" target="_BLANK">
-              <i class="fa fa-github" aria-hidden="true"></i>
-            </a>
-            <a href="https://instagram.com/c.cabo" target="_BLANK">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="mailto:cameroncabo@gmail.com">
-              <i class="fa fa-envelope-o" aria-hidden="true"></i>
-            </a>
-          </div>
-
-          <div class="links mono">
-            <a href="/" class="{{#if isRootActive}}active{{/if}}">Home</a>
-            <a href="/projects" class="{{#if isProjectsActive}}active{{/if}}">Projects</a>
-            <a href="/posts" class="{{#if isPostsActive}}active{{/if}}">Posts</a>
-            <a href="/art-design" class="{{#if isArtDesignActive}}active{{/if}}">Art/Design</a>
-            <a href="/freelancing" class="{{#if isFreelancingActive}}active{{/if}}">Freelancing</a>
-            <a data-toggle="modal" data-target="#contactModal">
-              Contact
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="nav-space hidden-on-desktop"></div>
+      {{> nav}}
 
       <!-- App content -->
       <div class="content">
