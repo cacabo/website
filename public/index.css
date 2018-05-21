@@ -445,6 +445,10 @@ a {
       padding: 0; }
       .content .card.card-post .body {
         padding: 1rem; }
+      .content .card.card-post .timestamp {
+        margin-top: 0.5rem;
+        margin-bottom: 0rem;
+        font-size: 1rem; }
     .content .card.has-img {
       padding: 0; }
       .content .card.has-img .card-img {

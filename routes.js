@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+const moment = require('moment');
 
 // Import json
 const education = require('./src/json/education');
@@ -10,6 +10,9 @@ const experiences = require('./src/json/experiences');
 const extracurriculars = require('./src/json/extracurriculars');
 const posts = require('./src/json/posts');
 const projects = require('./src/json/projects');
+
+// Set the API key for sendgrid
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Homepage
 router.get('/', (req, res) => res.render('home', {
@@ -59,16 +62,30 @@ router.get('/posts/:slug', (req, res) => {
       title,
       subtitle,
       image,
+    } = post;
+    let {
       updatedAt,
       createdAt,
     } = post;
+
+    // Build up the string for the partial to render the post
+    const partial = `posts/${slug}`;
+
+    // Format updated at and created at
+    updatedAt = new moment(updatedAt).fromNow();
+    createdAt = new moment(createdAt).fromNow();
+
+    // Do not show updated at if it is the same as created at
+    if (updatedAt === createdAt) updatedAt = null;
+
+    // Render the post found above
     res.render('post', {
       title,
       subtitle,
       image,
       createdAt,
       updatedAt,
-      partial: `posts/${slug}`,
+      partial,
     });
   } else {
     // Else, the slug was not matched, render the not found route
