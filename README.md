@@ -8,7 +8,7 @@ Personal website developed in Node with Handlebars, Express, and SCSS.
 - [x] Projects
 - [x] Freelancing info
 - [x] Posts
-- [ ] Art/Design
+- [x] Art/Design
 - [x] Mobile responsive nav
 - [ ] Page background styling
 - [x] Add linter

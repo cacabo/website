@@ -57,22 +57,22 @@ a {
  * Modular classes for spacing elements out
  */
 .marg-bot-0 {
-  margin-bottom: 0; }
+  margin-bottom: 0 !important; }
 
 .marg-bot-05 {
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem !important; }
 
 .marg-bot-1 {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem !important; }
 
 .marg-bot-2 {
-  margin-bottom: 2rem; }
+  margin-bottom: 2rem !important; }
 
 .marg-top-1 {
-  margin-top: 1rem; }
+  margin-top: 1rem !important; }
 
 .marg-top-2 {
-  margin-top: 2rem; }
+  margin-top: 2rem !important; }
 
 .space-3 {
   width: 100%;
@@ -272,11 +272,15 @@ a {
 
 @media screen and (min-width: 594px) and (max-width: 1024px) {
   .card-columns {
-    column-count: 2; } }
+    column-count: 2; }
+    .card-columns.wide {
+      column-count: 1; } }
 
 @media screen and (min-width: 1024px) {
   .card-columns {
-    column-count: 3; } }
+    column-count: 3; }
+    .card-columns.wide {
+      column-count: 2; } }
 
 .caption {
   color: #848484;

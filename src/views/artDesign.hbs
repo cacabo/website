@@ -1,4 +1,8 @@
 <div class="container">
+  <div class="card">
+    <h4>Design and creativity are in everything.</h4>
+    <p>Ever since preschool I have loved to draw and create. I approach every challenge, job, and goal with an artist's mindset in order to build impactful and well-crafted products.</p>
+  </div>
   <h4 class="mono bold">Artwork</h4>
   <div class="card-columns">
     {{#each art}}
@@ -6,4 +10,17 @@
     {{/each}}
   </div>
   <h4 class="marg-top-2 mono bold">Design</h4>
+  <div class="card-columns wide">
+    {{#each design}}
+      {{> designPiece this}}
+    {{/each}}
+  </div>
+  <div class="buttons">
+    <a href="/" class="btn btn-primary">
+      ← Back to home
+    </a>
+    <a data-toggle="modal" data-target="#contactModal" class="btn btn-primary">
+      Contact me
+    </a>
+  </div>
 </div>

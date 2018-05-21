@@ -7,11 +7,19 @@
 @media screen and (min-width: 594px) and (max-width: 1024px) {
   .card-columns {
     column-count: 2;
+
+    &.wide {
+      column-count: 1;
+    }
   }
 }
 
 @media screen and (min-width: 1024px) {
   .card-columns {
     column-count: 3;
+
+    &.wide {
+      column-count: 2;
+    }
   }
 }

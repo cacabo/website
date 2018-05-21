@@ -11,6 +11,7 @@ const extracurriculars = require('./src/json/extracurriculars');
 const posts = require('./src/json/posts');
 const projects = require('./src/json/projects');
 const art = require('./src/json/art');
+const design = require('./src/json/design');
 
 // Set the API key for sendgrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
@@ -41,6 +42,7 @@ router.get('/projects', (req, res) => res.render('projects', {
 router.get('/art-design', (req, res) => res.render('artDesign', {
   title: 'Cameron Cabo | Art/Design',
   art,
+  design,
   isArtDesignActive: true,
 }));
 
