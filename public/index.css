@@ -436,6 +436,9 @@ a {
     border-radius: 0.2rem;
     box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.1); }
+    .content .card .timestamp {
+      margin-bottom: 0rem;
+      font-size: 1rem; }
     .content .card .subtitle {
       margin-bottom: 0.5rem;
       font-weight: normal; }

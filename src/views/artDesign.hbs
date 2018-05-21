@@ -1,3 +1,9 @@
 <div class="container">
-  <h2>Art/Design</h2>
+  <h4 class="mono bold">Artwork</h4>
+  <div class="card-columns">
+    {{#each art}}
+      {{> artPiece this}}
+    {{/each}}
+  </div>
+  <h4 class="marg-top-2 mono bold">Design</h4>
 </div>

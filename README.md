@@ -17,3 +17,4 @@ Personal website developed in Node with Handlebars, Express, and SCSS.
 - [ ] Replace icons with local images
 - [ ] Write additional posts
 - [ ] Generic background image for link sharing
+- [x] Add timestamps to posts
