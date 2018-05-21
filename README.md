@@ -1,10 +1,10 @@
 # Personal Website
 
-Personal website developed in Node with Handlebars.
+Personal website developed in Node with Handlebars, Express, and SCSS.
 
 ### TODO
 - [ ] Add images to homepage content
-- [ ] Add meta tags
+- [x] Add meta tags
 - [x] Projects
 - [x] Freelancing info
 - [x] Posts
@@ -14,6 +14,6 @@ Personal website developed in Node with Handlebars.
 - [x] Add linter
 - [x] Contact form frontend
 - [x] Contact form functionality
-- [ ] Replace icons
+- [ ] Replace icons with local images
 - [ ] Write additional posts
-- [ ] Generic background image
+- [ ] Generic background image for link sharing

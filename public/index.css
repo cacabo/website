@@ -437,7 +437,7 @@ a {
     box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
     border: 1px solid rgba(0, 0, 0, 0.1); }
     .content .card .subtitle {
-      margin-bottom: 0rem;
+      margin-bottom: 0.5rem;
       font-weight: normal; }
     .content .card p:last-child {
       margin-bottom: 0rem; }
@@ -450,6 +450,23 @@ a {
       .content .card.has-img .card-img {
         border-radius: 0.2rem 0.2rem 0rem 0rem;
         width: 100%; }
+      .content .card.has-img#home .profile-picture {
+        border-radius: 50%;
+        width: 8rem;
+        height: 8rem;
+        transform: translateY(-9rem);
+        border: 4px solid white;
+        box-shadow: 0rem 0.1rem 0.2rem rgba(0, 0, 0, 0.25);
+        position: absolute; }
+      .content .card.has-img#home .card-img {
+        width: 100% !important;
+        height: 10rem;
+        display: block;
+        background-position: top;
+        background-repeat: none;
+        background-size: cover; }
+      .content .card.has-img#home .body {
+        padding-top: 2rem; }
       .content .card.has-img .body {
         padding: 1rem; }
   .content a.card {
@@ -459,6 +476,10 @@ a {
 @media screen and (min-width: 1024px) {
   .content .card.card-post .body {
     padding: 1.5rem calc(1rem + 2.5%); } }
+
+@media screen and (max-width: 848px) {
+  .content .card#home .profile-picture {
+    left: calc(50% - 4rem); } }
 
 html,
 body {
