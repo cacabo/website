@@ -86,6 +86,7 @@ router.get('/posts/:slug', (req, res) => {
     res.render('post', {
       title,
       subtitle,
+      description: subtitle,
       image,
       createdAt,
       updatedAt,
@@ -155,6 +156,7 @@ router.post('/contact', (req, res) => {
 });
 
 // Handle 404 error
+// NOTE this is reached if no other route above was matched
 router.get('*', (req, res) => res.render('not-found', {
   title: 'Cameron Cabo | Not Found',
 }));
