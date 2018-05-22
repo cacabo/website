@@ -76,8 +76,8 @@ router.get('/posts/:slug', (req, res) => {
     const partial = `posts/${slug}`;
 
     // Format updated at and created at
-    updatedAt = new moment(updatedAt).fromNow();
-    createdAt = new moment(createdAt).fromNow();
+    if (updatedAt) updatedAt = new moment(updatedAt).fromNow();
+    if (createdAt) createdAt = new moment(createdAt).fromNow();
 
     // Do not show updated at if it is the same as created at
     if (updatedAt === createdAt) updatedAt = null;
