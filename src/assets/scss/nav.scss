@@ -219,6 +219,11 @@
     display: none !important;
   }
 
+  .content > .container-fluid {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
   .app {
     padding: 0rem 2.5%;
 

@@ -32,27 +32,6 @@ a {
   font-weight: bold; }
 
 /**
- * Styling buttons used on the site
- */
-.btn {
-  border-radius: 0.2rem;
-  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
-  font-family: 'Inconsolata', monospace;
-  font-size: 1.2rem; }
-  .btn:hover {
-    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1); }
-  .btn.btn-primary {
-    color: white !important;
-    background: #41597f !important;
-    border: 1px solid rgba(0, 0, 0, 0.1) !important; }
-    .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
-      background: #28364c !important; }
-
-@media screen and (max-width: 848px) {
-  .btn {
-    font-size: 1rem; } }
-
-/**
  * Modular classes for spacing elements out
  */
 .marg-bot-0 {
@@ -82,28 +61,88 @@ a {
   display: block; }
 
 /**
- * Styling the contact modal and form
+ * Styling buttons used on the site
  */
-#contactModal .alert {
-  border-width: 2px; }
+.btn {
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
+  font-family: 'Inconsolata', monospace;
+  font-size: 1.2rem; }
+  .btn:hover {
+    box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1); }
+  .btn.btn-primary {
+    color: white !important;
+    background: #41597f !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important; }
+    .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
+      background: #28364c !important; }
 
-#contactModal .modal-content {
-  border-radius: 0.2rem; }
+@media screen and (max-width: 848px) {
+  .btn {
+    font-size: 1rem; } }
 
-#contactModal .form-control {
+/**
+ * Styling for cards used throughout the application
+ */
+.content .card {
+  background: white;
+  padding: 1rem;
   margin-bottom: 1rem;
-  border-width: 2px;
-  font-size: 16px;
-  font-family: 'Roboto' sans-serif;
-  padding: 0.75rem;
-  border: 2px solid rgba(0, 0, 0, 0.1); }
-  #contactModal .form-control:hover {
-    border: 2px solid rgba(0, 0, 0, 0.2); }
-  #contactModal .form-control:focus, #contactModal .form-control:active {
-    border: 2px solid #41597f; }
+  border-radius: 0.2rem;
+  box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1); }
+  .content .card .timestamp {
+    margin-bottom: 0rem;
+    font-size: 1rem; }
+  .content .card .subtitle {
+    margin-bottom: 0.5rem;
+    font-weight: normal; }
+  .content .card p:last-child {
+    margin-bottom: 0rem; }
+  .content .card.card-post {
+    padding: 0; }
+    .content .card.card-post .body {
+      padding: 1rem; }
+    .content .card.card-post .timestamp {
+      margin-top: 0.5rem;
+      margin-bottom: 0rem;
+      font-size: 1rem; }
+  .content .card.has-img {
+    padding: 0; }
+    .content .card.has-img .card-img {
+      border-radius: 0.2rem 0.2rem 0rem 0rem;
+      width: 100%; }
+    .content .card.has-img#home .profile-picture {
+      border-radius: 50%;
+      width: 8rem;
+      height: 8rem;
+      transform: translateY(-9rem);
+      border: 4px solid white;
+      box-shadow: 0rem 0.1rem 0.2rem rgba(0, 0, 0, 0.25);
+      position: absolute; }
+    .content .card.has-img#home .card-img {
+      width: 100% !important;
+      height: 10rem;
+      display: block;
+      background-position: top;
+      background-repeat: none;
+      background-size: cover; }
+    .content .card.has-img#home .body {
+      padding-top: 2rem; }
+    .content .card.has-img .body {
+      padding: 1rem; }
 
-#contactModal textarea.form-control {
-  margin-bottom: 0; }
+.content a.card {
+  text-decoration: none !important;
+  color: black !important; }
+
+@media screen and (min-width: 1024px) {
+  .content .card.card-post .body {
+    padding: 1.5rem calc(1rem + 2.5%); } }
+
+@media screen and (max-width: 848px) {
+  .content .card#home .profile-picture {
+    left: calc(50% - 4rem); } }
 
 /**
  * Styling for the navigation of the app
@@ -239,6 +278,9 @@ a {
 @media screen and (min-width: 848px) {
   .hidden-on-desktop {
     display: none !important; }
+  .content > .container-fluid {
+    padding: 0 !important;
+    margin: 0 !important; }
   .app {
     padding: 0rem 2.5%; }
     .app .nav {
@@ -271,6 +313,44 @@ a {
 @media screen and (min-width: 1248px) {
   .app {
     padding: 0 5%; } }
+
+/**
+ * Styling for the footer rendered on every page
+ */
+footer {
+  padding-bottom: 1rem; }
+  footer a, footer p {
+    font-size: 0.8rem;
+    color: #848484 !important; }
+    footer a.right, footer p.right {
+      float: right; }
+  footer a:hover {
+    text-decoration: underline !important;
+    color: #848484 !important; }
+
+/**
+ * Styling the contact modal and form
+ */
+#contactModal .alert {
+  border-width: 2px; }
+
+#contactModal .modal-content {
+  border-radius: 0.2rem; }
+
+#contactModal .form-control {
+  margin-bottom: 1rem;
+  border-width: 2px;
+  font-size: 16px;
+  font-family: 'Roboto' sans-serif;
+  padding: 0.75rem;
+  border: 2px solid rgba(0, 0, 0, 0.1); }
+  #contactModal .form-control:hover {
+    border: 2px solid rgba(0, 0, 0, 0.2); }
+  #contactModal .form-control:focus, #contactModal .form-control:active {
+    border: 2px solid #41597f; }
+
+#contactModal textarea.form-control {
+  margin-bottom: 0; }
 
 @media screen and (max-width: 594px) {
   .card-columns {
@@ -434,70 +514,6 @@ a {
       padding: 0rem !important; }
       .project .screenshot-wrapper .browser-screenshot {
         box-shadow: 0rem -0.1rem 0.5rem rgba(0, 0, 0, 0.25); } }
-
-/**
- * Styling for cards used throughout the application
- */
-.content {
-  padding-bottom: 2rem; }
-  .content .card {
-    background: white;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 0.2rem;
-    box-shadow: 0rem 0.1rem 0.4rem rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.1); }
-    .content .card .timestamp {
-      margin-bottom: 0rem;
-      font-size: 1rem; }
-    .content .card .subtitle {
-      margin-bottom: 0.5rem;
-      font-weight: normal; }
-    .content .card p:last-child {
-      margin-bottom: 0rem; }
-    .content .card.card-post {
-      padding: 0; }
-      .content .card.card-post .body {
-        padding: 1rem; }
-      .content .card.card-post .timestamp {
-        margin-top: 0.5rem;
-        margin-bottom: 0rem;
-        font-size: 1rem; }
-    .content .card.has-img {
-      padding: 0; }
-      .content .card.has-img .card-img {
-        border-radius: 0.2rem 0.2rem 0rem 0rem;
-        width: 100%; }
-      .content .card.has-img#home .profile-picture {
-        border-radius: 50%;
-        width: 8rem;
-        height: 8rem;
-        transform: translateY(-9rem);
-        border: 4px solid white;
-        box-shadow: 0rem 0.1rem 0.2rem rgba(0, 0, 0, 0.25);
-        position: absolute; }
-      .content .card.has-img#home .card-img {
-        width: 100% !important;
-        height: 10rem;
-        display: block;
-        background-position: top;
-        background-repeat: none;
-        background-size: cover; }
-      .content .card.has-img#home .body {
-        padding-top: 2rem; }
-      .content .card.has-img .body {
-        padding: 1rem; }
-  .content a.card {
-    text-decoration: none !important;
-    color: black !important; }
-
-@media screen and (min-width: 1024px) {
-  .content .card.card-post .body {
-    padding: 1.5rem calc(1rem + 2.5%); } }
-
-@media screen and (max-width: 848px) {
-  .content .card#home .profile-picture {
-    left: calc(50% - 4rem); } }
 
 html,
 body {

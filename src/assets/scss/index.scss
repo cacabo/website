@@ -1,15 +1,22 @@
 // Import other stylesheets
 @import './colors';
 @import './fonts';
-@import './buttons';
+
+// Helper classes
 @import './spacing';
-@import './contact';
+@import './buttons';
+@import './cards';
+
+// SHared components
 @import './nav';
+@import './footer';
+
+// Page-specific
+@import './contact';
 @import './columns';
 @import './posts';
 @import './freelancing';
 @import './projects';
-@import './cards';
 
 html,
 body {
