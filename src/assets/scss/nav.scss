@@ -15,7 +15,7 @@
 
   #overview {
     h4 {
-      color: $black;
+      color: $dark-gray;
     }
 
     p {
@@ -41,7 +41,7 @@
       }
 
       &:hover {
-        color: $black !important;
+        color: $dark-gray !important;
       }
     }
   }
@@ -61,11 +61,11 @@
       &:hover,
       &:active,
       &:focus {
-        color: $black !important;
+        color: $dark-gray !important;
       }
 
       &.active {
-        color: $black !important;
+        color: $dark-gray !important;
       }
     }
   }
@@ -263,6 +263,7 @@
         display: block;
         height: 4rem;
         margin-bottom: 1rem;
+        opacity: 0.5;
       }
 
       .title {

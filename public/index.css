@@ -157,7 +157,7 @@ a {
     min-height: 100vh;
     min-height: calc(100vh - 52px); }
   .app #overview h4 {
-    color: #000000; }
+    color: #5b5b5b; }
   .app #overview p {
     color: #5b5b5b;
     font-size: 1rem; }
@@ -172,7 +172,7 @@ a {
       .app .social a .fa {
         margin-right: 0.25rem; }
       .app .social a:hover {
-        color: #000000 !important; }
+        color: #5b5b5b !important; }
   .app .links {
     display: block;
     width: 100%; }
@@ -184,9 +184,9 @@ a {
       clear: left;
       margin-bottom: 0.5rem; }
       .app .links a:hover, .app .links a:active, .app .links a:focus {
-        color: #000000 !important; }
+        color: #5b5b5b !important; }
       .app .links a.active {
-        color: #000000 !important; }
+        color: #5b5b5b !important; }
 
 @media screen and (max-width: 847.9px) {
   .hidden-on-mobile {
@@ -307,7 +307,8 @@ a {
       .app .nav .logo {
         display: block;
         height: 4rem;
-        margin-bottom: 1rem; }
+        margin-bottom: 1rem;
+        opacity: 0.5; }
       .app .nav .title {
         height: auto;
         display: block;
@@ -435,7 +436,7 @@ footer {
   font-weight: bold; }
 
 .post .code {
-  background: #f2f2f4;
+  background: #f4f4f7;
   overflow-x: scroll;
   padding: 1rem;
   margin-bottom: 1rem; }
@@ -445,7 +446,7 @@ footer {
     font-size: 0.8rem; }
 
 .post .blockquote {
-  border-left: 4px solid #f2f2f4;
+  border-left: 4px solid #f4f4f7;
   padding: 0.25rem 0rem 0.25rem 1rem;
   font-style: italic;
   color: #848484; }
@@ -454,6 +455,14 @@ footer {
     text-align: right;
     font-size: 1rem;
     padding-top: 0.25rem; }
+
+@media screen and (max-width: 648px) {
+  .card-post h1 {
+    font-size: 2.2rem; }
+  .card-post h2 {
+    font-size: 2rem; }
+  .card-post h3 {
+    font-size: 1.8rem; } }
 
 /**
  * Styling the freelancing page
@@ -544,4 +553,4 @@ footer {
 
 html,
 body {
-  background: #f2f2f4; }
+  background: #f4f4f7; }

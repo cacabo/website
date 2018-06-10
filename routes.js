@@ -17,13 +17,22 @@ const design = require('./src/json/design');
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Homepage
-router.get('/', (req, res) => res.render('home', {
-  title: 'Cameron Cabo',
-  education,
-  experiences,
-  extracurriculars,
-  isRootActive: true,
-}));
+router.get('/', (req, res) => {
+  const formattedEducation = education.map(e => {
+    if (e.image) {
+      e.image = `/img/education/${e.image}`;
+    }
+    return e;
+  });
+
+  res.render('home', {
+    title: 'Cameron Cabo',
+    education: formattedEducation,
+    experiences,
+    extracurriculars,
+    isRootActive: true,
+  });
+});
 
 // Freelancing
 router.get('/freelancing', (req, res) => res.render('freelancing', {
