@@ -49,10 +49,6 @@
       &:active,
       &:focus {
         color: $black !important;
-
-        &::after {
-          content: " →";
-        }
       }
 
       &.active {
@@ -224,6 +220,8 @@
   }
 
   .app {
+    padding: 0rem 2.5%;
+
     .nav {
       width: 16rem;
       padding: 1rem 0rem 0rem 1rem;
@@ -265,5 +263,11 @@
       margin-left: 16rem;
       margin-right: 1rem;
     }
+  }
+}
+
+@media screen and (min-width: 1248px) {
+  .app {
+    padding: 0 5%;
   }
 }
