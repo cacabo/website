@@ -1,6 +1,6 @@
 # Personal Website
 
-Personal website developed in Node with Handlebars, Express, and SCSS.
+Personal website developed in Node with Handlebars, Express, and SCSS leveraging local JSON files for storage. Hosted on Heroku.
 
 ### TODO
 - [ ] Add images to homepage content
@@ -19,3 +19,6 @@ Personal website developed in Node with Handlebars, Express, and SCSS.
 - [ ] Generic background image for link sharing
 - [x] Add timestamps to posts
 - [ ] Favicon
+- [ ] Lower screenshot quality for quicker loading time
+- [ ] Update how links look in posts (underline only?)
+- [ ] Remove gray padding on mobile?
