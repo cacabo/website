@@ -153,7 +153,14 @@ a {
   display: block;
   width: 100%; }
   .app .content {
-    padding-top: 1rem; }
+    padding-top: 1rem;
+    min-height: 100vh;
+    min-height: calc(100vh - 52px); }
+  .app #overview h4 {
+    color: #000000; }
+  .app #overview p {
+    color: #5b5b5b;
+    font-size: 1rem; }
   .app .logo-wrapper {
     text-decoration: none !important; }
   .app .social {
@@ -161,16 +168,16 @@ a {
     width: 100%; }
     .app .social a {
       text-decoration: none !important;
-      color: #757575 !important; }
+      color: #a0a0a0 !important; }
       .app .social a .fa {
         margin-right: 0.25rem; }
       .app .social a:hover {
-        color: black !important; }
+        color: #000000 !important; }
   .app .links {
     display: block;
     width: 100%; }
     .app .links a {
-      color: #757575 !important;
+      color: #a0a0a0 !important;
       text-decoration: none;
       display: block;
       float: left;
@@ -179,7 +186,7 @@ a {
       .app .links a:hover, .app .links a:active, .app .links a:focus {
         color: #000000 !important; }
       .app .links a.active {
-        color: black !important; }
+        color: #000000 !important; }
 
 @media screen and (max-width: 847.9px) {
   .hidden-on-mobile {
@@ -283,9 +290,15 @@ a {
     margin: 0 !important; }
   .app {
     padding: 0rem 2.5%; }
+    .app .nav-wrapper {
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      flex-direction: row;
+      position: fixed;
+      padding-left: 1rem; }
     .app .nav {
       width: 16rem;
-      padding: 1rem 0rem 0rem 1rem;
       position: fixed;
       background: none;
       box-shadow: none; }
@@ -308,6 +321,7 @@ a {
         margin-bottom: 7.5%; }
     .app .content {
       margin-left: 16rem;
+      margin-left: calc(16rem + 1.25%);
       margin-right: 1rem; } }
 
 @media screen and (min-width: 1248px) {
@@ -318,12 +332,13 @@ a {
  * Styling for the footer rendered on every page
  */
 footer {
+  padding-top: 1rem;
   padding-bottom: 1rem; }
   footer p {
     font-size: 0.8rem;
     margin-bottom: 0;
     line-height: 1;
-    color: #919191; }
+    color: #a0a0a0; }
     footer p.right {
       float: right; }
   footer #scroll-to-top:hover {

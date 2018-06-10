@@ -2,13 +2,14 @@
  * Styling for the footer rendered on every page
  */
 footer {
+  padding-top: 1rem;
   padding-bottom: 1rem;
 
   p {
     font-size: 0.8rem;
     margin-bottom: 0;
     line-height: 1;
-    color: lighten($gray, 5%);
+    color: $pale-gray;
 
     &.right {
       float: right;
