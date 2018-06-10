@@ -4,17 +4,35 @@
 footer {
   padding-bottom: 1rem;
 
-  a, p {
+  p {
     font-size: 0.8rem;
-    color: $gray !important;
+    margin-bottom: 0;
+    line-height: 1;
+    color: lighten($gray, 5%);
 
     &.right {
       float: right;
     }
   }
 
-  a:hover {
-    text-decoration: underline !important;
-    color: $gray !important;
+  #scroll-to-top:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 448px) {
+  footer {
+    padding-bottom: 0rem;
+    text-align: center;
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      width: 100%;
+
+      &.right {
+        float: none;
+      }
+    }
   }
 }

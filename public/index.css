@@ -319,14 +319,26 @@ a {
  */
 footer {
   padding-bottom: 1rem; }
-  footer a, footer p {
+  footer p {
     font-size: 0.8rem;
-    color: #848484 !important; }
-    footer a.right, footer p.right {
+    margin-bottom: 0;
+    line-height: 1;
+    color: #919191; }
+    footer p.right {
       float: right; }
-  footer a:hover {
-    text-decoration: underline !important;
-    color: #848484 !important; }
+  footer #scroll-to-top:hover {
+    text-decoration: underline; }
+
+@media screen and (max-width: 448px) {
+  footer {
+    padding-bottom: 0rem;
+    text-align: center; }
+    footer p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      width: 100%; }
+      footer p.right {
+        float: none; } }
 
 /**
  * Styling the contact modal and form
