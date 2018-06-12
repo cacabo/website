@@ -142,7 +142,9 @@ a {
 
 @media screen and (max-width: 848px) {
   .content .card#home .profile-picture {
-    left: calc(50% - 4rem); } }
+    left: calc(50% - 4rem); }
+  .content .card .subtitle {
+    font-size: 1rem; } }
 
 .flex-container {
   display: flex;
@@ -249,10 +251,10 @@ a {
       z-index: 1001;
       top: 0.5rem; }
       .nav #toggle:hover span, .nav #toggle:focus span, .nav #toggle:active span {
-        background: #5b5b5b; }
+        background: #848484; }
       .nav #toggle span {
         width: 100%;
-        background: #848484;
+        background: #a0a0a0;
         height: 3px;
         display: block;
         transition: all 0.2s ease; }
@@ -364,6 +366,7 @@ footer {
 
 @media screen and (max-width: 448px) {
   footer {
+    padding-top: 1.5rem;
     padding-bottom: 0rem;
     text-align: center; }
     footer p {

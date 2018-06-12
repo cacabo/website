@@ -136,13 +136,13 @@
       &:focus,
       &:active {
         span {
-          background: $dark-gray;
+          background: $gray;
         }
       }
 
       span {
         width: 100%;
-        background: $gray;
+        background: $pale-gray;
         height: 3px;
         display: block;
         transition: all 0.2s ease;
