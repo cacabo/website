@@ -97,7 +97,7 @@ a {
   .content .card .subtitle {
     margin-bottom: 0.5rem;
     font-weight: normal; }
-  .content .card p:last-child {
+  .content .card > p:last-child {
     margin-bottom: 0rem; }
   .content .card.card-post {
     padding: 0; }

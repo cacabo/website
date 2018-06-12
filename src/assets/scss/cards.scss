@@ -20,7 +20,7 @@
       font-weight: normal;
     }
 
-    p:last-child {
+    &> p:last-child {
       margin-bottom: 0rem;
     }
 

@@ -4,27 +4,31 @@
     "company": "PayPal",
     "startDate": "May 2018",
     "endDate": "August 2018",
-    "description": "Working to reduce user churn and optimize payments. Creating new features in full-stack JavaScript."
+    "description": "Working to reduce user churn and optimize payments. Creating new features in full-stack JavaScript.",
+    "image": "paypal.png"
   },
   {
     "title": "Software Engineering Intern",
     "company": "Honey",
     "startDate": "June 2017",
     "endDate": "August 2017",
-    "description": "Worked full-stack with JavaScript to build out new applications and expand existing features. I worked within an engineering team, interfacing regularly with my lead, PM, fellow engineers, and QA. I contributed to the Travel API which is currently in production (https://honey.travel) and to scripts and components to be rolled out in the coming months on web and mobile."
+    "description": "Worked full-stack with JavaScript to build out new applications and expand existing features. I worked within an engineering team, interfacing regularly with my lead, PM, fellow engineers, and QA. I contributed to the Travel API which is currently in production (https://honey.travel) and to scripts and components to be rolled out in the coming months on web and mobile.",
+    "image": "honey.svg"
   },
   {
     "title": "Teaching Assistant",
     "company": "University of Pennsylvania",
     "startDate": "August 2018",
     "endDate": "Present",
-    "description": "Teaching assistant for CIS 197: JavaScript. Aided in development of homework sets, lectures, and projects."
+    "description": "Teaching assistant for CIS 197: JavaScript. Aided in development of homework sets, lectures, and projects.",
+    "image": "penn.jpg"
   },
   {
     "title": "Co-Founder & Developer",
     "company": "Riplo",
     "startDate": "April 2018",
     "endDate": "Present",
-    "description": "Driven group of student developers and designers who leverage modern technologies and industry-trained best-practices to rapidly build web and mobile applications for our clients."
+    "description": "Driven group of student developers and designers who leverage modern technologies and industry-trained best-practices to rapidly build web and mobile applications for our clients.",
+    "image": "riplo.svg"
   }
 ]
