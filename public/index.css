@@ -94,11 +94,11 @@ a {
   .content .card .timestamp {
     margin-bottom: 0rem;
     font-size: 1rem; }
-  .content .card .subtitle {
-    margin-bottom: 0.5rem;
-    font-weight: normal; }
-  .content .card > p:last-child {
+  .content .card p:last-child {
     margin-bottom: 0rem; }
+  .content .card .subtitle {
+    margin-bottom: 0.5rem !important;
+    font-weight: normal; }
   .content .card.card-post {
     padding: 0; }
     .content .card.card-post .body {
@@ -172,9 +172,9 @@ a {
     min-height: 100vh;
     min-height: calc(100vh - 52px); }
   .app #overview h4 {
-    color: #5b5b5b; }
+    color: #000000; }
   .app #overview p {
-    color: #5b5b5b;
+    color: #000000;
     font-size: 1rem; }
   .app .logo-wrapper {
     text-decoration: none !important; }
@@ -187,21 +187,23 @@ a {
       .app .social a .fa {
         margin-right: 0.25rem; }
       .app .social a:hover {
-        color: #5b5b5b !important; }
+        color: #000000 !important; }
   .app .links {
     display: block;
     width: 100%; }
     .app .links a {
-      color: #a0a0a0 !important;
+      color: #5b5b5b !important;
       text-decoration: none;
       display: block;
       float: left;
       clear: left;
       margin-bottom: 0.5rem; }
       .app .links a:hover, .app .links a:active, .app .links a:focus {
-        color: #5b5b5b !important; }
+        color: #000000 !important;
+        text-decoration: underline; }
       .app .links a.active {
-        color: #5b5b5b !important; }
+        color: #000000 !important;
+        text-decoration: underline; }
 
 @media screen and (max-width: 847.9px) {
   .hidden-on-mobile {

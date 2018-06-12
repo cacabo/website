@@ -3,7 +3,7 @@
 Personal website developed in Node with Handlebars, Express, and SCSS leveraging local JSON files for storage. Hosted on Heroku.
 
 ### TODO
-- [ ] Add images to homepage content
+- [x] Add images to homepage content
 - [x] Add meta tags
 - [x] Projects
 - [x] Freelancing info

@@ -15,11 +15,11 @@
 
   #overview {
     h4 {
-      color: $dark-gray;
+      color: $black;
     }
 
     p {
-      color: $dark-gray;
+      color: $black;
       font-size: 1rem;
     }
   }
@@ -41,7 +41,7 @@
       }
 
       &:hover {
-        color: $dark-gray !important;
+        color: $black !important;
       }
     }
   }
@@ -51,7 +51,7 @@
     width: 100%;
 
     a {
-      color: $pale-gray !important;
+      color: $dark-gray !important;
       text-decoration: none;
       display: block;
       float: left;
@@ -61,11 +61,13 @@
       &:hover,
       &:active,
       &:focus {
-        color: $dark-gray !important;
+        color: $black !important;
+        text-decoration: underline;
       }
 
       &.active {
-        color: $dark-gray !important;
+        color: $black !important;
+        text-decoration: underline;
       }
     }
   }
