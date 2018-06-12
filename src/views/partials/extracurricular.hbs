@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="flex-container">
+    <div class="flex">
+      <h4 class="marg-bot-0">{{title}}, {{organization}}</h4>
+      <p class="mono gray-text subtitle">{{startDate}} - {{endDate}}</p>
+    </div>
+    {{#if image}}
+      <div class="background-image" style="background-image: url(img/extracurriculars/{{image}})"></div>
+    {{/if}}
+  </div>
+  <p>{{description}}</p>
+</div>
