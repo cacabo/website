@@ -94,3 +94,23 @@
     left: calc(50% - 4rem);
   }
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+
+  .background-image {
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 3rem;
+    max-width: 3rem;
+    flex: none;
+    margin-left: 1rem;
+  }
+
+  .flex {
+    flex: 1;
+  }
+}

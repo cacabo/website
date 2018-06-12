@@ -144,6 +144,21 @@ a {
   .content .card#home .profile-picture {
     left: calc(50% - 4rem); } }
 
+.flex-container {
+  display: flex;
+  flex-direction: row; }
+  .flex-container .background-image {
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    width: 3rem;
+    max-width: 3rem;
+    flex: none;
+    margin-left: 1rem; }
+  .flex-container .flex {
+    flex: 1; }
+
 /**
  * Styling for the navigation of the app
  * On mobile and smaller screens, this is at the top

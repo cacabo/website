@@ -18,16 +18,17 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Homepage
 router.get('/', (req, res) => {
-  const formattedEducation = education.map(e => {
-    if (e.image) {
-      e.image = `/img/education/${e.image}`;
-    }
-    return e;
-  });
+  // const formattedEducation = education.map(e => {
+  //   if (e.image) {
+  //     const imgRoute = `/img/education/${e.image}`;
+  //     e.image = imgRoute;
+  //   }
+  //   return e;
+  // });
 
   res.render('home', {
     title: 'Cameron Cabo',
-    education: formattedEducation,
+    education,
     experiences,
     extracurriculars,
     isRootActive: true,
