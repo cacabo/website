@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "concurrently \"nodemon index.js\" \"open \"http://localhost:3000\"\"",
     "build": "node index.js",
     "test": "node index.js --env=jsdom"
   },
