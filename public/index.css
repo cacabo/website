@@ -155,11 +155,25 @@ a {
     background-size: contain;
     background-position: top;
     width: 3rem;
-    max-width: 3rem;
+    max-height: 3rem;
     flex: none;
     margin-left: 1rem; }
   .flex-container .flex {
     flex: 1; }
+
+@media screen and (max-width: 572px) {
+  .flex-container .backgrund-image {
+    width: 2.4rem;
+    max-height: 3rem;
+    margin-left: 0.5rem; }
+  .app .content {
+    padding-top: 0 !important; }
+    .app .content .card {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      border-radius: 0px; }
+      .app .content .card .card-img {
+        border-radius: 0; } }
 
 /**
  * Styling for the navigation of the app
