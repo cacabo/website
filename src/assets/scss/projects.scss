@@ -87,3 +87,12 @@
     }
   }
 }
+
+@media screen and (max-width: 572px) {
+  .project {
+    border-radius: 0;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -142,7 +142,7 @@
 
       span {
         width: 100%;
-        background: $pale-gray;
+        background: lighten($pale-gray, 15%);
         height: 3px;
         display: block;
         transition: all 0.2s ease;
