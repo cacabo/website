@@ -19,6 +19,6 @@ Personal website developed in Node with Handlebars, Express, and SCSS leveraging
 - [ ] Generic background image for link sharing
 - [x] Add timestamps to posts
 - [ ] Favicon
-- [ ] Lower screenshot quality for quicker loading time
+- [x] Lower screenshot quality for quicker loading time
 - [ ] Update how links look in posts (underline only?)
-- [ ] Remove gray padding on mobile?
+- [x] Remove gray padding on mobile?
