@@ -114,5 +114,11 @@
         });
       });
     </script>
+
+    <script type="text/javascript">
+      $('#contactModal').on('shown.bs.modal', function() {
+        $('#firstName').trigger('focus');
+      });
+    </script>
   </body>
 </html>
