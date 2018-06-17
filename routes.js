@@ -51,6 +51,7 @@ router.get('/art-design', (req, res) => res.render('artDesign', {
 // Contact page
 router.get('/contact', (req, res) => res.render('contact', {
   title: 'Cameron Cabo | Contact',
+  isContactActive: true,
 }));
 
 // Listing all posts

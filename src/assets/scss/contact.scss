@@ -2,10 +2,6 @@
  * Styling the contact modal and form
  */
 #contactModal {
-  .alert {
-    border-width: 2px;
-  }
-
   .modal-content {
     border-radius: 0.2rem;
     border: 1px solid $border;
@@ -36,4 +32,32 @@
 
 textarea.form-control {
   margin-bottom: 0;
+}
+
+/**
+ * Only show the link to the contact modal on larger screens
+ * On smaller screens direct users to the contact path
+ */
+@media screen and (min-width: 848px) {
+  #contact-btn {
+    display: inline-block;
+  }
+
+  #contact-link {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 847.9px) {
+  #contact-btn {
+    display: none;
+  }
+
+  #contact-link {
+    display: inline-block;
+  }
+}
+
+.alert {
+  border-width: 2px;
 }
