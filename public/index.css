@@ -76,13 +76,16 @@ a {
     border: 1px solid rgba(0, 0, 0, 0.1) !important; }
     .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
       background: #28364c !important; }
+  .btn.btn-secondary {
+    color: white !important; }
 
 .buttons {
   display: block;
   width: 100%;
   margin-bottom: 0.5rem; }
   .buttons .btn {
-    margin-bottom: 0.5rem; }
+    margin-bottom: 0.5rem;
+    margin-right: 0.25rem; }
 
 @media screen and (max-width: 848px) {
   .btn {
@@ -411,23 +414,23 @@ footer {
   border-radius: 0.2rem;
   border: 1px solid rgba(0, 0, 0, 0.1); }
 
-#contactModal .form-control {
+.modal-backdrop {
+  background: #ffffff; }
+
+.form-control {
   margin-bottom: 1rem;
   border-width: 2px;
   font-size: 16px;
   font-family: 'Roboto' sans-serif;
   padding: 0.75rem;
   border: 2px solid rgba(0, 0, 0, 0.1); }
-  #contactModal .form-control:hover {
+  .form-control:hover {
     border: 2px solid rgba(0, 0, 0, 0.2); }
-  #contactModal .form-control:focus, #contactModal .form-control:active {
+  .form-control:focus, .form-control:active {
     border: 2px solid #41597f; }
 
-#contactModal textarea.form-control {
+textarea.form-control {
   margin-bottom: 0; }
-
-.modal-backdrop {
-  background: #ffffff; }
 
 @media screen and (max-width: 594px) {
   .card-columns {

@@ -18,14 +18,6 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 // Homepage
 router.get('/', (req, res) => {
-  // const formattedEducation = education.map(e => {
-  //   if (e.image) {
-  //     const imgRoute = `/img/education/${e.image}`;
-  //     e.image = imgRoute;
-  //   }
-  //   return e;
-  // });
-
   res.render('home', {
     title: 'Cameron Cabo',
     education,
@@ -54,6 +46,11 @@ router.get('/art-design', (req, res) => res.render('artDesign', {
   art,
   design,
   isArtDesignActive: true,
+}));
+
+// Contact page
+router.get('/contact', (req, res) => res.render('contact', {
+  title: 'Cameron Cabo | Contact',
 }));
 
 // Listing all posts

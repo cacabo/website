@@ -22,6 +22,10 @@
       background: $dark-slate !important;
     }
   }
+
+  &.btn-secondary {
+    color: white !important;
+  }
 }
 
 .buttons {
@@ -31,6 +35,7 @@
 
   .btn {
     margin-bottom: 0.5rem;
+    margin-right: 0.25rem;
   }
 }
 
