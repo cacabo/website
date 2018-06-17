@@ -173,6 +173,10 @@ a {
     width: 2.4rem;
     max-height: 3rem;
     margin-left: 0.5rem; }
+  .space-mobile {
+    height: 1rem;
+    width: 100%;
+    display: block; }
   .app .content {
     padding-top: 0 !important; }
     .app .content .card {
@@ -237,7 +241,7 @@ a {
     height: 3rem; }
   .nav {
     width: 100%;
-    box-shadow: 0rem 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0rem 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
     position: fixed;
     z-index: 1; }
     .nav #overview {
@@ -404,7 +408,8 @@ footer {
   border-width: 2px; }
 
 #contactModal .modal-content {
-  border-radius: 0.2rem; }
+  border-radius: 0.2rem;
+  border: 1px solid rgba(0, 0, 0, 0.1); }
 
 #contactModal .form-control {
   margin-bottom: 1rem;
@@ -420,6 +425,9 @@ footer {
 
 #contactModal textarea.form-control {
   margin-bottom: 0; }
+
+.modal-backdrop {
+  background: #ffffff; }
 
 @media screen and (max-width: 594px) {
   .card-columns {
@@ -496,6 +504,11 @@ footer {
     text-align: right;
     font-size: 1rem;
     padding-top: 0.25rem; }
+
+.card-post h1,
+.card-post h2,
+.card-post h3 {
+  line-height: 1; }
 
 @media screen and (max-width: 648px) {
   .card-post h1 {

@@ -74,6 +74,14 @@
   }
 }
 
+.card-post {
+  h1,
+  h2,
+  h3 {
+    line-height: 1;
+  }
+}
+
 @media screen and (max-width: 648px) {
   .card-post {
     h1 {

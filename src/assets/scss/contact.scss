@@ -5,9 +5,10 @@
   .alert {
     border-width: 2px;
   }
-  
+
   .modal-content {
     border-radius: 0.2rem;
+    border: 1px solid $border;
   }
 
   .form-control {
@@ -31,4 +32,8 @@
   textarea.form-control {
     margin-bottom: 0;
   }
+}
+
+.modal-backdrop {
+  background: $white;
 }
