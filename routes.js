@@ -16,6 +16,25 @@ const design = require('./src/json/design');
 // Set the API key for sendgrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// Helper function to get a post with the passed in slug
+const findPost = (slug) => {
+  let matchingPost;
+  posts.forEach((post) => {
+    if (post.slug === slug) {
+      matchingPost = post;
+    }
+  });
+
+  return matchingPost;
+};
+
+// Helper function to render a not found page
+const renderNotFound = (res) => {
+  res.status(404).render('not-found', {
+    title: 'Cameron Cabo | Not Found',
+  });
+};
+
 // Homepage
 router.get('/', (req, res) => {
   res.render('home', {
@@ -66,26 +85,31 @@ router.get('/posts/:slug', (req, res) => {
   // Isolate the slug from the URL
   const slug = req.params.slug;
 
-  // Find posts with the same slug, if there are any
-  const filteredPosts = posts.filter(post => post.slug === slug);
-  if (filteredPosts && filteredPosts.length) {
-    const post = filteredPosts[0];
+  // Ensure the slug is valid
+  if (!slug) renderNotFound(res);
+
+  // Find the post with the matching slug
+  const matchingPost = findPost(slug);
+
+  if (matchingPost) {
     const {
       title,
       subtitle,
       image,
-    } = post;
-    let {
-      updatedAt,
-      createdAt,
-    } = post;
+    } = matchingPost;
+    const {
+      updatedAtMS,
+      createdAtMS,
+    } = matchingPost;
 
     // Build up the string for the partial to render the post
     const partial = `posts/${slug}`;
 
     // Format updated at and created at
-    if (updatedAt) updatedAt = new moment(updatedAt).fromNow();
-    if (createdAt) createdAt = new moment(createdAt).fromNow();
+    let updatedAt;
+    let createdAt;
+    if (updatedAtMS) updatedAt = new moment(updatedAtMS).fromNow();
+    if (createdAtMS) createdAt = new moment(createdAtMS).fromNow();
 
     // Do not show updated at if it is the same as created at
     if (updatedAt === createdAt) updatedAt = null;
@@ -102,9 +126,7 @@ router.get('/posts/:slug', (req, res) => {
     });
   } else {
     // Else, the slug was not matched, render the not found route
-    res.render('not-found', {
-      title: 'Cameron Cabo | Not Found',
-    });
+    renderNotFound(res);
   }
 });
 
@@ -165,9 +187,7 @@ router.post('/contact', (req, res) => {
 
 // Handle 404 error
 // NOTE this is reached if no other route above was matched
-router.get('*', (req, res) => res.render('not-found', {
-  title: 'Cameron Cabo | Not Found',
-}));
+router.get('*', (req, res) => renderNotFound(res));
 
 // Export the router
 module.exports = router;
