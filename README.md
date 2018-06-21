@@ -2,6 +2,60 @@
 
 Personal website developed in Node with Handlebars, Express, and SCSS leveraging local JSON files for storage. Hosted on Heroku.
 
+------
+
+### Architecture
+```
+│
+├─ public               # Files accessible from the frontend
+│  ├─ img               # Images
+│  │  └─ ...
+│  ├─ js                # Frontend scripts
+│  │  └─ ...
+│  ├─ index.css         # Compiled CSS file
+│  └─ ...               # Favicon files
+│
+├─ src                  # Assets, data, and content
+│  ├─ assets
+│  │  └─ scss           # Styles written in SCSS
+│  │     └─ ...
+│  ├─ json              # Data for posts, projects, etc.
+│  │  └─ ...
+│  └─ views             # Handlebars files
+│     ├─ layouts        # Data for posts, projects, etc.
+│     │  └─ layout.hbs  # Wrapper HTML for all pages
+│     ├─ partials       # Data for posts, projects, etc.
+│     │  ├─ posts       # HTML partial for each post
+│     │  │  └─ ...
+│     │  └─ ...         # Other partials
+│     └─ ...            # Page components
+│
+├─ .eslintrc            # Documentation
+├─ .gitignore           # Files not included in git repo
+├─ index.js             # Configure express server
+├─ package.json         # Layout dependencies
+├─ routes.js            # App API's and routing
+├─ ...                  # Yarn config files
+└─ README.md            # Documentation
+```
+
+### Posts system design
+
+Each post is represented by a JSON file of the form:
+```JSON
+{
+  "createdAt": "123...",
+  "updatedAt": "123...",
+  "title": "Title of the post",
+  "slug": "title-of-the-post",
+  "image": "...",
+  "subtitle": "Subtitle of the post"
+},
+```
+There is a corresponding Handlebars file in the `/src/views/partials/posts` directory indexed by the post's `slug`, in this case `title-of-the-post`. This works to determine the URL for the post along with the HTML content rendered.
+
+------
+
 ### Completed
 - [x] Add images to homepage content
 - [x] Add meta tags
@@ -21,11 +75,12 @@ Personal website developed in Node with Handlebars, Express, and SCSS leveraging
 - [x] Next and previous links for posts
 - [x] Preview posts and projects on homepage
 - [x] Update how links look in posts (underline only?)
+- [x] Build out README with file architecture, features, etc.
 
 ### Planned
-- [ ] Write about certain projects on their own pages
-- [ ] Replace sharing icons with local images
+- [ ] Write about projects on their own pages
+- [ ] Replace font awesome icons with local images
 - [ ] Page background styling
 - [ ] Write additional posts
 - [ ] Generic background image for link sharing
-- [ ] Build out README with file architecture, features, etc.
+- [ ] Smooth transitions between pages

@@ -1,0 +1,22 @@
+.text-line-behind {
+  padding-top: 0.5rem;
+  text-align: center;
+
+  .line-behind {
+    width: 100%;
+    transform: translateY(0.8rem);
+    height: 1px;
+    background: $lighter-gray;
+    position: relative;
+  }
+
+  p {
+    background: $light-gray;
+    padding: 0rem 0.5rem;
+    color: $pale-gray;
+    width: auto;
+    display: inline-block;
+    font-size: 0.8rem;
+    transform: translateY(0);
+  }
+}
