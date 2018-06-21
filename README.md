@@ -75,6 +75,7 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 - [x] Next and previous links for posts
 - [x] Preview posts and projects on homepage
 - [x] Update how links look in posts (underline only?)
+- [x] Smooth transitions between pages
 - [x] Build out README with file architecture, features, etc.
 
 ### Planned
@@ -83,4 +84,3 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 - [ ] Page background styling
 - [ ] Write additional posts
 - [ ] Generic background image for link sharing
-- [ ] Smooth transitions between pages

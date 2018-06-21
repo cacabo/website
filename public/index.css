@@ -657,3 +657,7 @@ textarea.form-control {
 html,
 body {
   background: #f4f4f7; }
+
+.fade-in {
+  opacity: 0;
+  transition: all 0.2s ease; }

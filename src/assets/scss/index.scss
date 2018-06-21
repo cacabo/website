@@ -23,3 +23,8 @@ html,
 body {
   background: $light-gray;
 }
+
+.fade-in {
+  opacity: 0;
+  transition: all 0.2s ease;
+}

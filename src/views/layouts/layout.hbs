@@ -89,7 +89,7 @@
       {{> nav}}
 
       <!-- App content -->
-      <div class="content">
+      <div class="content fade-in">
         <div class="container-fluid">
           {{{ body }}}
         </div>
@@ -137,6 +137,12 @@
     <script type="text/javascript">
       $('#contactModal').on('shown.bs.modal', function() {
         $('#firstName').trigger('focus');
+      });
+    </script>
+
+    <script type="text/javascript">
+      $('document').ready(function() {
+        $('.fade-in').css('opacity', 1);
       });
     </script>
   </body>
