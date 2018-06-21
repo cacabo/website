@@ -1,11 +1,16 @@
 /**
  * Styling buttons used on the site
  */
+ a.btn {
+   text-decoration: none !important;
+ }
+ 
 .btn {
   border-radius: 0.2rem;
   box-shadow: 0rem 0.2rem 0.4rem $shadow;
   font-family: 'Inconsolata', monospace;
   font-size: 1.2rem;
+  text-decoration: none !important;
 
   &:hover {
     box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;

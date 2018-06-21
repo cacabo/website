@@ -10,15 +10,20 @@ Personal website developed in Node with Handlebars, Express, and SCSS leveraging
 - [x] Posts
 - [x] Art/Design
 - [x] Mobile responsive nav
-- [ ] Page background styling
 - [x] Add linter
 - [x] Contact form frontend
 - [x] Contact form functionality
-- [ ] Replace icons with local images
-- [ ] Write additional posts
-- [ ] Generic background image for link sharing
 - [x] Add timestamps to posts
-- [ ] Favicon
 - [x] Lower screenshot quality for quicker loading time
-- [ ] Update how links look in posts (underline only?)
 - [x] Remove gray padding on mobile?
+- [x] Remove modal on smaller screens
+- [x] Update how links look in posts (underline only?)
+- [ ] Preview posts and projects on homepage?
+- [ ] Write about certain projects on their own pages
+- [ ] Replace sharing icons with local images
+- [ ] Page background styling
+- [ ] Write additional posts
+- [ ] Favicon
+- [ ] Generic background image for link sharing
+- [ ] Next and previous links for posts
+- [ ] Build out readme with file architecture, features, etc.

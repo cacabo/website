@@ -19,7 +19,8 @@ li {
 a {
   color: #3e64a0 !important;
   cursor: hand;
-  cursor: pointer; }
+  cursor: pointer;
+  text-decoration: underline; }
   a:hover, a:focus, a:active {
     color: #304d7b !important; }
   a:visited {
@@ -63,11 +64,15 @@ a {
 /**
  * Styling buttons used on the site
  */
+a.btn {
+  text-decoration: none !important; }
+
 .btn {
   border-radius: 0.2rem;
   box-shadow: 0rem 0.2rem 0.4rem rgba(0, 0, 0, 0.05);
   font-family: 'Inconsolata', monospace;
-  font-size: 1.2rem; }
+  font-size: 1.2rem;
+  text-decoration: none !important; }
   .btn:hover {
     box-shadow: 0rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1); }
   .btn.btn-primary {
