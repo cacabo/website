@@ -17,13 +17,13 @@ Personal website developed in Node with Handlebars, Express, and SCSS leveraging
 - [x] Lower screenshot quality for quicker loading time
 - [x] Remove gray padding on mobile?
 - [x] Remove modal on smaller screens
+- [x] Favicon
 - [x] Update how links look in posts (underline only?)
 - [ ] Preview posts and projects on homepage?
 - [ ] Write about certain projects on their own pages
 - [ ] Replace sharing icons with local images
 - [ ] Page background styling
 - [ ] Write additional posts
-- [ ] Favicon
 - [ ] Generic background image for link sharing
 - [ ] Next and previous links for posts
 - [ ] Build out readme with file architecture, features, etc.
