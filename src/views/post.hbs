@@ -23,6 +23,25 @@
     </div>
   </div>
 
+  <div class="text-line-behind">
+    <div class="line-behind"></div>
+    <p>Read More</p>
+  </div>
+
+  <div class="row">
+    {{#if next}}
+      <div class="col-12 col-md-6">
+        {{> postPreview next}}
+      </div>
+    {{/if}}
+
+    {{#if prev}}
+      <div class="col-12 col-md-6">
+        {{> postPreview prev}}
+      </div>
+    {{/if}}
+  </div>
+
   <a href="/posts" class="btn btn-primary marg-top-1">
     ← Back to all posts
   </a>

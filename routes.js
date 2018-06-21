@@ -16,16 +16,43 @@ const design = require('./src/json/design');
 // Set the API key for sendgrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// Helper function to get the previous post
+const getPrevPost = (index) => {
+  if (posts.length === 0) return null;
+  else if (index === 0) return posts[posts.length - 1];
+  return posts[index - 1];
+};
+
+// Helper function to get the next post
+const getNextPost = (index) => {
+  if (posts.length === 0) return null;
+  else if (index === posts.length - 1) return posts[0];
+  return posts[index + 1];
+};
+
 // Helper function to get a post with the passed in slug
-const findPost = (slug) => {
+// Along with the next and previous posts
+const findPosts = (slug) => {
   let matchingPost;
-  posts.forEach((post) => {
+  let matchingPostIndex;
+  posts.forEach((post, index) => {
     if (post.slug === slug) {
       matchingPost = post;
+      matchingPostIndex = index;
     }
   });
 
-  return matchingPost;
+  // If a post was found, return that post along with the previous
+  // and next posts
+  if (matchingPost) {
+    return {
+      prev: getPrevPost(matchingPostIndex),
+      post: matchingPost,
+      next: getNextPost(matchingPostIndex),
+    };
+  }
+
+  return null;
 };
 
 // Helper function to render a not found page
@@ -89,18 +116,23 @@ router.get('/posts/:slug', (req, res) => {
   if (!slug) renderNotFound(res);
 
   // Find the post with the matching slug
-  const matchingPost = findPost(slug);
+  const postObj = findPosts(slug);
 
-  if (matchingPost) {
+  if (postObj && postObj.post) {
+    const {
+      next,
+      post,
+      prev,
+    } = postObj;
     const {
       title,
       subtitle,
       image,
-    } = matchingPost;
+    } = post;
     const {
       updatedAtMS,
       createdAtMS,
-    } = matchingPost;
+    } = post;
 
     // Build up the string for the partial to render the post
     const partial = `posts/${slug}`;
@@ -123,6 +155,8 @@ router.get('/posts/:slug', (req, res) => {
       createdAt,
       updatedAt,
       partial,
+      next,
+      prev,
     });
   } else {
     // Else, the slug was not matched, render the not found route

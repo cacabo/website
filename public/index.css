@@ -639,3 +639,21 @@ textarea.form-control {
 html,
 body {
   background: #f4f4f7; }
+
+.text-line-behind {
+  padding-top: 0.5rem;
+  text-align: center; }
+  .text-line-behind .line-behind {
+    width: 100%;
+    transform: translateY(0.8rem);
+    height: 1px;
+    background: #dbdbe0;
+    position: relative; }
+  .text-line-behind p {
+    background: #f4f4f7;
+    padding: 0rem 0.5rem;
+    color: #a0a0a0;
+    width: auto;
+    display: inline-block;
+    font-size: 0.8rem;
+    transform: translateY(0); }
