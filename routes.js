@@ -16,6 +16,18 @@ const design = require('./src/json/design');
 // Set the API key for sendgrid
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
+// Helper function to get two recent posts
+const getRecentPosts = () => {
+  if (posts.length <= 2) return posts;
+  return posts.slice(0, 2);
+};
+
+// Helper function to get two recent projects
+const getRecentProjects = () => {
+  if (projects.length <= 2) return projects;
+  return projects.slice(0, 2);
+};
+
 // Helper function to get the previous post
 const getPrevPost = (index) => {
   if (posts.length === 0) return null;
@@ -69,6 +81,8 @@ router.get('/', (req, res) => {
     education,
     experiences,
     extracurriculars,
+    posts: getRecentPosts(),
+    projects: getRecentProjects(),
     isRootActive: true,
   });
 });
@@ -117,7 +131,6 @@ router.get('/posts/:slug', (req, res) => {
 
   // Find the post with the matching slug
   const postObj = findPosts(slug);
-
   if (postObj && postObj.post) {
     const {
       next,

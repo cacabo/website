@@ -70,3 +70,33 @@
     {{> extracurricular this}}
   {{/each}}
 </div>
+
+<!-- Recent projects -->
+{{#if projects}}
+  <div>
+    <h4 class="mono bold title">Recent Projects</h4>
+    {{#each projects}}
+      {{> project this}}
+    {{/each}}
+  </div>
+  <a href="/projects" class="btn btn-primary marg-bot-1">
+    View projects
+  </a>
+{{/if}}
+
+<!-- Recent posts -->
+{{#if posts}}
+  <div>
+    <h4 class="mono bold title">Recent Posts</h4>
+    <div class="row">
+      {{#each posts}}
+        <div class="col-12 col-md-6">
+          {{> postPreview this}}
+        </div>
+      {{/each}}
+    </div>
+    <a href="/posts" class="btn btn-primary marg-bot-1">
+      View posts
+    </a>
+  </div>
+{{/if}}
