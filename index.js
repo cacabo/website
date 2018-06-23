@@ -24,14 +24,15 @@ app.engine('hbs', hbs({
 
 // Compile SCSS to CSS
 app.use(sassMiddleware({
-  src: __dirname + '/src/assets/scss',
-  dest: __dirname + '/public',
+  src: `${__dirname}/src/assets/scss`,
+  dest: `${__dirname}/public`,
+  outputStyle: 'compressed',
   debug: true,
 }));
 
 // Leverage JSON body parser
 // app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // Serve assets via the public directory
 app.use(express.static(path.join( __dirname, 'public')));
@@ -44,4 +45,4 @@ app.set('view engine', 'hbs');
 app.use('/', api);
 
 // Render the app
-app.listen(PORT || 3000, () => console.log('App listening on port 3000!'));
+app.listen(PORT || 3000, () => console.log('App listening on port 3000! 🐳'));

@@ -1,0 +1,46 @@
+.bg {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+
+  div {
+    position: fixed;
+    background: $lighter-gray;
+  }
+
+  .line-1 {
+    width: 100%;
+    top: 10%;
+    height: 1px;
+    left: 0;
+  }
+
+  .line-2 {
+    height: 100%;
+    left: 10%;
+    width: 1px;
+    top: 0;
+  }
+
+  .line-3 {
+    height: 100%;
+    left: 80%;
+    width: 1px;
+    top: 0;
+  }
+
+  .line-4 {
+    transform: rotate(45deg);
+    height: 100%;
+    width: 1px;
+    left: 50%;
+    top: 0;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
