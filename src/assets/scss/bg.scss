@@ -11,6 +11,7 @@
   div {
     position: fixed;
     background: $lighter-gray;
+    transition: all 0.2s ease;
   }
 
   #line-1 {
@@ -38,4 +39,9 @@
 .content {
   position: relative;
   z-index: 1;
+}
+
+.nav {
+  position: fixed;
+  z-index: 2;
 }

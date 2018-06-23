@@ -1,6 +1,6 @@
 # Personal Website
 
-Personal website developed in Node with Handlebars, Express, and SCSS leveraging local JSON files for storage. Hosted on Heroku.
+Personal website developed in Node with Handlebars, Express, and SCSS. The site leverages local JSON files for storing data on my education, posts, experience, and work. The app is hosted on Heroku.
 
 ------
 
@@ -56,7 +56,13 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 
 ------
 
-### Completed
+### Planned features
+- [ ] Write about projects on their own pages
+- [ ] Replace font awesome icons with local images
+- [ ] Write additional posts
+- [ ] Generic background image for link sharing
+
+### Completed features
 - [x] Add images to homepage content
 - [x] Add meta tags
 - [x] Projects
@@ -77,10 +83,4 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 - [x] Update how links look in posts (underline only?)
 - [x] Smooth transitions between pages
 - [x] Build out README with file architecture, features, etc.
-
-### Planned
-- [ ] Write about projects on their own pages
-- [ ] Replace font awesome icons with local images
-- [ ] Page background styling
-- [ ] Write additional posts
-- [ ] Generic background image for link sharing
+- [x] Page background styling
