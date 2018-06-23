@@ -46,12 +46,18 @@
         <a href="/posts" class="{{#if isPostsActive}}active{{/if}}">Posts</a>
         <a href="/art-design" class="{{#if isArtDesignActive}}active{{/if}}">Art/Design</a>
         <a href="/freelancing" class="{{#if isFreelancingActive}}active{{/if}}">Freelancing</a>
-        <a data-toggle="modal" data-target="#contactModal" class="{{#if isContactActive}}active{{/if}}" id="contact-btn">
-          Contact
-        </a>
-        <a href="/contact" class="{{#if isContactActive}}active{{/if}}" id="contact-link">
-          Contact
-        </a>
+        {{#if isContactActive}}
+          <a href="/contact" class="active">
+            Contact
+          </a>
+        {{else}}
+          <a data-toggle="modal" data-target="#contactModal" id="contact-btn">
+            Contact
+          </a>
+          <a href="/contact" id="contact-link">
+            Contact
+          </a>
+        {{/if}}
       </div>
     </div>
   </div>

@@ -58,9 +58,8 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 
 ### Planned features
 - [ ] Write about projects on their own pages
-- [ ] Replace font awesome icons with local images
 - [ ] Write additional posts
-- [ ] Generic background image for link sharing
+- [ ] Google Analytics
 
 ### Completed features
 - [x] Add images to homepage content
@@ -84,3 +83,5 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 - [x] Smooth transitions between pages
 - [x] Build out README with file architecture, features, etc.
 - [x] Page background styling
+- [x] Generic background image for link sharing
+- [x] Replace font awesome icons with local images

@@ -91,11 +91,13 @@ router.get('/', (req, res) => {
 router.get('/freelancing', (req, res) => res.render('freelancing', {
   title: 'Cameron Cabo | Freelancing',
   isFreelancingActive: true,
+  description: 'I develop websites and mobile apps for all kinds of small businesses and startups. Through my work I hope to grow and help others do the same. Contact me and we can get to work.',
 }));
 
 // Projects
 router.get('/projects', (req, res) => res.render('projects', {
   title: 'Cameron Cabo | Projects',
+  description: 'I am a firm believer in learning by doing. Building projects is my means of picking up new tech and better understanding technology, users, and markets.',
   projects,
   isProjectsActive: true,
 }));
@@ -103,6 +105,7 @@ router.get('/projects', (req, res) => res.render('projects', {
 // Art and design
 router.get('/art-design', (req, res) => res.render('artDesign', {
   title: 'Cameron Cabo | Art/Design',
+  description: "Ever since preschool I have loved to draw and create. I approach every challenge, job, and goal with an artist's mindset in order to build impactful and well-crafted products.",
   art,
   design,
   isArtDesignActive: true,
@@ -111,6 +114,7 @@ router.get('/art-design', (req, res) => res.render('artDesign', {
 // Contact page
 router.get('/contact', (req, res) => res.render('contact', {
   title: 'Cameron Cabo | Contact',
+  description: 'Want to learn more about my experience or interests? Have a project of your own? Please reach out and I will get back to you as soon as possible.',
   isContactActive: true,
 }));
 
