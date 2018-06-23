@@ -5,6 +5,11 @@
   width: 100%;
   text-align: center;
   margin-bottom: 1.5rem;
+
+  a {
+    font-size: 1rem;
+    color: $gray !important;
+  }
 }
 
 .underline {

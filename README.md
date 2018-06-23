@@ -59,7 +59,7 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 ### Planned features
 - [ ] Write about projects on their own pages
 - [ ] Write additional posts
-- [ ] Google Analytics
+- [ ] Timestamp on posts
 
 ### Completed features
 - [x] Add images to homepage content
@@ -85,3 +85,4 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 - [x] Page background styling
 - [x] Generic background image for link sharing
 - [x] Replace font awesome icons with local images
+- [x] Google Analytics
