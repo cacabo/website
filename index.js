@@ -43,12 +43,11 @@ app.set('view engine', 'hbs');
 
 // Middleware to always use https protocol when in production
 app.use((req, res, next) => {
-  const host = req.get('host');
+  const host = req.headers.host;
   if (host.startsWith('localhost')) next();
   else {
-    const protocol = req.protocol;
-    if (protocol === 'http') res.redirect('https://' + req.headers.host + req.url);
-    else next();
+    if (req.headers['x-forwarded-proto'] === 'https') next();
+    else res.redirect(`https://${req.headers.host}${req.url}`);
   }
 });
 
