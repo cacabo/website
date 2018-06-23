@@ -147,21 +147,21 @@ router.get('/posts/:slug', (req, res) => {
       image,
     } = post;
     const {
-      updatedAtMS,
-      createdAtMS,
+      updatedAt,
+      createdAt,
     } = post;
 
     // Build up the string for the partial to render the post
     const partial = `posts/${slug}`;
 
     // Format updated at and created at
-    let updatedAt;
-    let createdAt;
-    if (updatedAtMS) updatedAt = new moment(updatedAtMS).fromNow();
-    if (createdAtMS) createdAt = new moment(createdAtMS).fromNow();
+    let updatedAtText;
+    let createdAtText;
+    if (updatedAt) updatedAtText = new moment(updatedAt).fromNow();
+    if (createdAt) createdAtText = new moment(createdAt).fromNow();
 
     // Do not show updated at if it is the same as created at
-    if (updatedAt === createdAt) updatedAt = null;
+    if (updatedAtText === createdAtText) updatedAtText = null;
 
     // Render the post found above
     res.render('post', {
@@ -169,8 +169,8 @@ router.get('/posts/:slug', (req, res) => {
       subtitle,
       description: subtitle,
       image,
-      createdAt,
-      updatedAt,
+      createdAt: createdAtText,
+      updatedAt: updatedAtText,
       partial,
       next,
       prev,

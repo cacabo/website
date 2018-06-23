@@ -41,6 +41,17 @@ app.use(express.static(path.join( __dirname, 'public')));
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'hbs');
 
+// Middleware to always use https protocol when in production
+app.use((req, res, next) => {
+  const host = req.get('host');
+  if (host.startsWith('localhost')) next();
+  else {
+    const protocol = req.protocol;
+    if (protocol === 'http') res.redirect('https://' + req.headers.host + req.url);
+    else next();
+  }
+});
+
 // Serve all API routes
 app.use('/', api);
 
