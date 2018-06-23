@@ -119,39 +119,20 @@
     <script src="/js/nav-toggle.js"></script>
     <script src="/js/contact.js"></script>
     <script src="/js/background.js"></script>
+    <script src="/js/scroll-to-top.js"></script>
+    <script src="/js/modal-trigger.js"></script>
+    <script src="/js/modal-autofocus.js"></script>
+    <script src="/js/fade-in.js"></script>
 
-    <script type="text/javascript">
-      $('document').ready(function() {
-        $('#scroll-to-top').click(function() {
-          $('body, html').animate({
-              scrollTop: 0
-          }, 400);
-        });
-      });
-    </script>
+    <!-- Google analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <!-- Collapse nav when the contact button is clicked -->
-    <script type="text/javascript">
-      $('document').ready(function() {
-        $('#contact-btn').click(function() {
-          console.log('click');
-          $('#overview').removeClass('active');
-          $('#menu').removeClass('active');
-          $('#toggle').removeClass('active');
-        });
-      });
-    </script>
-
-    <script type="text/javascript">
-      $('#contactModal').on('shown.bs.modal', function() {
-        $('#firstName').trigger('focus');
-      });
-    </script>
-
-    <script type="text/javascript">
-      $('document').ready(function() {
-        $('.fade-in').css('opacity', 1);
-      });
+      ga('create', 'UA-105075968-1', 'auto');
+      ga('send', 'pageview');
     </script>
   </body>
 </html>

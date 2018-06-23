@@ -50,3 +50,13 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+/**
+ * Hide background effects on smaller screens to optimize loading
+ * and scrolling
+ */
+@media screen and (max-width: 572px) {
+  .bg {
+    display: none;
+  }
+}
