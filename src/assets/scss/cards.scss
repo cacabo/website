@@ -29,6 +29,10 @@
 
       .body {
         padding: 1rem;
+
+        &.pad-top-0 {
+          padding-top: 0;
+        }
       }
 
       .timestamp {

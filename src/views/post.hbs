@@ -17,7 +17,7 @@
     {{else}}
       <div class="space-1"></div>
     {{/if}}
-    <div class="body post serif">
+    <div class="body post serif {{#unless image}}pad-top-0{{/unless}}">
       <!-- Lookup the partial indexed by the post slug -->
       {{> (lookup . 'partial')}}
     </div>
