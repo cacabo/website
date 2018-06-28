@@ -59,6 +59,7 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 ### Planned features
 - [ ] Write about projects on their own pages
 - [ ] Write additional posts
+- [ ] Add topics/tags to posts
 
 ### Completed features
 - [x] Add images to homepage content

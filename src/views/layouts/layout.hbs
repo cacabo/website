@@ -35,8 +35,8 @@
     <!-- Set the page title -->
     {{#if title}}
       <title>{{ title }}</title>
-      <meta property="og:title" content={{ title }}>
-      <meta property="twitter:title" content={{ title }}>
+      <meta property="og:title" content="{{ title }}">
+      <meta property="twitter:title" content="{{ title }}">
     {{else}}
       <title>Cameron Cabo</title>
       <meta property="og:title" content="Cameron Cabo">
@@ -45,9 +45,9 @@
 
     <!-- Set the page description -->
     {{#if description}}
-      <meta name="description" content={{ description }}>
-      <meta property="og:description" content={{ description }}>
-      <meta property="twitter:description" content={{ description }}>
+      <meta name="description" content="{{ description }}">
+      <meta property="og:description" content="{{ description }}">
+      <meta property="twitter:description" content="{{ description }}">
     {{else}}
       <meta name="description" content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
       <meta property="og:description" content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
@@ -56,15 +56,15 @@
 
     <!-- Set the page keywords -->
     {{#if keywords}}
-      <meta name="keywords" content={{ keywords }}>
+      <meta name="keywords" content="{{ keywords }}">
     {{else}}
       <meta name="keywords" content="cameron,cam,cabo,cameroncabo,penn,freelance,web,webdev,website,m&t,jerome,fisher,upenn,pennsylvania,university,harvard,westlake,student,react,javascript,node,developer,dev,rails,ruby,art,design,contact,los,angeles,LA,philly,philadelphia,youthhack,riplo,metric,themetric">
     {{/if}}
 
     <!-- Set the page image if there is one -->
     {{#if image}}
-      <meta property="og:image" content={{image}}>
-      <meta property="twitter:image" content={{image}}>
+      <meta property="og:image" content="{{image}}">
+      <meta property="twitter:image" content="{{image}}">
       <meta name="twitter:card" content="summary_large_image"/>
     {{else}}
       <meta property="og:image" content="/img/bg.png">
