@@ -12,8 +12,8 @@ $(document).ready(function() {
     event.preventDefault();
 
     // Style button
-    $submitButton.addClass('disabled');
-    $submitButton.val('Sending...');
+    $button.addClass('disabled');
+    $button.val('Sending...');
 
     // Parse and format form data
     var str = $(this).serialize();
@@ -25,8 +25,8 @@ $(document).ready(function() {
         $message.html(`<div class="alert alert-danger">${data.error}</div>`);
 
         // Reset the button
-        $submitButton.removeClass('disabled');
-        $submitButton.val('Send');
+        $button.removeClass('disabled');
+        $button.val('Send');
       } else {
         // If sending the message was successful
         $message.html('<div></div>');
@@ -42,8 +42,8 @@ $(document).ready(function() {
       $message.html('<div class="alert alert-danger">Something went wrong. Check the form and try again.</div>');
 
       // Reset the button
-      $submitButton.removeClass('disabled');
-      $submitButton.val('Send');
+      $button.removeClass('disabled');
+      $button.val('Send');
     });
   });
 });
