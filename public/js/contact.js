@@ -1,5 +1,5 @@
 // Handle submitting the contact form modal
-$(document).ready(function() {
+$(document).ready(function setModalListener() {
   // Isolate elements
   var $message = $('#message');
   var $contactForm = $('#contactForm');
@@ -7,7 +7,7 @@ $(document).ready(function() {
   var $button = $('#contactFormButton');
 
   // When the contact form is submitted
-  $contactForm.submit(function(event) {
+  $contactForm.submit(function handleSubmit(event) {
     // Prevent the default action
     event.preventDefault();
 
@@ -19,7 +19,7 @@ $(document).ready(function() {
     var str = $(this).serialize();
 
     // Actually make the request
-    $.post('/contact', str, function(data) {
+    $.post('/contact', str, function handleResponse(data) {
       if (!data.success) {
         // If sending the message was unsuccessful
         $message.html(`<div class="alert alert-danger">${data.error}</div>`);
@@ -33,11 +33,11 @@ $(document).ready(function() {
         $contactForm.html('<div class="modal-body"><div class="alert alert-success marg-bot-0">Your email was sent successfully! I will get back to you as quickly as possible.</div></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button></div>');
 
         // Hide the modal after 2 seconds
-        setTimeout(function() {
+        setTimeout(function hideModal() {
           $modal.modal('hide');
         }, 3000);
       }
-    }).fail(function() {
+    }).fail(function handleFailure() {
       // If there was some other error
       $message.html('<div class="alert alert-danger">Something went wrong. Check the form and try again.</div>');
 
@@ -49,7 +49,7 @@ $(document).ready(function() {
 });
 
 // Handle submitting the contact page
-$(document).ready(function() {
+$(document).ready(function setFormListener() {
   // Isolate elements
   var $contactMessage = $('#contact-page-message');
   var $contactPageForm = $('#contact-form');
@@ -57,7 +57,7 @@ $(document).ready(function() {
 
   if ($contactPageForm) {
     // When the contact form is submitted
-    $contactPageForm.submit(function(event) {
+    $contactPageForm.submit(function handleSubmit(event) {
       // Prevent the default action
       event.preventDefault();
 
@@ -69,7 +69,7 @@ $(document).ready(function() {
       var str = $(this).serialize();
 
       // Actually make the request
-      $.post('/contact', str, function(data) {
+      $.post('/contact', str, function handleResponse(data) {
         if (!data.success) {
           // If sending the message was unsuccessful
           $contactMessage.html(`<div class="alert alert-danger marg-bot-1">${data.error}</div>`);
@@ -82,7 +82,7 @@ $(document).ready(function() {
           $contactMessage.html('<div></div>');
           $contactPageForm.html('<div><div class="alert alert-success marg-bot-1">Your email was sent successfully! I will get back to you as quickly as possible.</div><a href="/" class="btn btn-primary">Back to home</a></div>');
         }
-      }).fail(function() {
+      }).fail(function handleFailure() {
         // If there was some other error
         $contactMessage.html('<div class="alert alert-danger marg-bot-1">Something went wrong. Check the form and try again.</div>');
 

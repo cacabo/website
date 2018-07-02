@@ -215,7 +215,7 @@ router.post('/contact', (req, res) => {
 
   // Relay information back to the website
   if (error) {
-    res.send({success: false, error});
+    res.send({ success: false, error });
     return;
   }
 
