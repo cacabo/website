@@ -2,7 +2,7 @@
   {
     "title": "Nalda",
     "description": "Web application for curated listings, articles, and videos dedicated to exploring cities through food.",
-    "link": "https://naldacampus.com",
+    "link": "https://www.naldacampus.com",
     "slug": "nalda",
     "repo": "https://github.com/adamripley98/nalda",
     "technologies": "Node, React, Redux, Google Maps API, Amazon S3, Passport, MongoDB",
@@ -15,7 +15,7 @@
   {
     "title": "Flourish",
     "description": "Micro donation platform enabling millenials to make more impactful contributions.",
-    "link": "https://flourishroundup.com",
+    "link": "https://flourishchange.com/",
     "slug": "flourish",
     "repo": null,
     "technologies": "Node, React, Redux",
@@ -28,7 +28,7 @@
   {
     "title": "The Metric",
     "description": "A publication with the aim to measure what's happening around the world through your voice.",
-    "link": "https://themetric.org",
+    "link": "https://www.themetric.org/",
     "slug": "the-metric",
     "repo": "https://github.com/ccabo1/themetric",
     "technologies": "Rails, ERB, Ruby",
@@ -41,7 +41,7 @@
   {
     "title": "Love Sylvie",
     "description": "Landing and referral page for a perfume startup focused on building an online brand.",
-    "link": "http://lovesylvie.com",
+    "link": "http://www.lovesylvie.com",
     "slug": "love-sylvie",
     "repo": "https://github.com/ccabo1/lovesylvie",
     "technologies": "Rails, ERB, Ruby",
