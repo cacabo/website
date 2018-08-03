@@ -1,16 +1,5 @@
 [
   {
-    "createdAt": "2018-07-19 19:40:10",
-    "updatedAt": "2018-07-19 19:40:10",
-    "title": "Re-engineering the Site",
-    "slug": "re-engineering-the-site",
-    "image": "TODO",
-    "subtitle": "Now putting flexibility (and Node) first",
-    "topics": [
-      "code"
-    ]
-  },
-  {
     "createdAt": "2018-06-23 13:40:31",
     "updatedAt": "2018-06-23 13:40:31",
     "title": "Reflections on sophomore year",
