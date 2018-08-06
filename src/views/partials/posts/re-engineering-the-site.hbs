@@ -1,7 +1,73 @@
 <p>
-  In summer of 2017, I was very excited to unleash my latest project: a proper personal webapp to replace my very first static HTML site. You can read all about the thought process <a href="/posts/building-the-blog-the-thought-process" target="_BLANK">here</a> and the technical decisions I made <a href="/posts/building-the-blog-the-tech-side" target="_BLANK">here</a>. In reflection, my implementation largely aligned with my objectives for the site: I could write and edit posts from the deployed site itself and could edit content and pages by simply redeploying to Heroku.
+  In summer of 2017, I was very excited to unleash my latest project: a proper personal webapp to replace my very first static HTML site. You can read all about the thought process <a href="/posts/building-the-blog-the-thought-process" target="_BLANK">here</a> and the technical decisions I made <a href="/posts/building-the-blog-the-tech-side" target="_BLANK">here</a>. In reflection, my implementation largely aligned with my objectives for the site: I could write and edit posts from the deployed site itself and could edit static content and pages by simply redeploying to Heroku.
 </p>
 
 <p>
-  At the same time, it's pretty incredible how much you can learn in a year, and with those learnings entirely shift your perspective on different matters. Today, I struggle to find myself wanting to build <i>anything</i> in Rails. While I once valued the structure the framework lays out for the developer, I increasingly realized every new feature added is more of a band-aid then a well-designed pattern. What you gain in speed of initial development and consistency you often lose in flexibility and personal-preference.
+  At the same time, it's pretty incredible how much you can learn in a year, and with those learnings entirely shift your perspective on different matters. Today, I struggle to find myself wanting to build <i>anything</i> besides simple APIs in Rails. While I once valued the structure the framework lays out for the developer, I increasingly realized every new feature added is more of a band-aid than it is a well-designed programming pattern. What you gain in speed of initial development and consistency you often lose in flexibility and personal-preference.
+</p>
+
+<p>
+  Rather, I've been developing almost exclusively in Node, largely because I've come to highly value how easy it is to use and import <i>exactly</i> what you need. Handlebars is a lighter, more intuitive ERB and express paired with JSON a more rapid, moldable, and intuitive backend than the PostgreSQL and Rails which held together my former app.
+</p>
+
+<p>
+  In building this I tested myself to keep the architecture and code as clean, DRY, and intuitive as possible:
+</p>
+
+<div class="code">
+  <xmp>│</xmp>
+  <xmp>├─ public               # Files accessible from the frontend</xmp>
+  <xmp>│  ├─ img               # Images</xmp>
+  <xmp>│  │  └─ ...</xmp>
+  <xmp>│  ├─ js                # Frontend scripts</xmp>
+  <xmp>│  │  └─ ...</xmp>
+  <xmp>│  ├─ index.css         # Compiled CSS file</xmp>
+  <xmp>│  └─ ...               # Favicon files</xmp>
+  <xmp>│</xmp>
+  <xmp>├─ src                  # Assets, data, and content</xmp>
+  <xmp>│  ├─ assets</xmp>
+  <xmp>│  │  └─ scss           # Styles written in SCSS</xmp>
+  <xmp>│  │     └─ ...</xmp>
+  <xmp>│  ├─ json              # Data for posts, projects, etc.</xmp>
+  <xmp>│  │  └─ ...</xmp>
+  <xmp>│  └─ views             # Handlebars files</xmp>
+  <xmp>│     ├─ layouts        # Data for posts, projects, etc.</xmp>
+  <xmp>│     │  └─ layout.hbs  # Wrapper HTML for all pages</xmp>
+  <xmp>│     ├─ partials       # Data for posts, projects, etc.</xmp>
+  <xmp>│     │  ├─ posts       # HTML partial for each post</xmp>
+  <xmp>│     │  │  └─ ...</xmp>
+  <xmp>│     │  └─ ...         # Other partials</xmp>
+  <xmp>│     └─ ...            # Page components</xmp>
+  <xmp>│</xmp>
+  <xmp>├─ .eslintrc            # Documentation</xmp>
+  <xmp>├─ .gitignore           # Files not included in git repo</xmp>
+  <xmp>├─ index.js             # Configure express server</xmp>
+  <xmp>├─ package.json         # Layout dependencies</xmp>
+  <xmp>├─ routes.js            # App API's and routing</xmp>
+  <xmp>├─ ...                  # Yarn config files</xmp>
+  <xmp>└─ README.md            # Documentation</xmp>
+</div>
+
+<p>
+  Each post is represented by a JSON file of the form:
+</p>
+
+<div class="code">
+  <xmp>{</xmp>
+  <xmp>  "createdAt": "123...",</xmp>
+  <xmp>  "updatedAt": "123...",</xmp>
+  <xmp>  "title": "Title of the post",</xmp>
+  <xmp>  "slug": "title-of-the-post",</xmp>
+  <xmp>  "image": "...",</xmp>
+  <xmp>  "subtitle": "Subtitle of the post",</xmp>
+  <xmp>  "topics": [ "..." ]</xmp>
+  <xmp>}</xmp>
+</div>
+
+<p>
+  There is a corresponding Handlebars file in the `/src/views/partials/posts` directory indexed by the post's `slug`, in this case `title-of-the-post`. This works to determine the URL for the post along with the HTML content rendered.
+</p>
+
+<p>
+  All data is served as simple JSON and is rendered by modular Handlebars components. Every page renders the same navbar and footer and keeps to a consistent use of cards, font sizes, and the like. It's simple and flexible&mdash;far more easy to iterate on than the Rails app ever was, and I'm excited to do just that going forwards.
 </p>

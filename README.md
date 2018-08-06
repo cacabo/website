@@ -49,8 +49,9 @@ Each post is represented by a JSON file of the form:
   "title": "Title of the post",
   "slug": "title-of-the-post",
   "image": "...",
-  "subtitle": "Subtitle of the post"
-},
+  "subtitle": "Subtitle of the post",
+  "topics": [ "..." ]
+}
 ```
 There is a corresponding Handlebars file in the `/src/views/partials/posts` directory indexed by the post's `slug`, in this case `title-of-the-post`. This works to determine the URL for the post along with the HTML content rendered.
 
