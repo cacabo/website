@@ -1,6 +1,8 @@
 # Personal Website
 
-Personal website developed in Node with Handlebars, Express, and SCSS. The site leverages local JSON files for storing data on my education, posts, experience, and work. The app is hosted on Heroku.
+Application developed in Node with Handlebars, Express, and SCSS. The site leverages local JSON files for storing data on my education, posts, experience, and work. This is also a place for various spin-off projects. The app is hosted on Heroku.
+
+![Screenshot](https://raw.githubusercontent.com/ccabo1/website/master/public/img/posts/new-site.jpg)
 
 ------
 
@@ -59,8 +61,8 @@ There is a corresponding Handlebars file in the `/src/views/partials/posts` dire
 
 ### Planned features
 - [ ] Write about projects on their own pages
-- [ ] Write additional posts
 - [ ] Add topics/tags to posts
+- [ ] Better optimize production build
 
 ### Completed features
 - [x] Add images to homepage content
