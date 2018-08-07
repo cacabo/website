@@ -1,13 +1,13 @@
 .caption {
-  color: $gray;
+  color: lighten($gray, 10%);
   font-family: 'Roboto', sans-serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   width: 100%;
   text-align: center;
   margin-bottom: 1.5rem;
 
   a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: $gray !important;
   }
 }
@@ -56,12 +56,19 @@
     overflow-x: scroll;
     padding: 1rem;
     margin-bottom: 1rem;
+    border-radius: 0.2rem;
 
     xmp {
       margin: 0;
       font-family: 'Roboto Mono', monospace;
       font-size: 0.8rem;
     }
+  }
+
+  code {
+    background: $light-gray;
+    padding: 0rem 0.2rem;
+    border-radius: 0.2rem;
   }
 
   .blockquote {
