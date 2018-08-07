@@ -5,12 +5,17 @@
       {{#if subtitle}}
         <h3 class="gray-text subtitle marg-bot-0">{{subtitle}}</h3>
       {{/if}}
-      {{#if createdAt}}
-        <div class="line"></div>
-        <p class="timestamp mono gray-text">
-          Posted {{createdAt}}{{#if updatedAt}}, updated {{updatedAt}}{{/if}}
-        </p>
-      {{/if}}
+      <div class="line"></div>
+      <p class="timestamp mono gray-text">
+        {{#if createdAt}}
+          Posted {{createdAt}}{{#if updatedAt}}, updated {{updatedAt}}{{/if}}{{#if topics}} in{{/if}}
+        {{/if}}
+        {{#if topics}}
+          {{#each topics}}
+            <a class="topic" href="/posts/topics/{{this}}">{{this}}</a>
+          {{/each}}
+        {{/if}}
+      </p>
     </div>
     {{#if image}}
       <img src="{{image}}" class="img-fluid"></img>

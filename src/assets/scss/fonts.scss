@@ -1,13 +1,15 @@
 /**
  * Styling for text and fonts
  */
+$mono: 'Roboto Mono', monospace;
+
 body,
 html {
   font-family: 'Roboto', sans-serif;
 }
 
 .mono {
-  font-family: 'Roboto Mono', monospace;
+  font-family: $mono;
 }
 
 .serif {

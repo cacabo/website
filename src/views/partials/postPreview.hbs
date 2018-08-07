@@ -5,9 +5,16 @@
   <div class="body">
     <h4>{{this.title}}</h4>
     {{#if this.subtitle}}
-      <p class="gray-text">
+      <p class="gray-text marg-bot-05">
         {{this.subtitle}}
       </p>
+    {{/if}}
+    {{#if this.topics}}
+      <div>
+        {{#each this.topics}}
+          <span class="topic">{{this}}</span>
+        {{/each}}
+      </div>
     {{/if}}
   </div>
 </a>

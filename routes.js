@@ -125,6 +125,27 @@ router.get('/posts', (req, res) => res.render('posts', {
   isPostsActive: true,
 }));
 
+// Get all posts with the specified topic
+router.get('/posts/topics/:topic', (req, res) => {
+  const topic = req.params.topic;
+
+  const filteredPosts = posts.filter(p => {
+    const topics = p.topics;
+
+    if (topics && topics.length) {
+      return topics.some(t => t === topic);
+    }
+
+    return false;
+  });
+
+  res.render('posts', {
+    title: `Cameron Cabo | Posts about "${topic}"`,
+    posts: filteredPosts,
+    topic,
+  });
+});
+
 // Rendering a specific post
 router.get('/posts/:slug', (req, res) => {
   // Isolate the slug from the URL
@@ -136,20 +157,9 @@ router.get('/posts/:slug', (req, res) => {
   // Find the post with the matching slug
   const postObj = findPosts(slug);
   if (postObj && postObj.post) {
-    const {
-      next,
-      post,
-      prev,
-    } = postObj;
-    const {
-      title,
-      subtitle,
-      image,
-    } = post;
-    const {
-      updatedAt,
-      createdAt,
-    } = post;
+    const { next, post, prev } = postObj;
+    const { title, subtitle, image } = post;
+    const { updatedAt, createdAt, topics } = post;
 
     // Build up the string for the partial to render the post
     const partial = `posts/${slug}`;
@@ -169,6 +179,7 @@ router.get('/posts/:slug', (req, res) => {
       subtitle,
       description: subtitle,
       image,
+      topics,
       createdAt: createdAtText,
       updatedAt: updatedAtText,
       partial,
