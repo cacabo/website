@@ -2,6 +2,18 @@
   {
     "createdAt": "2018-08-6 8:56:30",
     "updatedAt": "2018-08-6 8:56:30",
+    "title": "What I did this summer",
+    "slug": "what-i-did-this-summer",
+    "image": "/img/posts/summer.jpg",
+    "subtitle": "In case you were wondering :)",
+    "topics": [
+      "thoughts",
+      "review"
+    ]
+  },
+  {
+    "createdAt": "2018-08-6 8:56:30",
+    "updatedAt": "2018-08-6 8:56:30",
     "title": "Re-engineering the site",
     "slug": "re-engineering-the-site",
     "image": "/img/posts/new-site.jpg",
