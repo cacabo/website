@@ -35,7 +35,7 @@ app.use(sassMiddleware({
 app.use(bodyParser.urlencoded({ extended: false }));
 
 // Serve assets via the public directory
-app.use(express.static(path.join( __dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Set the views path
 app.set('views', path.join(__dirname, 'src/views'));
