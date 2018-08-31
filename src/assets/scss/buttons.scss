@@ -1,45 +1,58 @@
-/**
- * Styling buttons used on the site
- */
- a.btn {
-   text-decoration: none !important;
- }
+// Styling buttons used on the site
+a {
+  .btn {
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      text-decoration: none;
+    }
+  }
+}
 
 .btn {
-  border-radius: 0.2rem;
-  box-shadow: 0rem 0.2rem 0.4rem $shadow;
+  border-radius: .2rem;
+  box-shadow: 0 .2rem .4rem $shadow;
   font-family: 'Inconsolata', monospace;
   font-size: 1.2rem;
-  text-decoration: none !important;
+  text-decoration: none;
 
   &:hover {
-    box-shadow: 0rem 0.2rem 0.2rem $dark-shadow;
+    box-shadow: 0 .2rem .2rem $dark-shadow;
   }
 
   &.btn-primary {
-    color: white !important;
-    background: $slate !important;
-    border: 1px solid $border !important;
+    background: $slate;
+    border: 1px solid $border;
+    color: $white;
 
     &:hover,
     &:active,
     &:focus, {
-      background: $dark-slate !important;
+      background: $dark-slate;
     }
   }
 
   &.btn-secondary {
-    color: white !important;
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus, {
+      color: $white;
+    }
   }
 }
 
 .buttons {
+  margin-bottom: .5rem;
   width: 100%;
-  margin-bottom: 0.5rem;
 
   .btn {
-    margin-bottom: 0.5rem;
-    margin-right: 0.25rem;
+    margin-bottom: .5rem;
+    margin-right: .25rem;
     z-index: 10;
   }
 }

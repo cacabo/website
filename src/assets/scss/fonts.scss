@@ -1,6 +1,4 @@
-/**
- * Styling for text and fonts
- */
+// Styling for text and fonts
 $mono: 'Roboto Mono', monospace;
 
 body,
@@ -23,24 +21,34 @@ li {
 }
 
 a {
-  color: $blue !important;
-  cursor: hand;
+  color: $blue;
   cursor: pointer;
   text-decoration: underline;
 
   &:hover,
   &:focus,
   &:active {
-    color: darken($blue, 10%) !important;
+    color: darken($blue, 10%);
   }
 
   &:visited {
-    color: $slate;
+    color: $blue;
   }
 }
 
 .gray-text {
-  color: $gray !important;
+  color: $gray;
+
+  &a {
+    color: $gray;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: $gray;
+    }
+  }
 }
 
 .bold {

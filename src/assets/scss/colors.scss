@@ -1,22 +1,25 @@
 // Colors used in styles throughout the application
-$white: #ffffff;
+$black: #000;
+$browser-border: rgba(0, 0, 0, .175);
+$border: rgba(0, 0, 0, .1);
+$dark-border: rgba(0, 0, 0, .2);
+$dark-gray: #5b5b5b;
+$gray: #848484;
+$light-border: rgba(255, 255, 255, .2);
 $light-gray: #f4f4f7;
 $lighter-gray: #dbdbe0;
 $pale-gray: #a0a0a0;
-$gray: #848484;
-$dark-gray: #5b5b5b;
-$black: #000000;
-$border: rgba(0, 0, 0, 0.1);
-$light-border: rgba(255, 255, 255, 0.2);
-$dark-border: rgba(0, 0, 0, 0.2);
+$project-btn-bg: rgba(255, 255, 255, .3);
+$white: #fff;
 
 // Colors
-$light-blue: #c3d0e5;
 $blue: #3e64a0;
-$slate: #41597f;
 $dark-slate: #28364c;
+$light-blue: #c3d0e5;
+$slate: #41597f;
+$yellow: #ff0;
 
 // Shadows
-$shadow: rgba(0, 0, 0, 0.05);
-$dark-shadow: rgba(0, 0, 0, 0.1);
-$darker-shadow: rgba(0, 0, 0, 0.25);
+$dark-shadow: rgba(0, 0, 0, .1);
+$darker-shadow: rgba(0, 0, 0, .25);
+$shadow: rgba(0, 0, 0, .05);

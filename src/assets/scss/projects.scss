@@ -1,53 +1,49 @@
-/**
- * Styling for projects and project screenshots
- */
-
+// Styling for projects and project screenshots
 // Styling the screenshot used to show desktop screenshots
 .browser-screenshot {
   background: $lighter-gray;
   border: 1px solid $border;
-  padding: 0% 1.25% 2.5% 1.25%;
-  box-shadow: 0rem 0.1rem 0.4rem $dark-shadow;
-  border-radius: 0.2rem;
+  border-radius: .2rem;
+  box-shadow: 0 .1rem .4rem $dark-shadow;
+  padding: 0% 1.25% 2.5%;
 
   .top {
     height: 2rem;
+    padding: .5rem 0;
     text-align: right;
-    padding: 0.5rem 0rem;
 
     .circle {
-      display: inline-block;
       background: $border;
-      width: 1rem;
-      height: 1rem;
       border-radius: 50%;
-      margin-left: 0.25rem;
+      display: inline-block;
+      height: 1rem;
+      margin-left: .25rem;
+      width: 1rem;
     }
   }
 }
 
 // Styling individual project previews
 .project {
-  border-radius: 0.2rem;
-  box-shadow: 0rem 0.1rem 0.4rem $shadow;
-  color: white;
-  overflow: hidden;
-  display: flex;
   align-items: flex-end;
-  margin-bottom: 2rem;
-  padding: 0rem 2.5%;
-
+  border-radius: .2rem;
+  box-shadow: 0 .1rem .4rem $shadow;
+  color: $white;
+  display: flex;
   flex-direction: row;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  padding: 0 2.5%;
 
   .screenshot-wrapper {
-    padding: 5% 0% 0% 1rem;
+    padding: 5% 0 0 1rem;
   }
 
   &:nth-child(even) {
     flex-direction: row-reverse;
 
     .screenshot-wrapper {
-      padding: 5% 1rem 0% 0%;
+      padding: 5% 1rem 0 0;
     }
   }
 
@@ -57,18 +53,25 @@
   }
 
   .browser-screenshot {
-    padding-bottom: 0rem;
-    border-radius: 0.2rem 0.2rem 0rem 0rem;
-    border-bottom: none;
-    box-shadow: 0rem -0.1rem 2rem $darker-shadow;
+    border-bottom: 0;
+    border-radius: .2rem .2rem 0 0;
+    box-shadow: 0 -.1rem 2rem $darker-shadow;
+    padding-bottom: 0;
   }
 
   .text {
-    padding: 1rem 0rem;
+    padding: 1rem 0;
 
     .btn {
-      background: rgba(255, 255, 255, 0.3);
-      color: white !important;
+      background: $project-btn-bg;
+      color: $white;
+
+      &:hover,
+      &:focus,
+      &:visited,
+      &:active {
+        color: $white;
+      }
     }
   }
 }
@@ -79,10 +82,10 @@
     padding: 0% 5%;
 
     .screenshot-wrapper {
-      padding: 0rem !important;
+      padding: 0;
 
       .browser-screenshot {
-        box-shadow: 0rem -0.1rem 0.5rem $darker-shadow;
+        box-shadow: 0 -.1rem .5rem $darker-shadow;
       }
     }
   }
@@ -91,8 +94,8 @@
 @media screen and (max-width: 572px) {
   .project {
     border-radius: 0;
+    margin-bottom: 1.5rem;
     margin-left: -1rem;
     margin-right: -1rem;
-    margin-bottom: 1.5rem;
   }
 }

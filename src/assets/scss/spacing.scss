@@ -1,6 +1,4 @@
-/**
- * Modular classes for spacing elements out
- */
+// Modular classes for spacing elements out
 .marg-bot-0 {
   margin-bottom: 0 !important;
 }
@@ -30,7 +28,7 @@
 }
 
 .space-3 {
-  width: 100%;
-  height: 3rem;
   display: block;
+  height: 3rem;
+  width: 100%;
 }

@@ -1,46 +1,55 @@
 .caption {
   color: lighten($gray, 10%);
   font-family: 'Roboto', sans-serif;
-  font-size: 0.9rem;
-  width: 100%;
-  text-align: center;
+  font-size: .9rem;
   margin-bottom: 1.5rem;
+  text-align: center;
+  width: 100%;
 
   a {
-    font-size: 0.9rem;
-    color: $gray !important;
+    color: $gray;
+    font-size: .9rem;
+
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      color: $gray;
+    }
   }
 }
 
 .highlight {
-  background: yellow;
+  background: $yellow;
 }
 
 .topic {
   background: darken($light-gray, 2.5%);
-  padding: 0rem 0.2rem;
-  border-radius: 0.2rem;
-  transition: all 0.2s ease;
-  margin-right: 0.2rem;
-  text-decoration: none;
-  color: darken($gray, 5%) !important;
+  border-radius: .2rem;
+  color: darken($gray, 5%);
   font-family: $mono;
   font-size: 1rem;
+  margin-right: .2rem;
+  padding: 0 .2rem;
+  text-decoration: none;
+  transition: background .2s ease;
 }
 
-a.topic {
-  color: darken($gray, 5%) !important;
+a {
+  .topic {
+    color: darken($gray, 5%);
 
-  &:hover,
-  &:focus,
-  &:active,
-  &:visited {
-    text-decoration: none;
-    color: darken($gray, 5%) !important;
-  }
+    &:hover,
+    &:focus,
+    &:active,
+    &:visited {
+      color: darken($gray, 5%);
+      text-decoration: none;
+    }
 
-  &:hover {
-    background: darken($light-gray, 5%);
+    &:hover {
+      background: darken($light-gray, 5%);
+    }
   }
 }
 
