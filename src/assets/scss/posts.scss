@@ -66,10 +66,10 @@ a {
 }
 
 .line {
-  width: 100%;
-  height: 0px;
   border-top: 2px solid lighten($border, 10%);
-  margin: 1rem 0rem;
+  height: 0;
+  margin: 1rem 0;
+  width: 100%;
 }
 
 .center {
@@ -83,49 +83,41 @@ a {
   h4,
   h5,
   h6 {
-    margin-top: 1.5rem;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
     font-weight: bold;
+    margin-top: 1.5rem;
   }
 
   .code {
     background: $light-gray;
+    border-radius: .2rem;
+    margin-bottom: 1rem;
     overflow-x: scroll;
     padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 0.2rem;
 
     xmp {
-      margin: 0;
       font-family: 'Roboto Mono', monospace;
-      font-size: 0.8rem;
+      font-size: .8rem;
+      margin: 0;
     }
   }
 
   code {
     background: $light-gray;
-    padding: 0rem 0.2rem;
-    border-radius: 0.2rem;
+    border-radius: .2rem;
+    padding: 0 .2rem;
   }
 
   .blockquote {
     border-left: 4px solid $light-gray;
-    padding: 0.25rem 0rem 0.25rem 1rem;
-    font-style: italic;
     color: $gray;
+    font-style: italic;
+    padding: .25rem 0 .25rem 1rem;
 
     .author {
       display: block;
-      text-align: right;
       font-size: 1rem;
-      padding-top: 0.25rem;
+      padding-top: .25rem;
+      text-align: right;
     }
   }
 }
@@ -138,7 +130,28 @@ a {
   }
 
   .line {
-    margin: 0.75rem 0rem;
+    margin: .75rem 0;
+  }
+}
+
+.mac-wrapper {
+  position: relative;
+  width: 100%;
+
+  .mac {
+    margin-bottom: 1rem;
+  }
+
+  .mac-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    margin-left: 12.5%;
+    margin-top: 3.5%;
+    padding-top: 47%;
+    position: absolute;
+    width: 75%;
   }
 }
 

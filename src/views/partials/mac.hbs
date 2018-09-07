@@ -1,5 +1,7 @@
-<img src="/img/mac.png" class="img-fluid" />
+<div class="mac-wrapper">
+  {{# if img}}
+    <div style="background-image: url({{ img }});" class="mac-img"></div>
+  {{/if}}
 
-{{# if img}}
-  <img src={{img}} class="mac-img" />
-{{/if}}
+  <img src="/img/mac.png" class="img-fluid mac" />
+</div>
