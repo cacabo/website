@@ -7,10 +7,14 @@
   width: 100%;
 
   a {
-    color: $gray;
+    color: lighten($gray, 10%);
     font-size: .9rem;
+    text-decoration: underline;
 
-    &:visited,
+    &:visited {
+      color: lighten($gray, 10%);
+    }
+
     &:hover,
     &:active,
     &:focus {
