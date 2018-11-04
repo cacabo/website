@@ -131,5 +131,14 @@
       ga('create', 'UA-105075968-1', 'auto');
       ga('send', 'pageview');
     </script>
+
+    <script>
+      // while (typeof $ == 'undefined');
+      $(document).ready(function() {
+        $('#carousel').find('.carousel-item')
+          .first()
+          .addClass('active');
+      });
+    </script>
   </body>
 </html>

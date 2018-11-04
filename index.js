@@ -6,7 +6,7 @@ const sassMiddleware = require('node-sass-middleware');
 const bodyParser = require('body-parser');
 
 // Import the port, if there is one
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000;
 
 // Import routes
 const api = require('./routes');
@@ -14,12 +14,20 @@ const api = require('./routes');
 // Configure the app to use express
 const app = express();
 
+// Helper function for handlebars array-like props
+function split(csv) {
+  return csv.split(',');
+}
+
 // Leverage handlebars
 app.engine('hbs', hbs({
   extname: 'hbs',
   defaultLayout: 'layout',
   layoutsDir: `${__dirname}/src/views/layouts/`,
   partialsDir: `${__dirname}/src/views/partials`,
+  helpers: {
+    split: split,
+  },
 }));
 
 // Compile SCSS to CSS
@@ -44,6 +52,7 @@ app.set('view engine', 'hbs');
 // Middleware to always use https protocol when in production
 app.use((req, res, next) => {
   const host = req.headers.host;
+
   if (host.startsWith('localhost')) next();
   else {
     if (req.headers['x-forwarded-proto'] === 'https') next();
@@ -55,4 +64,4 @@ app.use((req, res, next) => {
 app.use('/', api);
 
 // Render the app
-app.listen(PORT || 3000, () => console.log('App listening on port 3000! 🐳'));
+app.listen(PORT, () => console.log('App listening on port 3000! 🐳'));
