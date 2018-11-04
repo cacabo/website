@@ -1,10 +1,11 @@
 // Styling for cards used throughout the application
+
 .content {
   .card {
     background: $white;
     border: 1px solid $border;
-    border-radius: .2rem;
-    box-shadow: 0 .1rem .4rem $shadow;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.1rem 0.4rem $shadow;
     margin-bottom: 1rem;
     padding: 1rem;
 
@@ -25,7 +26,7 @@
 
     .subtitle {
       font-weight: normal;
-      margin-bottom: .5rem;
+      margin-bottom: 0.75rem !important; // sass-lint:disable-line no-important
     }
 
     &.card-post {
@@ -50,7 +51,7 @@
       padding: 0;
 
       .card-img {
-        border-radius: .2rem .2rem 0 0;
+        border-radius: 0.2rem 0.2rem 0 0;
         width: 100%;
       }
 
@@ -58,7 +59,7 @@
         .profile-picture {
           border: 4px solid $white;
           border-radius: 50%;
-          box-shadow: 0 .1rem .2rem $darker-shadow;
+          box-shadow: 0 0.1rem 0.2rem $darker-shadow;
           height: 8rem;
           position: absolute;
           transform: translateY(-9rem);
@@ -90,10 +91,10 @@
       color: $black;
       text-decoration: none;
 
-      &:hover,
-      &:visited,
       &:active,
-      &:focus {
+      &:focus,
+      &:hover,
+      &:visited {
         color: $black;
       }
     }
@@ -127,11 +128,11 @@
 
       &.card-post {
         .timestamp {
-          font-size: .8rem;
+          font-size: 0.8rem;
         }
 
         .line {
-          margin: .75rem 0;
+          margin: 0.75rem 0;
         }
       }
     }
@@ -161,7 +162,7 @@
 @media screen and (max-width: 572px) {
   .flex-container {
     .backgrund-image {
-      margin-left: .5rem;
+      margin-left: 0.5rem;
       max-height: 3rem;
       width: 2.4rem;
     }
