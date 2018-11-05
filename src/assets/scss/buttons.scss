@@ -1,11 +1,12 @@
 // Styling buttons used on the site
+
 a {
   .btn {
     text-decoration: none;
 
-    &:hover,
-    &:focus,
     &:active,
+    &:focus,
+    &:hover,
     &:visited {
       text-decoration: none;
     }
@@ -13,24 +14,24 @@ a {
 }
 
 .btn {
-  border-radius: .2rem;
-  box-shadow: 0 .2rem .4rem $shadow;
+  border-radius: 0.2rem;
+  box-shadow: 0 0.2rem 0.4rem $shadow;
   font-family: 'Inconsolata', monospace;
   font-size: 1.2rem;
   text-decoration: none;
 
   &:hover {
-    box-shadow: 0 .2rem .2rem $dark-shadow;
+    box-shadow: 0 0.2rem 0.2rem $dark-shadow;
   }
 
   &.btn-primary {
     background: $slate;
     border: 1px solid $border;
-    color: $white;
+    color: $white !important;
 
-    &:hover,
     &:active,
-    &:focus, {
+    &:focus,
+    &:hover {
       background: $dark-slate;
     }
   }
@@ -38,21 +39,21 @@ a {
   &.btn-secondary {
     color: $white;
 
-    &:hover,
     &:active,
-    &:focus, {
+    &:focus,
+    &:hover {
       color: $white;
     }
   }
 }
 
 .buttons {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   width: 100%;
 
   .btn {
-    margin-bottom: .5rem;
-    margin-right: .25rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.25rem;
     z-index: 10;
   }
 }

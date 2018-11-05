@@ -4,7 +4,7 @@
     "company": "PayPal",
     "startDate": "May 2018",
     "endDate": "August 2018",
-    "description": "Working to reduce user churn and optimize payments. Creating new features in full-stack JavaScript.",
+    "description": "<ul><li>Full-stack JS feature development and testing (Node, Angular, Chai, Mocha).</li><li>Contributed in production to \"Pay with PayPal\" checkout flow.</li><li>Exercised $100K budget to dynamically introduce incentives at checkout.</li><li>Markedly improved conversion rates through targeted AB tests.</li></ul>",
     "image": "paypal.png"
   },
   {
@@ -12,7 +12,7 @@
     "company": "Honey",
     "startDate": "June 2017",
     "endDate": "August 2017",
-    "description": "Worked full-stack with JavaScript to build out new applications and expand existing features. I worked within an engineering team, interfacing regularly with my lead, PM, fellow engineers, and QA. I contributed to the Travel API which is currently in production (https://honey.travel) and to scripts and components to be rolled out in the coming months on web and mobile.",
+    "description": "<ul><li>Wrote middleware and REST API endpoints for web and mobile e-commerce platforms.</li> <li>Worked within an agile engineering team to build out new production features.</li><li>Technologies: JavaScript, Git, Node, Express, React Native, React, Jest, jQuery.</li></ul>",
     "image": "honey.svg"
   },
   {
@@ -20,7 +20,7 @@
     "company": "University of Pennsylvania",
     "startDate": "August 2018",
     "endDate": "Present",
-    "description": "Teaching assistant for CIS 197: JavaScript. Aided in development of homework sets, applications, lectures, and projects.",
+    "description": "<ul><li>Aided in development of homework sets, lectures, test suites, documentation, and projects.</li><li>Curriculum focuses on JS, Node, Express, React, Redux, and React Native.</li><li>Hosted office hours to help student with course assignments and concepts.</li></ul>",
     "image": "penn.jpg"
   },
   {
@@ -28,7 +28,7 @@
     "company": "Riplo",
     "startDate": "April 2018",
     "endDate": "Present",
-    "description": "Driven group of student developers and designers who leverage modern technologies and industry-trained best-practices to rapidly build web and mobile applications for our clients.",
+    "description": "<ul><li>Led web and mobile development team through multiple concurrent projects.</li><li>Created full-stack web and mobile apps for startups and small businesses.</li><li>Leveraged modern technologies and industry-trained best-practices.</li></ul>",
     "image": "riplo.svg"
   }
 ]

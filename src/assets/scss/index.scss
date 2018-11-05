@@ -21,12 +21,17 @@
 @import './freelancing';
 @import './projects';
 
-html,
-body {
+body,
+html {
   background: $light-gray;
 }
 
 .fade-in {
   opacity: 0;
-  transition: opacity .2s ease;
+  transition: opacity 0.2s ease;
+}
+
+h4.title {
+  margin-bottom: 1.5rem;
+  margin-top: 3rem;
 }

@@ -1,7 +1,19 @@
 [
   {
+    "title": "Insuricane",
+    "description": "A short-term home insurance product for hurricanes built for PennApps F18. Leveraged machine learning algorithm trained on NOAA data to calculate risk of damages to assets and a hedging portfolio of shorts on correlated, publicly traded local utilities.",
+    "slug": "insuricane",
+    "repo": "https://devpost.com/software/insuricane",
+    "technologies": "React, Redux, Google Maps API, Python, Google Cloud Platform, DocuSign API",
+    "startDate": "September 2018",
+    "endDate": "September 2018",
+    "desktopImage": "insuricane.png",
+    "mobileImage": null,
+    "color": "#404040"
+  },
+  {
     "title": "Nalda",
-    "description": "Web application for curated listings, articles, and videos dedicated to exploring cities through food.",
+    "description": "Web app for curated listings, articles, and videos for exploring cities through food.",
     "link": "https://www.naldacampus.com",
     "slug": "nalda",
     "repo": "https://github.com/adamripley98/nalda",
