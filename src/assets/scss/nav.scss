@@ -122,57 +122,23 @@
 
     #toggle {
       cursor: pointer;
-      margin-top: 0.2rem;
       position: absolute;
       right: 1rem;
-      top: 0.5rem;
-      width: 2rem;
+      top: calc(1rem + 3px);
       z-index: 1001;
 
-      &:active,
-      &:focus,
-      &:hover {
-        span {
-          background: $gray;
-        }
-      }
-
       span {
-        background: lighten($pale-gray, 15%);
+        background: $black;
         display: block;
-        height: 3px;
-        transition: all 0.2s ease;
-        width: 100%;
-      }
-
-      // Apply a margin top to all bars except the first one
-      span + span {
-        margin-top: 0.5rem;
+        height: 2px;
+        margin-bottom: 3px;
+        width: 16px;
+        transition: background 0.2s ease;
       }
 
       &.active {
         span {
           background: $light-blue;
-        }
-
-        &:active,
-        &:focus,
-        &:hover {
-          span {
-            background: $white;
-          }
-        }
-
-        #first {
-          transform: translateY(11px) translateX(0.2rem) rotate(135deg);
-        }
-
-        #second {
-          transform: rotate(-135deg) translateX(-0.14142rem) translateY(0.14142rem);
-        }
-
-        #third {
-          transform: translateY(-11px) translateX(0.2rem) rotate(135deg);
         }
       }
     }
