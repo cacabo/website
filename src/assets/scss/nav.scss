@@ -8,24 +8,12 @@
   width: 100%;
 
   .content {
-    padding-top: 1rem;
-    min-height: 100vh;
     min-height: calc(100vh - 52px);
+    padding-top: 1rem;
   }
 
   #menu {
     width: 100%;
-  }
-
-  #overview {
-    h4 {
-      color: $black;
-    }
-
-    p {
-      color: $black;
-      font-size: 1rem;
-    }
   }
 
   .logo-wrapper {
@@ -33,19 +21,21 @@
   }
 
   .social {
-    margin-bottom: 0.5rem;
     display: block;
+    margin-bottom: 1rem;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 
     a {
       text-decoration: none !important;
 
       img {
-        opacity: 0.4;
-        height: 1.1rem;
-        margin-right: 0.2rem;
-        width: auto;
         display: inline;
+        height: 1rem;
+        margin-right: 0.4rem;
+        opacity: 0.25;
+        width: auto;
       }
 
       &:hover {
@@ -61,12 +51,11 @@
     width: 100%;
 
     a {
-      color: $dark-gray !important;
-      text-decoration: none;
-      display: block;
-      float: left;
       clear: left;
+      color: $dark-gray !important;
+      display: block;
       margin-bottom: 0.5rem;
+      text-decoration: none;
 
       &:active,
       &:focus,
@@ -89,25 +78,25 @@
   }
 
   .nav-space {
-    width: 100%;
     display: block;
     height: 3rem;
+    width: 100%;
   }
 
   .nav {
-    width: 100%;
     box-shadow: 0 0.1rem 0.15rem $dark-shadow;
     position: fixed;
+    width: 100%;
     z-index: 1;
 
     #overview {
-      width: 100%;
-      display: block;
-      z-index: 2;
-      padding: 0.5rem 1rem;
-      background: white;
+      background: $white;
       border-bottom: 1px solid $border;
+      display: block;
+      padding: 0.5rem 1rem;
       transition: all 0.2s ease;
+      width: 100%;
+      z-index: 2;
 
       .logo {
         height: 2rem;
@@ -149,11 +138,11 @@
       }
 
       span {
-        width: 100%;
         background: lighten($pale-gray, 15%);
-        height: 3px;
         display: block;
+        height: 3px;
         transition: all 0.2s ease;
+        width: 100%;
       }
 
       // Apply a margin top to all bars except the first one
@@ -189,21 +178,21 @@
     }
 
     #menu {
-      background: white;
-      width: 100%;
+      background: $white;
       border-bottom: 1px solid $border;
-      position: absolute;
-      left: 0;
-      top: 0;
-      padding: 1rem 1rem 0.5rem;
-      overflow: hidden;
-      transition: all 0.2s ease;
       height: 0;
+      left: 0;
+      overflow: hidden;
+      padding: 1rem 1rem 0.5rem;
+      position: absolute;
+      top: 0;
+      transition: all 0.2s ease;
+      width: 100%;
       z-index: 1;
 
       &.active {
-        height: 100vh;
         background: $slate;
+        height: 100vh;
       }
 
       .links a {
@@ -216,23 +205,24 @@
     }
 
     .social {
-      margin-bottom: 1rem;
+      margin-top: 1rem;
+      position: relative;
 
       a {
         img {
-          color: white;
+          color: $white;
           filter: invert(100%);
-          opacity: 0.7;
           height: 1.4rem;
           margin-right: 2.5%;
+          opacity: 0.7;
         }
       }
     }
 
     .links {
       a {
-        margin-bottom: 1.5%;
         font-size: 1.4rem;
+        margin-bottom: 1.5%;
       }
     }
   }
@@ -244,27 +234,29 @@
   }
 
   .content > .container-fluid {
-    padding: 0 !important;
     margin: 0 !important;
+    padding: 0 !important;
   }
 
   .app {
-    padding: 0 2.5%;
+    padding: 0 2.5% 0 0;
 
     .nav-wrapper {
       align-items: center;
       display: flex;
-      height: 100vh;
       flex-direction: row;
-      position: fixed;
+      height: 100vh;
       padding-left: 1rem;
+      position: fixed;
     }
 
     .nav {
-      width: 16rem;
-      position: fixed;
       background: none;
       box-shadow: none;
+      position: fixed;
+      width: 16rem;
+      height: 100%;
+      top: 0;
 
       #toggle {
         display: none;
@@ -272,22 +264,21 @@
 
       .logo {
         display: block;
-        height: 4rem;
-        margin-bottom: 1rem;
+        height: 2rem;
+        margin-top: 1rem;
         opacity: 0.5;
       }
 
       .title {
-        height: auto;
         display: block;
-        width: 100%;
         font-size: 1.8rem;
-        line-height: 1;
         font-weight: 500;
+        height: auto;
+        line-height: 1;
+        width: 100%;
       }
 
       .social {
-        margin-bottom: 15%;
         min-height: 28px;
       }
 
@@ -299,7 +290,6 @@
     }
 
     .content {
-      margin-left: 16rem;
       margin-left: calc(16rem + 1.25%);
       margin-right: 1rem;
     }
@@ -308,6 +298,6 @@
 
 @media screen and (min-width: 1248px) {
   .app {
-    padding: 0 5%;
+    padding: 0 5% 0 0;
   }
 }
