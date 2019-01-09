@@ -1,22 +1,43 @@
 [
   {
+    "title": "Forward Deployed Software Engineering Intern",
+    "location": "London, UK",
+    "company": "Palantir",
+    "startDate": "June",
+    "endDate": "August 2019",
+    "description": "<ul><li>Will work with clients to curate Palantir's software to meet their needs.</li></ul>",
+    "image": "palantir.jpg"
+  },
+  {
+    "title": "Wharton India Entreprenuership Fellow",
+    "location": "Bangalore, India",
+    "company": "University of Pennsylvania",
+    "startDate": "May",
+    "endDate": "June 2019",
+    "description": "<ul><li>One of 13 students chosen for the fellowship.</li><li>Will work with Bangalore-based startup for 2 weeks.</li></ul>",
+    "image": "penn.jpg"
+  },
+  {
     "title": "Software Engineering Intern",
+    "location": "San Jose, CA",
     "company": "PayPal",
-    "startDate": "May 2018",
+    "startDate": "May",
     "endDate": "August 2018",
     "description": "<ul><li>Full-stack JS feature development and testing (Node, Angular, Chai, Mocha).</li><li>Contributed in production to \"Pay with PayPal\" checkout flow.</li><li>Exercised $100K budget to dynamically introduce incentives at checkout.</li><li>Markedly improved conversion rates through targeted AB tests.</li></ul>",
     "image": "paypal.png"
   },
   {
     "title": "Software Engineering Intern",
+    "location": "Los Angeles, CA",
     "company": "Honey",
-    "startDate": "June 2017",
+    "startDate": "June",
     "endDate": "August 2017",
     "description": "<ul><li>Wrote middleware and REST API endpoints for web and mobile e-commerce platforms.</li> <li>Worked within an agile engineering team to build out new production features.</li><li>Technologies: JavaScript, Git, Node, Express, React Native, React, Jest, jQuery.</li></ul>",
     "image": "honey.svg"
   },
   {
     "title": "Teaching Assistant",
+    "location": "Philadelphia, PA",
     "company": "University of Pennsylvania",
     "startDate": "August 2018",
     "endDate": "Present",
@@ -25,6 +46,7 @@
   },
   {
     "title": "Co-Founder & Developer",
+    "location": "Philadelphia, PA",
     "company": "Riplo",
     "startDate": "April 2018",
     "endDate": "Present",

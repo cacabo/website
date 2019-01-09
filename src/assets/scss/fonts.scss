@@ -14,10 +14,18 @@ html {
   font-family: 'PT Serif', Georgia, serif;
 }
 
-p,
 a,
-li {
-  font-size: 1.2rem;
+li,
+p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 1200px) {
+  a,
+  li,
+  p {
+    font-size: 1.2rem;
+  }
 }
 
 a {
@@ -25,9 +33,9 @@ a {
   cursor: pointer;
   text-decoration: underline;
 
-  &:hover,
+  &:active,
   &:focus,
-  &:active {
+  &:hover {
     color: darken($blue, 10%);
   }
 
@@ -42,9 +50,9 @@ a {
   &a {
     color: $gray;
 
-    &:hover,
-    &:focus,
     &:active,
+    &:focus,
+    &:hover,
     &:visited {
       color: $gray;
     }
