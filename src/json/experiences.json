@@ -36,7 +36,16 @@
     "image": "honey.svg"
   },
   {
-    "title": "Teaching Assistant",
+    "title": "Product Manager, CIS 350: Software Engineering",
+    "location": "Philadelphia, PA",
+    "company": "University of Pennsylvania",
+    "startDate": "January 2019",
+    "endDate": "Present",
+    "description": "<ul><li>Guided two teams concurrently through agile development cycles.</li><li>Oversaw students in developing mobile apps on Android, admin panels on web, and backend servers running on Node.js with MongoDB.</li></ul>",
+    "image": "penn.jpg"
+  },
+  {
+    "title": "Teaching Assistant, CIS 197: JavaScript",
     "location": "Philadelphia, PA",
     "company": "University of Pennsylvania",
     "startDate": "August 2018",
