@@ -1,8 +1,21 @@
 [
   {
+    "title": "Orthly",
+    "description": "Assisted in building a landing page for Orthly: a company who provides invisible aligners to patients for a fraction of the cost of traditional methods like braces or Invisalign.",
+    "slug": "orthly",
+    "link": "https://orthly.com",
+    "technologies": "React, Gatsby, Netlify",
+    "startDate": "November 2018",
+    "endDate": "November 2018",
+    "desktopImage": "orthly.png",
+    "mobileImage": null,
+    "color": "#6fdbbb"
+  },
+  {
     "title": "Insuricane",
     "description": "A short-term home insurance product for hurricanes built for PennApps F18. Leveraged machine learning algorithm trained on NOAA data to calculate risk of damages to assets and a hedging portfolio of shorts on correlated, publicly traded local utilities.",
     "slug": "insuricane",
+    "link": null,
     "repo": "https://devpost.com/software/insuricane",
     "technologies": "React, Redux, Google Maps API, Python, Google Cloud Platform, DocuSign API",
     "startDate": "September 2018",
