@@ -56,16 +56,6 @@
       }
 
       &#home {
-        .profile-picture {
-          border: 4px solid $white;
-          border-radius: 50%;
-          box-shadow: 0 0.1rem 0.2rem $darker-shadow;
-          height: 8rem;
-          position: absolute;
-          transform: translateY(-9rem);
-          width: 8rem;
-        }
-
         .card-img {
           background-position: top;
           background-repeat: none;
@@ -118,15 +108,22 @@
   }
 }
 
+.profile-picture {
+  border: 6px solid $white;
+  border-radius: 50%;
+  box-shadow: 0 0.1rem 0.2rem $darker-shadow;
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 1.5rem;
+}
+
 @media screen and (max-width: 848px) {
+  .profile-picture {
+    margin-left: calc(50% - 4rem);
+  }
+
   .content {
     .card {
-      &#home {
-        .profile-picture {
-          left: calc(50% - 4rem);
-        }
-      }
-
       .subtitle {
         font-size: 1rem;
       }

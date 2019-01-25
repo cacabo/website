@@ -4,7 +4,7 @@
     "organization": "Penn Labs",
     "startDate": "September 2017",
     "endDate": "Present",
-    "description": "Penn Labs is a University-sponsored group of developers, designers, and intrapreneurs who make software products for students at Penn. As director, I meet often with administrators and the Undergraduate Assembly (UA) to find needs in the Penn community and structure our project development to meet those needs. I also oversee our five teams to ensure all memebers are engaged and development is going smoothly. I'm currently also building Penn Basics, a centralized source of dining, study, laundry, and events information on campus.",
+    "description": "<ul><li>Penn Labs is a University-sponsored group of developers, designers, and intrapreneurs who make software products for students at Penn.</li><li>Met often with admins and the Undergraduate Assembly (UA) to find needs in the Penn community.</li><li>Oversaw our five teams to ensure all memebers are engaged and productive.</li><li>Built Penn Basics, a centralized source of dining, study, laundry, and events information on campus.</li></ul>",
     "image": "pennlabs.png"
   },
   {
@@ -12,7 +12,7 @@
     "organization": "YouthHack",
     "startDate": "August 2016",
     "endDate": "Present",
-    "description": "YouthHack is an international organization dedicated to building student entrepreneurs. I lead the Core Team in all marketing initiatives for events, partnerships, and programs. I also consult student-run ventures within our Ventures Accelerator program.",
+    "description": "<ul><li>YouthHack is an international organization dedicated to building student entrepreneurs.</li><li>Led all marketing and tech initiatives for events, partnerships, and programs.</li><li>Consulted student-run ventures within our Ventures Accelerator program.</li></ul>",
     "image": "yh.svg"
   },
   {
@@ -20,7 +20,7 @@
     "organization": "MUSE",
     "startDate": "August 2016",
     "endDate": "December 2017",
-    "description": "MUSE, or the Marketing Undergraduate Student Establishment, is a club at Wharton dedicated to marketing-oriented event planning and consulting. Through MUSE, I developed go-to-market strategies, market research, and brand positioning for our clients.",
+    "description": "<ul><li>The Marketing Undergraduate Student Establishment is a club at Wharton dedicated to marketing-based events and consulting.</li><li>Developed go-to-market strategies, market research, and brand positioning for our clients.</li></ul>",
     "image": "muse.png"
   }
 ]
