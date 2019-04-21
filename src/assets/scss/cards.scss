@@ -47,6 +47,10 @@
       }
     }
 
+    &.has-bg {
+      border: 0 !important;
+    }
+
     &.has-img {
       padding: 0;
 
@@ -63,10 +67,6 @@
           display: block;
           height: 10rem;
           width: 100%;
-        }
-
-        .body {
-          padding-top: 2rem;
         }
       }
 
@@ -109,17 +109,19 @@
 }
 
 .profile-picture {
-  border: 6px solid $white;
+  height: auto;
   border-radius: 50%;
-  box-shadow: 0 0.1rem 0.2rem $darker-shadow;
-  height: 8rem;
-  width: 8rem;
   margin-bottom: 1.5rem;
+  width: 10rem;
 }
 
 @media screen and (max-width: 848px) {
   .profile-picture {
-    margin-left: calc(50% - 4rem);
+    margin-left: calc(50% - 5rem);
+  }
+
+  #home {
+    margin-top: -1rem;
   }
 
   .content {
@@ -191,4 +193,9 @@
       }
     }
   }
+}
+
+#home {
+  padding-top: 2.5rem;
+  padding-bottom: 1.5rem;
 }
