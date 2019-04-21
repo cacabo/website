@@ -1,5 +1,18 @@
 [
   {
+    "createdAt": "2019-4-21 18:00:00",
+    "updatedAt": "2019-4-21 18:00:00",
+    "title": "The Ethics and Macroeconomics of Automation",
+    "slug": "the-ethics-and-macroeconomics-of-automation",
+    "image": "/img/posts/automation.jpg",
+    "subtitle": "Finding purpose, work, and flow with our machine friends",
+    "topics": [
+        "thoughts",
+        "technology",
+        "ethics"
+    ]
+  },
+  {
     "createdAt": "2018-08-6 8:56:30",
     "updatedAt": "2018-08-6 8:56:30",
     "title": "What I did this summer",
