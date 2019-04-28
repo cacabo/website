@@ -1,15 +1,16 @@
 <div>
-  <div class="card">
+  <div class="card has-bg" style="background-image: url(/img/art-backing-01.svg)" id="hero">
     <h2>Design and creativity are in everything</h2>
     <p>Ever since preschool I have loved to draw and create. I approach every challenge, job, and goal with an artist's mindset in order to build impactful and well-crafted products.</p>
+    <div class="space-1"></div>
   </div>
-  <h4 class="mono bold">Artwork</h4>
+  <h4 class="mono bold title">Artwork</h4>
   <div class="card-columns">
     {{#each art}}
       {{> artPiece this}}
     {{/each}}
   </div>
-  <h4 class="marg-top-2 mono bold">Design</h4>
+  <h4 class="marg-top-2 mono bold title">Design</h4>
   <div class="card-columns wide">
     {{#each design}}
       {{> designPiece this}}
