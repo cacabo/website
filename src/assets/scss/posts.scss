@@ -46,19 +46,23 @@
 }
 
 a {
-  .topic {
-    color: darken($gray, 5%);
-
-    &:active,
-    &:focus,
-    &:hover,
-    &:visited {
-      color: darken($gray, 5%);
-      text-decoration: none;
-    }
+  &.topic {
+    border: 0;
+    box-shadow: none;
+    color: darken($gray, 5%) !important;
 
     &:hover {
       background: darken($light-gray, 5%);
+    }
+  }
+
+  &:active,
+  &:focus,
+  &:hover,
+  &:visited {
+    &.topic {
+      color: darken($gray, 5%) !important;
+      text-decoration: none;
     }
   }
 }
