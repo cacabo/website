@@ -1,17 +1,15 @@
 // Styling for text and fonts
-$mono: 'Roboto Mono', monospace;
+
+$sans: 'Work Sans', sans-serif;
+$serif: 'PT Serif', Georgia, Times, serif;
 
 body,
 html {
-  font-family: 'Roboto', sans-serif;
-}
-
-.mono {
-  font-family: $mono;
+  font-family: $sans;
 }
 
 .serif {
-  font-family: 'PT Serif', Georgia, serif;
+  font-family: $serif;
 }
 
 a,

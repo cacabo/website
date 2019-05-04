@@ -7,7 +7,7 @@
       </div>
       <div class="col-12 col-md-9">
         <h1>Hi, I'm Cameron</h1>
-        <p>I'm want to leverage tech to help people learn more and live better. I study computer science and management in the <a href="https://fisher.wharton.upenn.edu/">M&T program at UPenn,</a> and spend my free time <a href="https://www.riplo.io">developing websites,</a> <a href="https://github.com/ccabo1/">learning new things,</a> and <a href="https://instagram.com/c.cabo">going to new places.</a></p>
+        <p>I want to leverage tech to help people learn more and live better. I study computer science and management in the <a href="https://fisher.wharton.upenn.edu/">M&T program at UPenn,</a> and spend my free time <a href="https://www.riplo.io">developing websites,</a> <a href="https://github.com/ccabo1/">learning new things,</a> and <a href="https://instagram.com/c.cabo">going to new places.</a></p>
       </div>
     </div>
   </div>
@@ -24,7 +24,7 @@
 
 <!-- Education -->
 <div class="marg-bot-2">
-  <h4 class="mono bold title">Education</h4>
+  <h4 class="title">Education</h4>
   {{#each education}}
     {{> education this}}
   {{/each}}
@@ -32,7 +32,7 @@
 
 <!-- Experience -->
 <div class="marg-bot-2">
-  <h4 class="mono bold title">Experience</h4>
+  <h4 class="title">Experience</h4>
   {{#each experiences}}
     {{> experience this}}
   {{/each}}
@@ -43,7 +43,7 @@
 
 <!-- Technologies -->
 <div class="marg-bot-2">
-  <h4 class="mono bold title">Technologies</h4>
+  <h4 class="title">Technologies</h4>
 
   <div class="card">
     <div class="row">
@@ -55,19 +55,19 @@
 
         <h4>Web</h4>
         <p>
-          React, Redux, HTML, CSS (SCSS, SASS, styled-components), ERB, Handlebars, Angular, EJS, jQuery.
+          React (Gatsby, Next), Redux, HTML, CSS (SCSS, styled-components), ERB, Handlebars, Angular, EJS, jQuery.
         </p>
 
         <h4>Mobile</h4>
         <p>
-          React Native, Redux, Android.
+          React Native, Android.
         </p>
       </div>
 
       <div class="col-12 col-md-6">
         <h4>APIs</h4>
         <p>
-          Node, Express, Passport, Ruby on Rails, GraphQL.
+          Node, Express, Passport, Ruby on Rails, GraphQL, Java Spark.
         </p>
 
         <h4>Databases &amp; Deployment</h4>
@@ -77,7 +77,7 @@
 
         <h4>Data</h4>
         <p>
-          Hadoop Map Reduce, SQL, Spark.
+          Map Reduce, SQL, Spark, Jupyter Notebook, Storm.
         </p>
       </div>
     </div>
@@ -90,7 +90,7 @@
 
 <!-- Extracurriculars -->
 <div>
-  <h4 class="mono bold title">Extracurriculars</h4>
+  <h4 class="title">Extracurriculars</h4>
   {{#each extracurriculars}}
     {{> extracurricular this}}
   {{/each}}
@@ -99,7 +99,7 @@
 <!-- Recent projects -->
 {{#if projects}}
   <div>
-    <h4 class="mono bold title">Recent Projects</h4>
+    <h4 class="title">Recent Projects</h4>
     {{#each projects}}
       {{> project this}}
     {{/each}}
@@ -112,7 +112,7 @@
 <!-- Recent posts -->
 {{#if posts}}
   <div>
-    <h4 class="mono bold title">Recent Posts</h4>
+    <h4 class="title">Recent Posts</h4>
     <div class="row">
       {{#each posts}}
         <div class="col-12 col-md-6">

@@ -1,8 +1,9 @@
 // Styling the contact modal and form
+
 #contactModal {
   .modal-content {
     border: 1px solid $border;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
   }
 }
 
@@ -13,17 +14,17 @@
 .form-control {
   border: 2px solid $border;
   border-width: 2px;
-  font-family: 'Roboto' sans-serif;
+  font-family: $sans;
   font-size: 16px;
   margin-bottom: 1rem;
-  padding: .75rem;
+  padding: 0.75rem;
 
   &:hover {
     border: 2px solid $dark-border;
   }
 
-  &:focus,
-  &:active {
+  &:active,
+  &:focus {
     border: 2px solid $slate;
   }
 }

@@ -1,18 +1,17 @@
 .caption {
-  color: lighten($gray, 10%);
-  font-family: 'Roboto', sans-serif;
+  color: lighten($gray, 10%) !important;
+  font-family: $sans;
   font-size: 0.9rem;
   margin-bottom: 1.5rem;
   text-align: center;
   width: 100%;
 
   a {
-    color: lighten($gray, 10%);
+    color: lighten($gray, 10%) !important;
     font-size: 0.9rem;
-    text-decoration: underline;
 
     &:visited {
-      color: lighten($gray, 10%);
+      color: lighten($gray, 10%) !important;
     }
 
     &:active,
@@ -37,7 +36,6 @@
   background: darken($light-gray, 2.5%);
   border-radius: 0.2rem;
   color: darken($gray, 5%);
-  font-family: $mono;
   font-size: 1rem;
   margin-right: 0.2rem;
   padding: 0 0.2rem;
@@ -79,8 +77,10 @@ a {
   font-style: italic;
 }
 
-.line {
+.line,
+hr {
   border-top: 2px solid lighten($border, 10%);
+  display: block;
   height: 0;
   margin: 1rem 0;
   width: 100%;
@@ -114,8 +114,8 @@ a {
     padding: 1rem;
 
     xmp {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 0.8rem;
+      font-family: monospace;
+      font-size: 1rem;
       margin: 0;
     }
   }
