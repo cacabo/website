@@ -33,12 +33,12 @@
 }
 
 .topic {
-  background: darken($light-gray, 2.5%);
-  border-radius: 0.2rem;
-  color: darken($gray, 5%);
+  background: lighten($teal, 10%);
+  border-radius: 0.4rem;
+  color: $blue;
   font-size: 1rem;
   margin-right: 0.2rem;
-  padding: 0 0.2rem;
+  padding: 0.2rem 0.4rem;
   text-decoration: none;
   transition: background 0.2s ease;
 }
@@ -47,10 +47,10 @@ a {
   &.topic {
     border: 0;
     box-shadow: none;
-    color: darken($gray, 5%) !important;
+    color: $blue !important;
 
     &:hover {
-      background: darken($light-gray, 5%);
+      background: $teal;
     }
   }
 
@@ -59,7 +59,7 @@ a {
   &:hover,
   &:visited {
     &.topic {
-      color: darken($gray, 5%) !important;
+      color: $blue !important;
       text-decoration: none;
     }
   }

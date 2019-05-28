@@ -9,13 +9,13 @@
     "image": "palantir.jpg"
   },
   {
-    "title": "Wharton India Entreprenuership Fellow",
+    "title": "Growth Intern",
     "location": "Bangalore, India",
-    "company": "University of Pennsylvania",
+    "company": "ZestMoney",
     "startDate": "May",
     "endDate": "June 2019",
-    "description": "<ul><li>One of 13 students chosen for the fellowship.</li><li>Will work with Bangalore-based startup for 2 weeks.</li></ul>",
-    "image": "penn.jpg"
+    "description": "<ul><li>One of 13 students chosen to be a <a href=\"https://entrepreneurship.wharton.upenn.edu/wharton-india-entrepreneurship-fellows/\">Wharton India Entrepreneurship Fellow</a> in the program's inaugural year.</li><li>Conducted comprehensive competitive analysis and new market entry research for Bangalore-based ZestMoney.</li></ul>",
+    "image": "zest.svg"
   },
   {
     "title": "Software Engineering Intern",
@@ -23,7 +23,7 @@
     "company": "PayPal",
     "startDate": "May",
     "endDate": "August 2018",
-    "description": "<ul><li>Full-stack JS feature development and testing (Node, Angular, Chai, Mocha).</li><li>Contributed in production to \"Pay with PayPal\" checkout flow.</li><li>Exercised $100K budget to dynamically introduce incentives at checkout.</li><li>Markedly improved conversion rates through targeted AB tests.</li></ul>",
+    "description": "<ul><li>Full-stack JS feature development and testing (Node, Angular, Chai, Mocha).</li><li>Contributed in production to \"Pay with PayPal\" checkout flow.</li><li>Exercised $100K budget to dynamically introduce incentives at checkout.</li><li>Markedly improved conversion rates through targeted A/B tests.</li><li>Re-architected and consolidated modal components used throughout the checkout app for better device compatibility and a more consistent UI.</li></ul>",
     "image": "paypal.png"
   },
   {
