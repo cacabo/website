@@ -265,5 +265,10 @@
 @media screen and (min-width: 1248px) {
   .app {
     padding: 0 5% 0 0;
+
+    .content {
+      margin-left: calc(16rem + 2.5%);
+      margin-right: calc(1rem + 2.5%);
+    }
   }
 }
