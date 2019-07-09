@@ -26,14 +26,10 @@ html {
   background: $white;
 }
 
-.fade-in {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
 h4.title {
   margin-bottom: 1.5rem;
   margin-top: 3rem;
+  font-weight: bold;
 }
 
 .has-bg {

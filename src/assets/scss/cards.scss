@@ -108,6 +108,10 @@
   }
 }
 
+.profile-picture-wrapper {
+  margin-right: calc(1rem + 2.5%);
+}
+
 .profile-picture {
   height: auto;
   border-radius: 50%;
@@ -116,8 +120,17 @@
 }
 
 @media screen and (max-width: 848px) {
+  .no-flex-mobile {
+    display: block !important;
+  }
+  
   .profile-picture {
     margin-left: calc(50% - 5rem);
+  }
+
+  .profile-picture-wrapper {
+    width: 100%;
+    margin-right: 0;
   }
 
   #hero {
