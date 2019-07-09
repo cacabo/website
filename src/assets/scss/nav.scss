@@ -2,7 +2,13 @@
  * Styling for the navigation of the app
  * On mobile and smaller screens, this is at the top
  * On larger screens, this is on the left
+ *
+ * NOTE with SCSS vars in calc statements, you must interpolate:
+ * https://stackoverflow.com/questions/17982111/sass-variable-in-css-calc-function
  */
+
+$nav-width: 16rem;
+
 .app {
   display: block;
   width: 100%;
@@ -31,11 +37,10 @@
       text-decoration: none !important;
 
       img {
-        display: inline;
-        height: 1rem;
+        display: inline-block;
         margin-right: 0.4rem;
         opacity: 0.25;
-        width: auto;
+        height: 1rem;
       }
 
       &:hover {
@@ -218,7 +223,7 @@
       background: none;
       box-shadow: none;
       position: fixed;
-      width: 16rem;
+      width: $nav-width;
       height: 100%;
       top: 0;
 
@@ -254,7 +259,7 @@
     }
 
     .content {
-      margin-left: calc(16rem + 1.25%);
+      margin-left: calc(#{$nav-width} + 1.25%);
       margin-right: 1rem;
     }
   }
@@ -263,8 +268,13 @@
 @media screen and (min-width: 1024px) {
   .app {
     .content {
-      margin-left: calc(16rem + 1.25%);
-      margin-right: calc(1rem + 5%);
+      margin-left: calc(#{$nav-width} + 1.25vw);
+      margin-right: calc(1rem + 5vw);
+
+      .content-full-width {
+        margin-left: -1.25vw;
+        margin-right: -5vw;
+      }
     }
   }
 }
@@ -272,8 +282,13 @@
 @media screen and (min-width: 1248px) {
   .app {
     .content {
-      margin-left: calc(16rem + 5%);
-      margin-right: calc(16rem + 5%);
+      margin-left: calc(#{$nav-width} + 5vw);
+      margin-right: calc(#{$nav-width} + 5vw);
+
+      .content-full-width {
+        margin-left: -5vw;
+        margin-right: -5vw;
+      }
     }
   }
 }
