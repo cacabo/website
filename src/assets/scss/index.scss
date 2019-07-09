@@ -28,8 +28,8 @@ html {
 
 h4.title {
   margin-bottom: 1.5rem;
-  margin-top: 3rem;
-  font-weight: bold;
+  margin-top: calc(2.5rem + 2.5vh);
+  font-weight: $bold;
 }
 
 .has-bg {

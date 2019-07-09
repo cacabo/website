@@ -205,8 +205,6 @@
   }
 
   .app {
-    padding: 0 2.5% 0 0;
-
     .nav-wrapper {
       align-items: center;
       display: flex;
@@ -238,7 +236,7 @@
       .title {
         display: block;
         font-size: 1.8rem;
-        font-weight: 500;
+        font-weight: $medium;
         height: auto;
         line-height: 1;
         width: 100%;
@@ -262,13 +260,20 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .app {
+    .content {
+      margin-left: calc(16rem + 1.25%);
+      margin-right: calc(1rem + 5%);
+    }
+  }
+}
+
 @media screen and (min-width: 1248px) {
   .app {
-    padding: 0 5% 0 0;
-
     .content {
-      margin-left: calc(16rem + 2.5%);
-      margin-right: calc(1rem + 2.5%);
+      margin-left: calc(16rem + 5%);
+      margin-right: calc(16rem + 5%);
     }
   }
 }

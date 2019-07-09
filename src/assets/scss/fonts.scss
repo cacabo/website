@@ -1,15 +1,29 @@
 // Styling for text and fonts
 
-$sans: 'Work Sans', sans-serif;
-$serif: 'PT Serif', Georgia, Times, serif;
+// $sans: 'Work Sans', sans-serif;
+$sans: 'Open Sans', Roboto, sans-serif;
+// $serif: 'PT Serif', Georgia, Times, serif;
+
+$bold: bold;
+$medium: 600;
+$normal: normal;
 
 body,
 html {
   font-family: $sans;
 }
 
-.serif {
-  font-family: $serif;
+// .serif {
+//   font-family: $serif;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $medium;
 }
 
 a,
@@ -58,5 +72,13 @@ a {
 }
 
 .bold {
-  font-weight: bold;
+  font-weight: $bold !important;
+}
+
+.medium {
+  font-weight: $medium !important;
+}
+
+.normal {
+  font-weight: $normal !important;
 }
