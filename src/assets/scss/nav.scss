@@ -57,7 +57,7 @@ $nav-width: 16rem;
 
     a {
       clear: left;
-      color: $dark-gray !important;
+      color: $gray !important;
       display: block;
       margin-bottom: 0.5rem;
       text-decoration: none;
@@ -66,12 +66,10 @@ $nav-width: 16rem;
       &:focus,
       &:hover {
         color: $black !important;
-        text-decoration: underline;
       }
 
       &.active {
         color: $black !important;
-        text-decoration: underline;
       }
     }
   }
@@ -185,7 +183,7 @@ $nav-width: 16rem;
           filter: invert(100%);
           height: 1.4rem;
           margin-right: 2.5%;
-          opacity: 0.7;
+          opacity: 0.75;
         }
       }
     }
