@@ -10,11 +10,11 @@
     padding: 1rem;
 
     .timestamp {
-      font-size: 1rem;
+      font-size: $font-sm;
       margin-bottom: 0;
 
       a {
-        font-size: 1rem;
+        font-size: $font-sm;
       }
     }
 
@@ -34,15 +34,9 @@
 
       .body {
         padding: 1rem;
-
-        &.pad-top-0 {
-          padding-top: 0;
-        }
       }
 
       .timestamp {
-        font-size: 1rem;
-        margin-bottom: 0;
         margin-top: 0;
       }
     }
@@ -125,8 +119,8 @@
 }
 
 .profile-picture {
-  height: auto;
   border-radius: 50%;
+  height: auto;
   margin-bottom: 1.5rem;
   width: 10rem;
 }
@@ -135,14 +129,14 @@
   .no-flex-mobile {
     display: block !important;
   }
-  
+
   .profile-picture {
     margin-left: calc(50% - 5rem);
   }
 
   .profile-picture-wrapper {
-    width: 100%;
     margin-right: 0;
+    width: 100%;
   }
 
   #hero {
@@ -152,12 +146,12 @@
   .content {
     .card {
       .subtitle {
-        font-size: 1rem;
+        font-size: $font-sm;
       }
 
       &.card-post {
         .timestamp {
-          font-size: 0.8rem;
+          font-size: $font-sm;
         }
 
         .line {
@@ -221,6 +215,6 @@
 }
 
 #hero {
-  padding-top: 2.5rem;
   padding-bottom: 1.5rem;
+  padding-top: 2.5rem;
 }

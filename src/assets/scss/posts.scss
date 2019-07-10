@@ -1,14 +1,14 @@
 .caption {
   color: lighten($gray, 10%) !important;
   font-family: $sans;
-  font-size: 0.9rem;
+  font-size: $font-xs;
   margin-bottom: 1.5rem;
   text-align: center;
   width: 100%;
 
   a {
     color: lighten($gray, 10%) !important;
-    font-size: 0.9rem;
+    font-size: $font-xs;
 
     &:visited {
       color: lighten($gray, 10%) !important;
@@ -23,7 +23,7 @@
 }
 
 .citation {
-  font-size: 0.8rem;
+  font-size: $font-xs;
   line-height: 1;
   margin-bottom: 0.2rem;
 }
@@ -36,7 +36,10 @@
   background: lighten($teal, 10%);
   border-radius: 0.4rem;
   color: $blue;
-  font-size: 1rem;
+  display: inline-block;
+  font-size: $font-sm;
+  margin-bottom: 0.4rem;
+  margin-right: 0.2rem;
   padding: 0.2rem 0.4rem;
   text-decoration: none;
   transition: background 0.2s ease;
@@ -110,7 +113,7 @@ hr {
 
     xmp {
       font-family: monospace;
-      font-size: 1rem;
+      font-size: $font-md;
       margin: 0;
     }
   }
@@ -129,8 +132,8 @@ hr {
 
     .author {
       display: block;
-      font-size: 1rem;
-      opacity: 0.5;
+      font-size: $font-md;
+      font-style: normal;
       padding-top: 0.25rem;
       text-align: right;
     }
@@ -142,6 +145,18 @@ hr {
   h2,
   h3 {
     line-height: 1.2;
+  }
+
+  h1 {
+    font-size: $font-xxl;
+  }
+
+  h2 {
+    font-size: $font-xl;
+  }
+
+  h3 {
+    font-size: $font-lg;
   }
 
   .line {
@@ -157,18 +172,20 @@ hr {
     h4,
     h5,
     h6 {
-      margin-top: calc(1.5rem + 1.25vh);
       margin-bottom: 1rem;
+      margin-top: calc(1.5rem + 1.25vh);
     }
   }
 
   .card-post {
-    .body:first-child {
-      padding-top: calc(1.5rem + 2.5vh) !important;
-    }
+    .body {
+      &:first-child {
+        padding-top: calc(1.5rem + 2.5vh) !important;
+      }
 
-    .body:last-child {
-      padding-bottom: calc(1.5rem + 2.5vh) !important;
+      &:last-child {
+        padding-bottom: calc(1.5rem + 2.5vh) !important;
+      }
     }
   }
 }
@@ -193,22 +210,6 @@ hr {
     padding-top: 47%;
     position: absolute;
     width: 75%;
-  }
-}
-
-@media screen and (max-width: 648px) {
-  .card-post {
-    h1 {
-      font-size: 2.2rem;
-    }
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    h3 {
-      font-size: 1.8rem;
-    }
   }
 }
 

@@ -10,6 +10,13 @@ $bold: bold;
 $medium: 600;
 $normal: normal;
 
+$font-xxl: 2rem;
+$font-xl: 1.5rem;
+$font-lg: 1.25rem;
+$font-md: 1rem;
+$font-sm: 0.875rem;
+$font-xs: 0.75rem;
+
 body,
 html {
   font-family: $sans;
@@ -31,14 +38,14 @@ h6 {
 a,
 li,
 p {
-  font-size: 1rem;
+  font-size: $font-sm;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1248px) {
   a,
   li,
   p {
-    font-size: 1.2rem;
+    font-size: $font-md;
   }
 }
 

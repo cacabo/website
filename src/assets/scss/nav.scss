@@ -7,7 +7,7 @@
  * https://stackoverflow.com/questions/17982111/sass-variable-in-css-calc-function
  */
 
-$nav-width: 16rem;
+$nav-width: 12rem;
 
 .app {
   display: block;
@@ -27,20 +27,20 @@ $nav-width: 16rem;
   }
 
   .social {
+    bottom: 0;
     display: block;
     margin-bottom: 1rem;
-    width: 100%;
     position: absolute;
-    bottom: 0;
+    width: 100%;
 
     a {
       text-decoration: none !important;
 
       img {
         display: inline-block;
+        height: 1rem;
         margin-right: 0.4rem;
         opacity: 0.25;
-        height: 1rem;
       }
 
       &:hover {
@@ -135,8 +135,8 @@ $nav-width: 16rem;
         display: block;
         height: 2px;
         margin-bottom: 3px;
-        width: 16px;
         transition: background 0.2s ease;
+        width: 16px;
       }
 
       &.active {
@@ -190,7 +190,7 @@ $nav-width: 16rem;
 
     .links {
       a {
-        font-size: 1.4rem;
+        font-size: $font-xl;
         margin-bottom: 1.5%;
       }
     }
@@ -236,15 +236,6 @@ $nav-width: 16rem;
         opacity: 0.5;
       }
 
-      .title {
-        display: block;
-        font-size: 1.8rem;
-        font-weight: $medium;
-        height: auto;
-        line-height: 1;
-        width: 100%;
-      }
-
       .social {
         min-height: 28px;
       }
@@ -286,6 +277,20 @@ $nav-width: 16rem;
       .content-full-width {
         margin-left: -5vw;
         margin-right: -5vw;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1496px) {
+  .app {
+    .content {
+      margin-left: calc(#{$nav-width} + 15vw);
+      margin-right: calc(#{$nav-width} + 15vw);
+
+      .content-full-width {
+        margin-left: -15vw;
+        margin-right: -15vw;
       }
     }
   }

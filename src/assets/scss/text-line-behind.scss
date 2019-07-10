@@ -6,7 +6,7 @@
     background: $lighter-gray;
     height: 1px;
     position: relative;
-    transform: translateY(.8rem);
+    transform: translateY(0.875rem);
     width: 100%;
   }
 
@@ -14,7 +14,7 @@
     background: $white;
     color: $pale-gray;
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: $font-xs;
     padding: 0 0.5rem;
     transform: translateY(0);
     width: auto;
