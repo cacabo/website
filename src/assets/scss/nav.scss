@@ -82,7 +82,7 @@ $nav-width: 12rem;
 
   .nav-space {
     display: block;
-    height: 3rem;
+    height: 49px;
     width: 100%;
   }
 
@@ -117,8 +117,10 @@ $nav-width: 12rem;
         background: $slate;
         border-bottom: 1px solid $light-border;
 
-        .logo.alt {
-          opacity: 1;
+        .logo {
+          &.alt {
+            opacity: 1;
+          }
         }
       }
     }
@@ -147,7 +149,7 @@ $nav-width: 12rem;
     }
 
     #menu {
-      background: $white;
+      background: $white; // When hidden
       border-bottom: 1px solid $border;
       height: 0;
       left: 0;
@@ -161,15 +163,7 @@ $nav-width: 12rem;
 
       &.active {
         background: $slate;
-        height: 100vh;
-      }
-
-      .links a {
-        color: $light-blue !important;
-
-        &:hover {
-          color: $white !important;
-        }
+        height: 100vh; // Take up the full height of screen when active
       }
     }
 
@@ -190,8 +184,17 @@ $nav-width: 12rem;
 
     .links {
       a {
+        color: $light-blue !important;
         font-size: $font-xl;
         margin-bottom: 1.5%;
+
+        &:hover {
+          color: $white !important;
+        }
+
+        &.active {
+          color: $white !important;
+        }
       }
     }
   }
@@ -209,9 +212,6 @@ $nav-width: 12rem;
 
   .app {
     .nav-wrapper {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
       height: 100vh;
       padding-left: 1rem;
       position: fixed;
@@ -220,10 +220,11 @@ $nav-width: 12rem;
     .nav {
       background: none;
       box-shadow: none;
-      position: fixed;
-      width: $nav-width;
+      display: block;
       height: 100%;
+      position: fixed;
       top: 0;
+      width: $nav-width;
 
       #toggle {
         display: none;
@@ -240,7 +241,12 @@ $nav-width: 12rem;
         min-height: 28px;
       }
 
+      // Center links vertically on the page
       .links {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
         a {
           margin-bottom: 5%;
         }
@@ -253,6 +259,10 @@ $nav-width: 12rem;
     }
   }
 }
+
+/**
+ * Spacing out content on different screen sizes
+ */
 
 @media screen and (min-width: 1024px) {
   .app {
