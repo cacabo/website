@@ -36,12 +36,12 @@
     "image": "honey.svg"
   },
   {
-    "title": "Product Manager, CIS 350: Software Engineering",
+    "title": "Teaching Assistant, CIS 555: Internet and Web Systems",
     "location": "Philadelphia, PA",
     "company": "University of Pennsylvania",
-    "startDate": "January 2019",
+    "startDate": "August 2019",
     "endDate": "Present",
-    "description": "<ul><li>Guided two teams concurrently through agile development cycles.</li><li>Oversaw students in developing mobile apps on Android, admin panels on web, and backend servers running on Node.js with MongoDB.</li></ul>",
+    "description": "<ul><li>Aided in grading assigments, drafting exams, and hosting office hours.</li><li>Curriculum focuses on Java, Apache Spark, Map Reduce, AWS, internet protocols, and distributed computing in general.</li></ul>",
     "image": "penn.jpg"
   },
   {
@@ -51,6 +51,15 @@
     "startDate": "August 2018",
     "endDate": "Present",
     "description": "<ul><li>Aided in development of homework sets, lectures, test suites, documentation, and projects.</li><li>Curriculum focuses on JS, Node, Express, React, Redux, and React Native.</li><li>Hosted office hours to help student with course assignments and concepts.</li></ul>",
+    "image": "penn.jpg"
+  },
+  {
+    "title": "Product Manager, CIS 350: Software Engineering",
+    "location": "Philadelphia, PA",
+    "company": "University of Pennsylvania",
+    "startDate": "January 2019",
+    "endDate": "May 2019",
+    "description": "<ul><li>Guided two teams concurrently through agile development cycles.</li><li>Oversaw students in developing mobile apps on Android, admin panels on web, and backend servers running on Node.js with MongoDB.</li></ul>",
     "image": "penn.jpg"
   },
   {
