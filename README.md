@@ -4,9 +4,10 @@ Application developed in Node with Handlebars, Express, and SCSS. The site lever
 
 ![Screenshot](https://raw.githubusercontent.com/ccabo1/website/master/public/img/posts/new-site.jpg)
 
-------
+---
 
 ### Architecture
+
 ```
 │
 ├─ public               # Files accessible from the frontend
@@ -41,9 +42,24 @@ Application developed in Node with Handlebars, Express, and SCSS. The site lever
 └─ README.md            # Documentation
 ```
 
+### Developing
+
+To run locally, first make sure dependencies are installed by running `yarn` with a stable version of Node `8.x`. Next, run:
+
+```bash
+yarn dev
+```
+
+To deploy to Heroku, first ensure that you have the proper Heroku credentials and that the Heroku CLI is properly installed. Next, run:
+
+```bash
+yarn deploy
+```
+
 ### Posts system design
 
 Each post is represented by a JSON file of the form:
+
 ```JSON
 {
   "createdAt": "123...",
@@ -55,13 +71,15 @@ Each post is represented by a JSON file of the form:
   "topics": [ "..." ]
 }
 ```
+
 There is a corresponding Handlebars file in the `/src/views/partials/posts` directory indexed by the post's `slug`, in this case `title-of-the-post`. This works to determine the URL for the post along with the HTML content rendered.
 
-------
+---
 
 ### Planned features
+
 - [ ] Write about projects on their own pages
 - [ ] Better optimize production build
 - [ ] Include share links on posts
-- [ ] More content
+- [ ] Add more content
 - [ ] Quotes & articles page
