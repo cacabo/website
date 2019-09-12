@@ -20,7 +20,8 @@
   "scripts": {
     "start": "node index.js",
     "dev": "source env.sh && concurrently \"nodemon index.js\" \"open \"http://localhost:3000\"\"",
-    "test": "node index.js --env=jsdom"
+    "test": "node index.js --env=jsdom",
+    "deploy": "git push heroku master"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
