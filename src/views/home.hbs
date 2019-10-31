@@ -7,7 +7,10 @@
       </div>
       <div class="flex">
         <h1>Hi, I'm Cameron</h1>
-        <p>I want to leverage tech to help people learn more and live better. I study computer science and management in the <a href="https://fisher.wharton.upenn.edu/">M&T program at UPenn,</a> and spend my free time <a href="https://www.riplo.io">developing websites,</a> <a href="https://github.com/ccabo1/">learning new things,</a> and <a href="https://instagram.com/c.cabo">going to new places.</a></p>
+        <p>I want to leverage tech to help people learn more and live better. I study computer science and management in
+          the <a href="https://fisher.wharton.upenn.edu/">M&T program at UPenn,</a> and spend my free time <a
+            href="https://www.riplo.io">developing websites,</a> <a href="https://github.com/ccabo1/">learning new
+            things,</a> and <a href="https://instagram.com/cameroncabo">going to new places.</a></p>
       </div>
     </div>
   </div>
@@ -26,7 +29,7 @@
 <div class="marg-bot-2">
   <h4 class="title">Education</h4>
   {{#each education}}
-    {{> education this}}
+  {{> education this}}
   {{/each}}
 </div>
 
@@ -34,7 +37,7 @@
 <div class="marg-bot-2">
   <h4 class="title">Experience</h4>
   {{#each experiences}}
-    {{> experience this}}
+  {{> experience this}}
   {{/each}}
   <a href="/files/resume.pdf" class="btn btn-primary" target="_BLANK">
     View my resume →
@@ -92,36 +95,36 @@
 <div>
   <h4 class="title">Extracurriculars</h4>
   {{#each extracurriculars}}
-    {{> extracurricular this}}
+  {{> extracurricular this}}
   {{/each}}
 </div>
 
 <!-- Recent projects -->
 {{#if projects}}
-  <div>
-    <h4 class="title">Recent Projects</h4>
-    {{#each projects}}
-      {{> project this}}
-    {{/each}}
-  </div>
-  <a href="/projects" class="btn btn-primary marg-bot-1">
-    View projects
-  </a>
+<div>
+  <h4 class="title">Recent Projects</h4>
+  {{#each projects}}
+  {{> project this}}
+  {{/each}}
+</div>
+<a href="/projects" class="btn btn-primary marg-bot-1">
+  View projects
+</a>
 {{/if}}
 
 <!-- Recent posts -->
 {{#if posts}}
-  <div>
-    <h4 class="title">Recent Posts</h4>
-    <div class="row">
-      {{#each posts}}
-        <div class="col-12 col-md-6">
-          {{> postPreview this}}
-        </div>
-      {{/each}}
+<div>
+  <h4 class="title">Recent Posts</h4>
+  <div class="row">
+    {{#each posts}}
+    <div class="col-12 col-md-6">
+      {{> postPreview this}}
     </div>
-    <a href="/posts" class="btn btn-primary marg-bot-1">
-      View posts
-    </a>
+    {{/each}}
   </div>
+  <a href="/posts" class="btn btn-primary marg-bot-1">
+    View posts
+  </a>
+</div>
 {{/if}}

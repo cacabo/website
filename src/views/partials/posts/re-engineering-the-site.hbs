@@ -1,59 +1,76 @@
 <h3>Some background</h3>
 
 <p>
-  In summer of 2017, I was very excited to unleash my latest project: a proper personal webapp to replace my very first static HTML site. You can read all about the thought process <a href="/posts/building-the-blog-the-thought-process" target="_BLANK">here</a> and the technical decisions I made <a href="/posts/building-the-blog-the-tech-side" target="_BLANK">here</a>. In reflection, my implementation largely aligned with my objectives for the site: I could write and edit posts from the deployed site itself and could edit static content and pages by simply redeploying to Heroku.
+  In summer of 2017, I was very excited to unleash my latest project: a proper personal webapp to replace my very first
+  static HTML site. You can read all about the thought process <a href="/posts/building-the-blog-the-thought-process"
+    target="_BLANK">here</a> and the technical decisions I made <a href="/posts/building-the-blog-the-tech-side"
+    target="_BLANK">here</a>. In reflection, my implementation largely aligned with my objectives for the site: I could
+  write and edit posts from the deployed site itself and could edit static content and pages by simply redeploying to
+  Heroku.
 </p>
 
 <p>
-  At the same time, it's pretty incredible how much you can learn in a year, and with those learnings entirely shift your perspective on certain topics. Today, I struggle to find myself wanting to build <i>anything</i> besides simple APIs in Rails. While I once valued the structure the framework lays out for the developer, I increasingly realized every new feature added is more of a band-aid than it is a well-designed programming pattern. What you gain in speed of initial development and consistency you often lose in flexibility and personal-preference. I'm sure it's possible to develop in such a way that does keep to good style and the like, but I find it particularly difficult to do so in Rails when compared to Node.
+  At the same time, it's pretty incredible how much you can learn in a year, and with those learnings entirely shift
+  your perspective on certain topics. Today, I struggle to find myself wanting to build <i>anything</i> besides simple
+  APIs in Rails. While I once valued the structure the framework lays out for the developer, I increasingly realized
+  every new feature added is more of a band-aid than it is a well-designed programming pattern. What you gain in speed
+  of initial development and consistency you often lose in flexibility and personal-preference. I'm sure it's possible
+  to develop in such a way that does keep to good style and the like, but I find it particularly difficult to do so in
+  Rails when compared to Node.
 </p>
 
 <p>
-  Rather, I've been developing almost exclusively in Node, largely because I've come to highly value how easy it is to use and import <i>exactly</i> what you need. Handlebars is a lighter, more intuitive ERB; Express paired with JSON is a more rapid, moldable, and intuitive backend than the PostgreSQL and Rails which held together my former app.
+  Rather, I've been developing almost exclusively in Node, largely because I've come to highly value how easy it is to
+  use and import <i>exactly</i> what you need. Handlebars is a lighter, more intuitive ERB; Express paired with JSON is
+  a more rapid, moldable, and intuitive backend than the PostgreSQL and Rails which held together my former app.
 </p>
 
 <h3>Diving into the code</h3>
 
 <p>
-  In building this application I tested myself to keep the architecture and code as clean, DRY, and intuitive as possible. Here's a look at the file structure:
+  In building this application I tested myself to keep the architecture and code as clean, DRY, and intuitive as
+  possible. Here's a look at the file structure:
 </p>
 
 <div class="code">
   <xmp>│</xmp>
-  <xmp>├─ public               # Files accessible from the frontend</xmp>
-  <xmp>│  ├─ img               # Images</xmp>
-  <xmp>│  │  └─ ...</xmp>
-  <xmp>│  ├─ js                # Frontend scripts</xmp>
-  <xmp>│  │  └─ ...</xmp>
-  <xmp>│  ├─ index.css         # Compiled CSS file</xmp>
-  <xmp>│  └─ ...               # Favicon files</xmp>
+  <xmp>├─ public # Files accessible from the frontend</xmp>
+  <xmp>│ ├─ img # Images</xmp>
+  <xmp>│ │ └─ ...</xmp>
+  <xmp>│ ├─ js # Frontend scripts</xmp>
+  <xmp>│ │ └─ ...</xmp>
+  <xmp>│ ├─ index.css # Compiled CSS file</xmp>
+  <xmp>│ └─ ... # Favicon files</xmp>
   <xmp>│</xmp>
-  <xmp>├─ src                  # Assets, data, and content</xmp>
-  <xmp>│  ├─ assets</xmp>
-  <xmp>│  │  └─ scss           # Styles written in SCSS</xmp>
-  <xmp>│  │     └─ ...</xmp>
-  <xmp>│  ├─ json              # Data for posts, projects, etc.</xmp>
-  <xmp>│  │  └─ ...</xmp>
-  <xmp>│  └─ views             # Handlebars files</xmp>
-  <xmp>│     ├─ layouts        # Data for posts, projects, etc.</xmp>
-  <xmp>│     │  └─ layout.hbs  # Wrapper HTML for all pages</xmp>
-  <xmp>│     ├─ partials       # Data for posts, projects, etc.</xmp>
-  <xmp>│     │  ├─ posts       # HTML partial for each post</xmp>
-  <xmp>│     │  │  └─ ...</xmp>
-  <xmp>│     │  └─ ...         # Other partials</xmp>
-  <xmp>│     └─ ...            # Page components</xmp>
+  <xmp>├─ src # Assets, data, and content</xmp>
+  <xmp>│ ├─ assets</xmp>
+  <xmp>│ │ └─ scss # Styles written in SCSS</xmp>
+  <xmp>│ │ └─ ...</xmp>
+  <xmp>│ ├─ json # Data for posts, projects, etc.</xmp>
+  <xmp>│ │ └─ ...</xmp>
+  <xmp>│ └─ views # Handlebars files</xmp>
+  <xmp>│ ├─ layouts # Data for posts, projects, etc.</xmp>
+  <xmp>│ │ └─ layout.hbs # Wrapper HTML for all pages</xmp>
+  <xmp>│ ├─ partials # Data for posts, projects, etc.</xmp>
+  <xmp>│ │ ├─ posts # HTML partial for each post</xmp>
+  <xmp>│ │ │ └─ ...</xmp>
+  <xmp>│ │ └─ ... # Other partials</xmp>
+  <xmp>│ └─ ... # Page components</xmp>
   <xmp>│</xmp>
-  <xmp>├─ .eslintrc            # Documentation</xmp>
-  <xmp>├─ .gitignore           # Files not included in git repo</xmp>
-  <xmp>├─ index.js             # Configure express server</xmp>
-  <xmp>├─ package.json         # Layout dependencies</xmp>
-  <xmp>├─ routes.js            # App API's and routing</xmp>
-  <xmp>├─ ...                  # Yarn config files</xmp>
-  <xmp>└─ README.md            # Documentation</xmp>
+  <xmp>├─ .eslintrc # Documentation</xmp>
+  <xmp>├─ .gitignore # Files not included in git repo</xmp>
+  <xmp>├─ index.js # Configure express server</xmp>
+  <xmp>├─ package.json # Layout dependencies</xmp>
+  <xmp>├─ routes.js # App API's and routing</xmp>
+  <xmp>├─ ... # Yarn config files</xmp>
+  <xmp>└─ README.md # Documentation</xmp>
 </div>
 
 <p>
-  I exported this architecture to a <a href="https://github.com/ccabo1/hbs-express-boilerplate" target="_BLANK">boilerplate repository</a> because I find it so universally useful as a starting point for Handlebars apps. I'm looking forward to using it in a variety of projects going forwards. The repository for the website itself can be found <a href="https://github.com/ccabo1/website" target="_BLANK">here.</a>
+  I exported this architecture to a <a href="https://github.com/ccabo1/hbs-express-boilerplate"
+    target="_BLANK">boilerplate repository</a> because I find it so universally useful as a starting point for
+  Handlebars apps. I'm looking forward to using it in a variety of projects going forwards. The repository for the
+  website itself can be found <a href="https://github.com/ccabo1/website" target="_BLANK">here.</a>
 </p>
 
 <p>
@@ -62,22 +79,25 @@
 
 <div class="code">
   <xmp>{</xmp>
-  <xmp>  "createdAt": "123...",</xmp>
-  <xmp>  "updatedAt": "123...",</xmp>
-  <xmp>  "title": "Title of the post",</xmp>
-  <xmp>  "slug": "title-of-the-post",</xmp>
-  <xmp>  "image": "...",</xmp>
-  <xmp>  "subtitle": "Subtitle of the post",</xmp>
-  <xmp>  "topics": [ "..." ]</xmp>
+  <xmp> "createdAt": "123...",</xmp>
+  <xmp> "updatedAt": "123...",</xmp>
+  <xmp> "title": "Title of the post",</xmp>
+  <xmp> "slug": "title-of-the-post",</xmp>
+  <xmp> "image": "...",</xmp>
+  <xmp> "subtitle": "Subtitle of the post",</xmp>
+  <xmp> "topics": [ "..." ]</xmp>
   <xmp>}</xmp>
 </div>
 
 <p>
-  There is a corresponding Handlebars file in the <code>/src/views/partials/posts</code> directory indexed by the post's <code>slug</code>, in this case <code>"title-of-the-post"</code>. This serves a dual function: (1) it determines the URL for the post and (2) the HTML content which makes up the post itself.
+  There is a corresponding Handlebars file in the <code>/src/views/partials/posts</code> directory indexed by the post's
+  <code>slug</code>, in this case <code>"title-of-the-post"</code>. This serves a dual function: (1) it determines the
+  URL for the post and (2) the HTML content which makes up the post itself.
 </p>
 
 <p>
-  All data is served as simple JSON and is rendered by modular Handlebars components. Take, for example, how I render my education on the homepage:
+  All data is served as simple JSON and is rendered by modular Handlebars components. Take, for example, how I render my
+  education on the homepage:
 </p>
 <div class="code">
   <xmp># On the backend</xmp>
@@ -85,23 +105,27 @@
   <xmp>const education = require('./src/json/education');</xmp>
   <xmp>...</xmp>
   <xmp>router.get('/', (req, res) => {</xmp>
-  <xmp>  res.render('home', {</xmp>
-  <xmp>    title: 'Cameron Cabo',</xmp>
-  <xmp>    education,</xmp>
-  <xmp>    experiences,</xmp>
-  <xmp>    extracurriculars,</xmp>
-  <xmp>    posts: getRecentPosts(),</xmp>
-  <xmp>    projects: getRecentProjects(),</xmp>
-  <xmp>    isRootActive: true,</xmp>
-  <xmp>  });</xmp>
+  <xmp> res.render('home', {</xmp>
+  <xmp> title: 'Cameron Cabo',</xmp>
+  <xmp> education,</xmp>
+  <xmp> experiences,</xmp>
+  <xmp> extracurriculars,</xmp>
+  <xmp> posts: getRecentPosts(),</xmp>
+  <xmp> projects: getRecentProjects(),</xmp>
+  <xmp> isRootActive: true,</xmp>
+  <xmp> });</xmp>
   <xmp>});</xmp>
 </div>
 <div class="code">
   <xmp># On the homepage</xmp>
   <xmp> </xmp>
-  <xmp><div class="marg-bot-2"></xmp>
-  <xmp>  <h4 class="title">Education</h4></xmp>
-  <xmp>  {#each education}</xmp>
+  <xmp>
+    <div class="marg-bot-2">
+  </xmp>
+  <xmp>
+    <h4 class="title">Education</h4>
+  </xmp>
+  <xmp> {#each education}</xmp>
   <xmp>    {> education this}</xmp>
   <xmp>  {/each}</xmp>
   <xmp></div></xmp>

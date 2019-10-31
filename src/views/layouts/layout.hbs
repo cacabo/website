@@ -1,144 +1,151 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <!-- Config meta tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Cameron Cabo">
 
-    <!-- Open graph tags and twitter tags -->
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Cameron Cabo">
-    <meta property="og:url" content="cameroncabo.com"/>
-    <meta property="twitter:url" content="cameroncabo.com"/>
+<head>
+  <!-- Config meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Cameron Cabo">
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+  <!-- Open graph tags and twitter tags -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Cameron Cabo">
+  <meta property="og:url" content="cameroncabo.com" />
+  <meta property="twitter:url" content="cameroncabo.com" />
 
-    <!-- Set the page title -->
-    {{#if title}}
-      <title>{{ title }}</title>
-      <meta property="og:title" content="{{ title }}">
-      <meta property="twitter:title" content="{{ title }}">
-    {{else}}
-      <title>Cameron Cabo</title>
-      <meta property="og:title" content="Cameron Cabo">
-      <meta property="twitter:title" content="Cameron Cabo">
-    {{/if}}
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
 
-    <!-- Set the page description -->
-    {{#if description}}
-      <meta name="description" content="{{ description }}">
-      <meta property="og:description" content="{{ description }}">
-      <meta property="twitter:description" content="{{ description }}">
-    {{else}}
-      <meta name="description" content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
-      <meta property="og:description" content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
-      <meta property="twitter:description" content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
-    {{/if}}
+  <!-- Set the page title -->
+  {{#if title}}
+  <title>{{ title }}</title>
+  <meta property="og:title" content="{{ title }}">
+  <meta property="twitter:title" content="{{ title }}">
+  {{else}}
+  <title>Cameron Cabo</title>
+  <meta property="og:title" content="Cameron Cabo">
+  <meta property="twitter:title" content="Cameron Cabo">
+  {{/if}}
 
-    <!-- Set the page keywords -->
-    {{#if keywords}}
-      <meta name="keywords" content="{{ keywords }}">
-    {{else}}
-      <meta name="keywords" content="cameron,cam,cabo,cameroncabo,penn,freelance,web,webdev,website,m&t,jerome,fisher,upenn,pennsylvania,university,harvard,westlake,student,react,javascript,node,developer,dev,rails,ruby,art,design,contact,los,angeles,LA,philly,philadelphia,youthhack,riplo,metric,themetric">
-    {{/if}}
+  <!-- Set the page description -->
+  {{#if description}}
+  <meta name="description" content="{{ description }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="twitter:description" content="{{ description }}">
+  {{else}}
+  <meta name="description" content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
+  <meta property="og:description"
+    content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
+  <meta property="twitter:description"
+    content="Personal website for Cameron Cabo: driven learner, developer, and product builder.">
+  {{/if}}
 
-    <!-- Set the page image if there is one -->
-    {{#if image}}
-      <meta property="og:image" content="{{image}}">
-      <meta property="twitter:image" content="{{image}}">
-      <meta name="twitter:card" content="summary_large_image"/>
-    {{else}}
-      <meta property="og:image" content="/img/bg.jpg">
-      <meta property="twitter:image" content="/img/bg.jpg">
-      <meta name="twitter:card" content="summary_large_image"/>
-    {{/if}}
+  <!-- Set the page keywords -->
+  {{#if keywords}}
+  <meta name="keywords" content="{{ keywords }}">
+  {{else}}
+  <meta name="keywords"
+    content="cameron,cam,cabo,cameroncabo,penn,freelance,web,webdev,website,m&t,jerome,fisher,upenn,pennsylvania,university,harvard,westlake,student,react,javascript,node,developer,dev,rails,ruby,art,design,contact,los,angeles,LA,philly,philadelphia,youthhack,riplo,metric,themetric">
+  {{/if}}
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <!-- Set the page image if there is one -->
+  {{#if image}}
+  <meta property="og:image" content="{{image}}">
+  <meta property="twitter:image" content="{{image}}">
+  <meta name="twitter:card" content="summary_large_image" />
+  {{else}}
+  <meta property="og:image" content="/img/bg.jpg">
+  <meta property="twitter:image" content="/img/bg.jpg">
+  <meta name="twitter:card" content="summary_large_image" />
+  {{/if}}
 
-    <!-- App styles -->
-    <link rel="stylesheet" href="/index.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
-    <!-- Fonts -->
-    {{!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|PT+Serif:400,400i,700" rel="stylesheet"> --}}
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <!-- Wrapper div for the application -->
-    <div class="app">
-      <!-- Background -->
-      {{> background}}
+  <!-- App styles -->
+  <link rel="stylesheet" href="/index.css" />
 
-      <!-- Navigation -->
-      {{> nav}}
+  <!-- Fonts -->
+  {{!-- <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|PT+Serif:400,400i,700" rel="stylesheet"> --}}
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700&display=swap" rel="stylesheet">
+</head>
 
-      <!-- App content -->
-      <div class="content">
-        <div class="container-fluid">
-          {{{ body }}}
-        </div>
+<body>
+  <!-- Wrapper div for the application -->
+  <div class="app">
+    <!-- Navigation -->
+    {{> nav}}
+
+    <!-- App content -->
+    <div class="content">
+      <div class="container-fluid">
+        {{{ body }}}
       </div>
-
-      <!-- Footer -->
-      {{> footer }}
-
-      <!-- Contact form -->
-      {{> contact }}
     </div>
 
-    <!-- Javascripts -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <!-- Footer -->
+    {{> footer }}
+
+    <!-- Contact form -->
+    {{> contact }}
+  </div>
+
+  <!-- Javascripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+    integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
     crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+    integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
 
-    <!-- Site-specific scripts -->
-    <script src="/js/nav-toggle.js"></script>
-    <script src="/js/contact.js"></script>
-    <script src="/js/background.js"></script>
-    <script src="/js/scroll-to-top.js"></script>
-    <script src="/js/modal-trigger.js"></script>
-    <script src="/js/modal-autofocus.js"></script>
+  <!-- Site-specific scripts -->
+  <script src="/js/nav-toggle.js"></script>
+  <script src="/js/contact.js"></script>
+  <script src="/js/scroll-to-top.js"></script>
+  <script src="/js/modal-trigger.js"></script>
+  <script src="/js/modal-autofocus.js"></script>
 
-    <!-- Google analytics -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <!-- Google analytics -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-      ga('create', 'UA-105075968-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-105075968-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 
-    <script>
-      // while (typeof $ == 'undefined');
-      $(document).ready(function() {
-        $('#carousel').find('.carousel-item')
-          .first()
-          .addClass('active');
-      });
-    </script>
-  </body>
+  <script>
+    // while (typeof $ == 'undefined');
+    $(document).ready(function () {
+      $('#carousel').find('.carousel-item')
+        .first()
+        .addClass('active');
+    });
+  </script>
+</body>
+
 </html>
