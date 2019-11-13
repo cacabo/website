@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal website for Cameron Cabo",
   "main": "index.js",
-  "repository": "https://github.com/ccabo1/website",
+  "repository": "https://github.com/cacabo/website",
   "author": "Cameron Cabo",
   "license": "MIT",
   "dependencies": {
